@@ -50,7 +50,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/create', 'RoleController@create')->name('role.create');
     Route::post('/create', 'RoleController@store')->name('role.store');
 
-    Route::get('/{slug}', 'RoleController@show')->name('role.show');
+    // Route::get('/{slug}', 'RoleController@show')->name('role.show');
     Route::get('/{slug}/edit', 'RoleController@edit')->name('role.edit');
     Route::put('/{slug}/edit', 'RoleController@update')->name('role.update');
   });
@@ -67,5 +67,16 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/{slug}/delete', 'MenuController@delete')->name('menu.delete');
     Route::get('/trash', 'MenuController@trash')->name('menu.deleted');
     Route::get('/delete-from-trash/{slug}', 'MenuController@parmanentDelete')->name('menu.parmanent.delete');
+  });
+
+  // Page Type Resources
+  Route::group(['prefix' => 'page-type'], function() {
+    Route::get('/', 'PageTypeController@index')->name('pageType.index');
+    Route::get('/create', 'PageTypeController@create')->name('pageType.create');
+    Route::post('/create', 'PageTypeController@store')->name('pageType.store');
+
+
+    Route::get('/{slug}/edit', 'PageTypeController@edit')->name('pageType.edit');
+    Route::put('/{slug}/edit', 'PageTypeController@update')->name('pageType.update');
   });
 });

@@ -13,9 +13,5 @@ class Menu extends Model {
     'slug', 
   ];
 
-  protected $casts = [
-    'permissions' => 'array',
-  ];
-
   protected $dates = ['deleted_at'];
 }
