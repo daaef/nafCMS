@@ -11,6 +11,15 @@ FILE="./config/app.php"
 #Reading the user input
 read -p "$(tput setaf 3)Please enter the desired Module name : $(tput sgr0)" repoName
 
+#Creates a VCS branch for the desired Model.
+function createNewBranch {
+    # create A Branch
+    git add .
+    git commit -m "checking into a new branch"
+    git checkout -b ${repoName^}
+}
+createNewBranch
+
 #Creates the desired Model, Service Provider and Controller.
 function createRepoAndContract {
     # create Model
