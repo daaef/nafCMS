@@ -1,4 +1,4 @@
-<h4>Admin Menus</h4>
+<h4>Admin Menu</h4>
 
 <ul>
   <li><a href="{{ route('role.create') }}">Create User Role</a></li>
