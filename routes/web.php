@@ -44,7 +44,7 @@ Route::group(['prefix' => 'auth'], function() {
 Route::group(['prefix' => 'admin'], function() {
   Route::get('/dashboard', 'AdminController@index')->name('admin.index');
 
-
+  // Menu Roles Resources
   Route::group(['prefix' => 'roles'], function() {
     Route::get('/', 'RoleController@index')->name('role.index');
     Route::get('/create', 'RoleController@create')->name('role.create');
@@ -53,5 +53,19 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/{slug}', 'RoleController@show')->name('role.show');
     Route::get('/{slug}/edit', 'RoleController@edit')->name('role.edit');
     Route::put('/{slug}/edit', 'RoleController@update')->name('role.update');
+  });
+
+  // Menu Route Resources
+  Route::group(['prefix' => 'menu'], function() {
+    Route::get('/', 'MenuController@index')->name('menu.index');
+    Route::get('/create', 'MenuController@create')->name('menu.create');
+    Route::post('/create', 'MenuController@store')->name('menu.store');
+
+    // Route::get('/{slug}', 'MenuController@show')->name('menu.show');
+    Route::get('/{slug}/edit', 'MenuController@edit')->name('menu.edit');
+    Route::put('/{slug}/edit', 'MenuController@update')->name('menu.update');
+    Route::get('/{slug}/delete', 'MenuController@delete')->name('menu.delete');
+    Route::get('/trash', 'MenuController@trash')->name('menu.deleted');
+    Route::get('/delete-from-trash/{slug}', 'MenuController@parmanentDelete')->name('menu.parmanent.delete');
   });
 });

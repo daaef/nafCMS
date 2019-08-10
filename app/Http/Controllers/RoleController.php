@@ -35,7 +35,7 @@ class RoleController extends Controller{
 			if($role->id) {
 				return redirect()->back()->with($notification);
 			} else {
-				return back()->withInput()->with('error', 'Could not create Your account. Try again!');
+				return back()->withInput()->with('error', 'Could not create role. Try again!');
 			}
 		} catch (QueryException $e) {
 			
@@ -65,7 +65,7 @@ class RoleController extends Controller{
 		// dd($request->all());
 		$role = $this->repo->update($request, $slug);
 		$notification = array(
-			'message' => 'Role $role->name updated successfully',
+			'message' => "Role $role->name updated successfully",
 			'alert-type' => 'success'
 		);
 
