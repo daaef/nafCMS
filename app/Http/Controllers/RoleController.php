@@ -1,9 +1,10 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
 use App\Repositories\Role\RoleContract;
-class RoleController extends Controller
-{
+
+class RoleController extends Controller{
 	protected $repo;
 	public function __construct(RoleContract $roleContract) {
 		$this->repo = $roleContract;
@@ -23,17 +24,30 @@ class RoleController extends Controller
 			'name' => 'required',
 		]);
 
-		// dd($request->all());
+		try {
+			$role = $this->repo->create($request);
 
-		$role = $this->repo->create($request);
+			$notification = array(
+				'message' => "Role $role->name created successfully",
+				'alert-type' => 'success'
+			);		
 
-		$notification = array(
-			'message' => 'Role $role->name created successfully',
-			'alert-type' => 'success'
-		);
+			if($role->id) {
+				return redirect()->back()->with($notification);
+			} else {
+				return back()->withInput()->with('error', 'Could not create Your account. Try again!');
+			}
+		} catch (QueryException $e) {
+			
+			$error = array(
+				'message' => "Role $request->name already exists!",
+				'alert-type' => 'error'
+			);
 
-		if($role->id) {
-			return redirect()->back()->with($notification);
+			$errorCode = $e->errorInfo[1];
+			if($errorCode == 1062){
+				return redirect()->back()->withInput()->with($error);
+			}
 		}
 	}
 	
