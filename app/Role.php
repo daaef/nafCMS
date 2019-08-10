@@ -20,9 +20,11 @@ class Role extends Model {
     'permissions' => 'array',
   ];
 
-  public function users() {
-    return $this->hasMany('App\User', 'user_id');
-  }
+  protected $dates = ['deleted_at'];
+
+  // public function users() {
+  //   return $this->hasMany('App\User', 'user_id');
+  // }
 
   
 }

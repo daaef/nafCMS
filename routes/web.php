@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
 
 
@@ -39,4 +39,19 @@ Route::group(['prefix' => 'auth'], function() {
 
   // Logout Route Resources
   Route::post('/logout', 'LoginController@logout')->name('logout');
+});
+
+Route::group(['prefix' => 'admin'], function() {
+  Route::get('/dashboard', 'AdminController@index')->name('admin.index');
+
+
+  Route::group(['prefix' => 'roles'], function() {
+    Route::get('/', 'RoleController@index')->name('role.index');
+    Route::get('/create', 'RoleController@create')->name('role.create');
+    Route::post('/create', 'RoleController@store')->name('role.store');
+
+    Route::get('/{slug}', 'RoleController@show')->name('role.show');
+    Route::get('/{slug}/edit', 'RoleController@edit')->name('role.edit');
+    Route::put('/{slug}/edit', 'RoleController@update')->name('role.update');
+  });
 });

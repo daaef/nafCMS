@@ -37,8 +37,8 @@ class EloquentRoleRepository implements RoleContract {
   }
 
   // Update a Role
-  public function update($request, $id) {
-    $updateRole = $this->findById($id);
+  public function update($request, $slug) {
+    $updateRole = $this->findBySlug($slug);
     $updateRole->name = $request->name;
     $updateRole->permissions = $request->permissions;
     $updateRole->description = $request->description;
