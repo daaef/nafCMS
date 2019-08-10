@@ -34,33 +34,23 @@ class LoginController extends Controller {
 		try {
 		  if(Sentinel::authenticate($credentials)) {
 				$authUser = Sentinel::getUser();
-				// dd($authUser->subscriptions());
+				// dd($authUser);
 				
 				try {
-				  if (Sentinel::getUser()->roles()->first()->slug === 'admin') {
-						// return redirect()->route('admin.index');
-				  } elseif (Sentinel::getUser()->roles()->first()->slug === 'partner') {
-
-						if($authUser->bio_status === 0) {
-						  return redirect()->route('dashboard.edit', $authUser->slug);
-						  return "Update Account";
-						} elseif ($authUser->bio_status === 1) {
-						  return redirect()->route('dashboard.index',$authUser->slug);
-						}
-				  } elseif (Sentinel::getUser()->roles()->first()->slug === 'member') {
-					
-						if($authUser->plan_status === 0) {
-						  return redirect()->route('plans.index');
-						  // return "Member dash needs update";
-						} elseif ($authUser->bio_status === 0) {
-						  return redirect()->route('dashboard.index', $authUser->id);
-						} elseif ($authUser->bio_status === 1) {
-						  // return redirect()->route('user_dash');
-						  return "Member dash";
-						}
+				  if (Sentinel::getUser()->roles()->first()->slug === 'superadmin') {
+						
+						return "Super Admin dashboard";
+				  } elseif (Sentinel::getUser()->roles()->first()->slug === 'admin') {
+				  	return redirect()->route('admin.index');
+				  	return "admin dashboard";
+				  } elseif (Sentinel::getUser()->roles()->first()->slug === 'author') {
+						// return redirect()->route('dashboard.edit', $authUser->slug);
+						return "author dashboard";
+				  } elseif (Sentinel::getUser()->roles()->first()->slug === 'moderator') {			
+						return "Moderator dash";						
 				  }
 				} catch (\BadMethodCallException $e) {
-				  return redirect()->route('get_login')->with('error', 'Your Session has expired. Please login again!');
+				  return redirect()->route('auth.login.get')->with('error', 'Your Session has expired. Please login again!');
 				}
 	  	} else {			
 				return redirect()->back()->withInput()->with('error', 'Ops... Your Login Credentials did not match');
