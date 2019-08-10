@@ -14,24 +14,48 @@ class RolesTableSeeder extends Seeder
       'slug' => 'superadmin',
       'name' => 'Super Admin',
       'description' => 'Super Admin User',
+      // 'permissions' => [
+      //   'user.create'   => true,
+      //   'user.view'   => true,
+      //   'user.update'   => true,
+      //   'user.delete' => true,
+      // ]
     ]);
     
     DB::table('roles')->insert([
       'slug' => 'admin',
       'name' => 'Admin',
       'description' => 'Admin User',
+      // 'permissions' => [
+      //   'user.create'   => true,
+      //   'user.view'   => true,
+      //   'user.update'   => true,
+      //   'user.delete' => true,
+      // ]
     ]);
     
     DB::table('roles')->insert([
       'slug' => 'author',
       'name' => 'Author User',
       'description' => 'Author User',
+      // 'permissions' => [
+      //   'user.create'   => true,
+      //   'user.view'   => true,
+      //   'user.update'   => true,
+      //   'user.delete' => false,
+      // ]
     ]);
 
     DB::table('roles')->insert([
       'slug' => 'member',
       'name' => 'Member',
       'description' => 'Author User',
+      // 'permissions' => [
+      //   'user.create'   => false,
+      //   'user.view'   => true,
+      //   'user.update'   => false,
+      //   'user.delete' => false,
+      // ]
     ]);
   }
 }

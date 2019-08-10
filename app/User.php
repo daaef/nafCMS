@@ -46,4 +46,8 @@ class User extends EloquentUser {
 	public static function byEmail($email) {
 		return static::whereEmail($email)->first();
 	}
+
+	public function role() {
+		return $this->belongsTo('App\Role', 'role_id');
+	}
 }

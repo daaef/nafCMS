@@ -174,6 +174,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+ 		App\Providers\RoleServiceProvider::class,
  		App\Providers\ForgotPasswordServiceProvider::class,
  		App\Providers\ActivationServiceProvider::class,
  		App\Providers\LoginServiceProvider::class,

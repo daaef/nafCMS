@@ -67,11 +67,12 @@ class MigrationCartalystSentinel extends Migration
             $table->string('slug');
             $table->string('name');
             $table->text('permissions')->nullable();
-            $table->text('desciption')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
 
             $table->engine = 'InnoDB';
             $table->unique('slug');
+            $table->softDeletes();
         });
 
         Schema::create('role_users', function (Blueprint $table) {
@@ -97,7 +98,7 @@ class MigrationCartalystSentinel extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email');
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->string('slug');
             $table->text('permissions')->nullable();
             $table->timestamp('last_login')->nullable();
