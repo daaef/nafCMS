@@ -9,24 +9,38 @@ class RoleController extends Controller
         $this->repo = $roleContract;
     }
     
-    public function index()
-    {
-        //
+    public function index() {
+        $posts = $this->repo->findAll();
+        return view('role.index')->with('roles', $roles);
     }
     
     public function create()
     {
-        //
+        return view('role.create');
     }
     
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+        ]);
+
+        $role = $this->repo->create($request);
+
+        $notification = array(
+            'message' => 'Role $role->name created successfully',
+            'alert-type' => 'success'
+        );
+
+        if($role->id) {
+            return redirect()->back()->with($notification);
+        }
     }
     
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $role = $this->repo->findBySlug($slug);
+        return view('role.show')->with('role', $role);
     }
     
     public function edit($id)
