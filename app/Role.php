@@ -9,11 +9,20 @@ class Role extends Model {
   
   use SoftDeletes;
 
-  public function users() {
-    return $this->hasMany('App\User', 'user_id');
-  }
+  protected $fillable = [
+    'name', 
+    'permissions',
+    'description', 
+    'slug', 
+  ];
 
   protected $casts = [
     'permissions' => 'array',
   ];
+
+  public function users() {
+    return $this->hasMany('App\User', 'user_id');
+  }
+
+  
 }
