@@ -34,8 +34,8 @@ Route::group(['prefix' => 'auth'], function() {
   Route::post('/reset/{email}/{resetCode}', "ForgotPasswordController@postResetPassword")->name('post_reset_password');
 
   // Login Route Resources
-  Route::get('/login', 'LoginController@getLogin')->name('get_login');
-  Route::post('/login', 'LoginController@doLogin')->name('do_login');
+  Route::get('/login', 'LoginController@getLogin')->name('auth.login.get');
+  Route::post('/login', 'LoginController@post')->name('auth.login.post');
 
   // Logout Route Resources
   Route::post('/logout', 'LoginController@logout')->name('logout');

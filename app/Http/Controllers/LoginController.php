@@ -13,6 +13,10 @@ class LoginController extends Controller {
 	public function __construct(LoginContract $loginContract) {
 		$this->repo = $loginContract;
 	}
+
+	public function getLogin() {
+		return view('auth.login');
+	}
 	
 	public function post(Request $request) {
 		$this->validate($request, [
