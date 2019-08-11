@@ -5,7 +5,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">Site logo</th>
       <th scope="col">site title</th>
       <th scope="col">site description</th>
@@ -18,7 +17,7 @@
     <tr>
     @foreach($settings as $setting)
       <tr>
-        <td>{{ $setting->site_logo }}</td>
+        <td><img src="uploads/logos/{{$setting->site_logo}}" width="100px" heigth="100x" alt="heloo"> </td>
         <td>{{ $setting->site_title }}</td>
         <td>{{ $setting->site_description }}</td>
         <td>{{ $setting->footer_copywrite }}</td>

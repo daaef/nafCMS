@@ -32,16 +32,20 @@ class SettingController extends Controller
 
         ]);
 
-        if($request->has('site_logo')) { 
-          $file = $request->file('site_logo');
-          $extension = $file->getClientOriginalExtension(); // getting image extension
-          $filename =time().'.'.$extension;
-          $file->move('uploads/logos/', $filename);
+       
+          if ($request->has('site_logo')) {
+            $image = $request->file('site_logo');
+            $filename = time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('uploads/logos/');
+            $image->move($destinationPath, $filename);
+           
         }
+        
 
         try{
             $settings = $this->repo->create($request);
             $settings['site_logo'] =  $filename;
+            $settings->save();
             return $settings;
         }
         catch (QueryException $e) {
@@ -88,6 +92,7 @@ class SettingController extends Controller
         try{
             $settings = $this->repo->update($id, $request);
             $settings['site_logo'] =  $filename;
+            $settings->save();
             return $settings;
         }
         catch (QueryException $e) {
