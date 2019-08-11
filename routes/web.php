@@ -68,4 +68,9 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/trash', 'MenuController@trash')->name('menu.deleted');
     Route::get('/delete-from-trash/{slug}', 'MenuController@parmanentDelete')->name('menu.parmanent.delete');
   });
+
+  // News Category
+  Route::group(['prefix' => 'news-category'], function(){
+    Route::get('/', 'NewsCategory@index')->name('newsCategory.index');
+  });
 });
