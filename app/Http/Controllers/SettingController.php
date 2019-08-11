@@ -23,7 +23,7 @@ class SettingController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'site_logo' => 'required',
+            'site_logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             'site_title' => 'required',
             'footer_copywrite' => 'required',
             'footer_facebook' => 'url',
@@ -73,7 +73,7 @@ class SettingController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'site_logo' => 'required',
+            'site_logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             'site_title' => 'required',
             'footer_copywrite' => 'required',
             'footer_facebook' => 'url',
@@ -90,10 +90,19 @@ class SettingController extends Controller
         }
 
         try{
-            $settings = $this->repo->update($id, $request);
-            $settings['site_logo'] =  $filename;
-            $settings->save();
-            return $settings;
+            $setting = $this->repo->update($id, $request);
+            $setting['site_logo'] =  $filename;
+            $setting->save();
+            return $setting;
+            $notification = array(
+				'message' => "Slider $setting->title created successfully",
+				'alert-type' => 'success'
+			);	
+            if($setting->id) {
+				return redirect()->back()->with($notification);
+			} else {
+				return back()->withInput()->with('error', 'Could not create setting. Try again!');
+			}
         }
         catch (QueryException $e) {
 			$errorCode = $e->errorInfo[1];
