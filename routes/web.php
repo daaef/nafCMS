@@ -46,10 +46,11 @@ Route::group(['prefix' => 'auth'], function() {
 Route::group(['prefix' => 'admin'], function() {
   Route::get('/dashboard', 'AdminController@index')->name('admin.index');
 
-  Route::group(['prefix' => 'setting'], function() {
+  Route::group(['prefix' => 'settings'], function() {
     Route::get('/', 'SettingController@index')->name('get_setting');
+    Route::post('/', 'SettingController@store')->name('store.settings');
     Route::get('/create-settings', 'SettingController@create')->name('create.settings');
-    Route::post('/store-settings', 'SettingController@store')->name('store.settings');
+    
 
     Route::get('/find-setting/{id}', 'SettingController@show')->name('find.setting');
     Route::get('/edit-setting/{id}', 'SettingController@edit')->name('edit.setting');
@@ -111,8 +112,8 @@ Route::group(['prefix' => 'admin'], function() {
 
   Route::group(['prefix' => 'sliders'], function() {
     Route::get('/', 'SliderController@index')->name('slider.index');
-    Route::get('/slider/create', 'SliderController@create')->name('slider.create');
-    Route::post('/slider/create', 'SliderController@store')->name('slider.store');
+    Route::get('/create', 'SliderController@create')->name('slider.create');
+    Route::post('/create', 'SliderController@store')->name('slider.store');
     
     Route::get('/{slug}/edit', 'SliderController@edit')->name('slider.edit');
     Route::put('/{slug}/update', 'SliderController@update')->name('slider.update');
