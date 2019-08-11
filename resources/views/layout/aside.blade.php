@@ -63,12 +63,12 @@
 					</a>                    
 				</li>
 
-				<!-- <li class="sidebar-item">
-					<a class="sidebar-link waves-effect waves-dark" href="" aria-expanded="false">
+				<li class="sidebar-item">
+					<a class="sidebar-link waves-effect waves-dark" href="{{ route('get_setting') }}" aria-expanded="false">
 						<i class="mdi mdi-av-timer"></i>
-						<span class="hide-menu"></span>
+						<span class="hide-menu">Settings</span>
 					</a>
-				</li> -->
+				</li>
 				<li class="sidebar-item">
 					<a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
 						<i class="mdi mdi-directions"></i>

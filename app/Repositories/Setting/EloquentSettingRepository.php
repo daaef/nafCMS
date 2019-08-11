@@ -46,6 +46,7 @@ class EloquentSettingRepository implements SettingContract {
         $setting->footer_facebook = $request->footer_facebook;
         $setting->footer_twitter = $request->footer_twitter;
         $setting->footer_instagram = $request->footer_instagram;
+        $setting->save();
         return $setting;
     }
 
