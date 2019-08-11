@@ -181,7 +181,8 @@ return [
  		App\Providers\ForgotPasswordServiceProvider::class,
  		App\Providers\ActivationServiceProvider::class,
  		App\Providers\LoginServiceProvider::class,
- 		App\Providers\RegisterServiceProvider::class,
+         App\Providers\RegisterServiceProvider::class,
+         App\Providers\NewsCategoryServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
     ],
 
