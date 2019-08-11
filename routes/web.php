@@ -39,7 +39,26 @@ Route::group(['prefix' => 'auth'], function() {
 
   // Logout Route Resources
   Route::post('/logout', 'LoginController@logout')->name('logout');
+
+  
 });
+
+Route::get('/all-settings', 'SettingController@index')->name('get_setting');
+
+Route::get('/create-settings', 'SettingController@create')->name('create.settings');
+
+Route::post('/store-settings', 'SettingController@store')->name('store.settings');
+
+Route::get('/find-setting/{id}', 'SettingController@show')->name('find.setting');
+
+
+Route::get('/edit-setting/{id}', 'SettingController@edit')->name('edit.setting');
+
+Route::put('/update-setting/{id}', 'SettingController@update')->name('update.setting');
+
+Route::get('/delete-setting/{id}', 'SettingController@delete')->name('delete.setting');
+
+
 
 Route::group(['prefix' => 'admin'], function() {
   Route::get('/dashboard', 'AdminController@index')->name('admin.index');
@@ -79,3 +98,4 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/{slug}/delete', 'NewsCategoryController@delete')->name('newsCategory.delete');
   });
 });
+

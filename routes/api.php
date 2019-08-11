@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+// Route::get('/settings', 'SettingController@index')->name('get_setting');
+
+// Route::post('/sett', 'SettingController@store')->name('post_setting');
