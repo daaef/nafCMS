@@ -12,8 +12,85 @@ class NewsCategoryController extends Controller
     public function __construct(NewsCategoryContract $NewsCategoryContract) {
 		$this->repo = $NewsCategoryContract;
     }
+
+    public function index() {
+      $news_categories = $this->repo->findAll();
+      return view('news_category.index')->with('news_categories', $news_categories);
+    }
     
     public function create() {
 		return view('news_category.create');
-	}
+    }
+    
+    public function store(Request $request) {
+      $this->validate($request, [
+        'name' => 'required',
+        'description' => 'required',
+      ]);
+  
+      try {
+        $news_category = $this->repo->create($request);
+  
+        $notification = array(
+          'message' => "News Category $news_category->name created successfully",
+          'alert-type' => 'success'
+        );		
+  
+        if($news_category->id) {
+          return redirect()->back()->with($notification);
+        } else {
+          return back()->withInput()->with('error', 'Could not create news category. Try again!');
+        }
+      } catch (QueryException $e) {
+        
+        $error = array(
+          'message' => "News Category $request->name already exists!",
+          'alert-type' => 'error'
+        );
+  
+        $errorCode = $e->errorInfo[1];
+        if($errorCode == 1062){
+          return redirect()->back()->withInput()->with($error);
+        }
+      }
+    }
+
+    public function show($slug) {
+      $news_category = $this->repo->findBySlug($slug);
+      return view('news_category.show')->with('news_category', $news_category);
+    }
+
+    public function edit($slug) {
+      $news_category = $this->repo->findBySlug($slug);
+      return view('news_category.edit')->with('news_category', $news_category);
+    }
+
+    public function update(Request $request, $slug) {
+      $news_category = $this->repo->update($request, $slug);
+      $notification = array(
+        'message' => "News Category $news_category->name updated successfully",
+        'alert-type' => 'success'
+      );
+  
+      if($news_category->id) {
+        return redirect()->route('newsCategory.index')->with($notification);
+      }
+    }
+
+    public function delete($slug) {
+		
+      if ($this->repo->remove($slug)) {
+        $notification = array(
+          'message' => "News Category deleted successfully",
+          'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+       } else {
+        $error = array(
+          'message' => 'Error Deleting News Category',
+          'alert-type' => 'error'
+        );
+        return back()->with($error);
+      }    
+    }
 }

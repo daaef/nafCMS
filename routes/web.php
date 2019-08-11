@@ -71,6 +71,11 @@ Route::group(['prefix' => 'admin'], function() {
 
   // News Category
   Route::group(['prefix' => 'news-category'], function(){
-    Route::get('/', 'NewsCategory@index')->name('newsCategory.index');
+    Route::get('/', 'NewsCategoryController@index')->name('newsCategory.index');
+    Route::get('/create', 'NewsCategoryController@create')->name('newsCategory.create');
+    Route::post('/create', 'NewsCategoryController@store')->name('newsCategory.store');
+    Route::get('/{slug}/edit', 'NewsCategoryController@edit')->name('newsCategory.edit');
+    Route::put('/{slug}/update', 'NewsCategoryController@update')->name('newsCategory.update');
+    Route::get('/{slug}/delete', 'NewsCategoryController@delete')->name('newsCategory.delete');
   });
 });

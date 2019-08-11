@@ -3,7 +3,7 @@ namespace App\Repositories\NewsCategory;
 use App\Repositories\NewsCategory\NewsCategoryContract;
 use App\NewsCategory;
 
-class EloquentMenuRepository implements MenuContract {
+class EloquentNewsCategoryRepository implements NewsCategoryContract {
   //create a news category.
   
   public function create($request) {
@@ -16,37 +16,38 @@ class EloquentMenuRepository implements MenuContract {
     return $newsCategory;
   }
 
-  // return all Menus
-//   public function findAll() {
-//     return Menu::all();
-//   }
+  // return all news category
+  public function findAll() {
+    return NewsCategory::all();
+  }
 
-  // return a Menu Item by ID
-//   public function findById($id) {
-//     return Menu::where('id', $id)->first();
-//   }
+  // return a news category by ID
+  public function findById($id) {
+    return NewsCategory::where('id', $id)->first();
+  }
 
-  // return a Menu Item by slug
-//   public function findBySlug($slug){
-//     return Menu::where('slug', $slug)->first();
-//   }
+  // return a news category by slug
+  public function findBySlug($slug){
+    return NewsCategory::where('slug', $slug)->first();
+  }
 
-  // Update a Menu Item
-//   public function update($request, $slug) {
-//     $updateMenu = $this->findBySlug($slug);
-//     $updateMenu->name = $request->name;    
-//     $str = strtolower($request->name);
+  // Update a news category
+  public function update($request, $slug) {
+    $newsCategory = $this->findBySlug($slug);
+    $newsCategory->name = $request->name;  
+    $newsCategory->description = $request->description;    
+    $str = strtolower($request->name);
 
-//     $updateMenu->slug = preg_replace('/\s+/', '-', $str);
-//     $updateMenu->save();
-//     return $updateMenu;
-//   }
+    $newsCategory->slug = preg_replace('/\s+/', '-', $str);
+    $newsCategory->save();
+    return $newsCategory;
+  }
 
   // Remove a Menu Item
-//   public function remove($slug) {
-//     $menu = $this->findBySlug($slug);
-//     return $menu->delete();
-//   }
+  public function remove($slug) {
+    $newsCategory = $this->findBySlug($slug);
+    return $newsCategory->delete();
+  }
 
 //   public function trash() {
 //     return Menu::onlyTrashed()->get();
