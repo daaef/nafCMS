@@ -177,6 +177,8 @@ return [
  		App\Providers\UserServiceProvider::class,
  		App\Providers\DashboardServiceProvider::class,
  		App\Providers\PageTypeServiceProvider::class,
+ 		App\Providers\SliderServiceProvider::class,
+ 		App\Providers\SettingServiceProvider::class,
  		App\Providers\MenuServiceProvider::class,
  		App\Providers\AdminServiceProvider::class,
  		App\Providers\DashboardServiceProvider::class,
@@ -184,7 +186,8 @@ return [
  		App\Providers\ForgotPasswordServiceProvider::class,
  		App\Providers\ActivationServiceProvider::class,
  		App\Providers\LoginServiceProvider::class,
- 		App\Providers\RegisterServiceProvider::class,
+        App\Providers\RegisterServiceProvider::class,
+        App\Providers\NewsCategoryServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
     ],
 
