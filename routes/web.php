@@ -55,6 +55,13 @@ Route::group(['prefix' => 'admin'], function() {
     Route::put('/{slug}/edit', 'RoleController@update')->name('role.update');
   });
 
+  // Users Route Resources
+  Route::group(['prefix' => 'users'], function() {
+    Route::get('/', 'UserController@index')->name('user.index');
+    Route::post('/', 'UserController@store')->name('user.store');
+    Route::put('/{slug}', 'UserController@update')->name('user.update');
+  });
+
   // Menu Route Resources
   Route::group(['prefix' => 'menu'], function() {
     Route::get('/', 'MenuController@index')->name('menu.index');

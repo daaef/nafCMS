@@ -23,7 +23,8 @@ class Role extends Model {
   protected $dates = ['deleted_at'];
 
   // public function users() {
-  //   return $this->hasMany('App\User', 'user_id');
+  //   return $this->belongsToMany('App\User', 'roles_users', 
+  //     'role_id', 'user_id');
   // }
 
   
