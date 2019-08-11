@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
 
 
@@ -34,8 +34,8 @@ Route::group(['prefix' => 'auth'], function() {
   Route::post('/reset/{email}/{resetCode}', "ForgotPasswordController@postResetPassword")->name('post_reset_password');
 
   // Login Route Resources
-  Route::get('/login', 'LoginController@getLogin')->name('get_login');
-  Route::post('/login', 'LoginController@doLogin')->name('do_login');
+  Route::get('/login', 'LoginController@getLogin')->name('auth.login.get');
+  Route::post('/login', 'LoginController@post')->name('auth.login.post');
 
   // Logout Route Resources
   Route::post('/logout', 'LoginController@logout')->name('logout');
@@ -57,3 +57,45 @@ Route::get('/edit-setting/{id}', 'SettingController@edit')->name('edit.setting')
 Route::put('/update-setting/{id}', 'SettingController@update')->name('update.setting');
 
 Route::get('/delete-setting/{id}', 'SettingController@delete')->name('delete.setting');
+
+
+
+Route::group(['prefix' => 'admin'], function() {
+  Route::get('/dashboard', 'AdminController@index')->name('admin.index');
+
+  // Menu Roles Resources
+  Route::group(['prefix' => 'roles'], function() {
+    Route::get('/', 'RoleController@index')->name('role.index');
+    Route::get('/create', 'RoleController@create')->name('role.create');
+    Route::post('/create', 'RoleController@store')->name('role.store');
+
+    Route::get('/{slug}', 'RoleController@show')->name('role.show');
+    Route::get('/{slug}/edit', 'RoleController@edit')->name('role.edit');
+    Route::put('/{slug}/edit', 'RoleController@update')->name('role.update');
+  });
+
+  // Menu Route Resources
+  Route::group(['prefix' => 'menu'], function() {
+    Route::get('/', 'MenuController@index')->name('menu.index');
+    Route::get('/create', 'MenuController@create')->name('menu.create');
+    Route::post('/create', 'MenuController@store')->name('menu.store');
+
+    // Route::get('/{slug}', 'MenuController@show')->name('menu.show');
+    Route::get('/{slug}/edit', 'MenuController@edit')->name('menu.edit');
+    Route::put('/{slug}/edit', 'MenuController@update')->name('menu.update');
+    Route::get('/{slug}/delete', 'MenuController@delete')->name('menu.delete');
+    Route::get('/trash', 'MenuController@trash')->name('menu.deleted');
+    Route::get('/delete-from-trash/{slug}', 'MenuController@parmanentDelete')->name('menu.parmanent.delete');
+  });
+
+  // News Category
+  Route::group(['prefix' => 'news-category'], function(){
+    Route::get('/', 'NewsCategoryController@index')->name('newsCategory.index');
+    Route::get('/create', 'NewsCategoryController@create')->name('newsCategory.create');
+    Route::post('/create', 'NewsCategoryController@store')->name('newsCategory.store');
+    Route::get('/{slug}/edit', 'NewsCategoryController@edit')->name('newsCategory.edit');
+    Route::put('/{slug}/update', 'NewsCategoryController@update')->name('newsCategory.update');
+    Route::get('/{slug}/delete', 'NewsCategoryController@delete')->name('newsCategory.delete');
+  });
+});
+

@@ -5,14 +5,11 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Role extends Model {
-  
+class Menu extends Model {
   use SoftDeletes;
 
   protected $fillable = [
-    'name', 
-    'permissions',
-    'description', 
+    'name',
     'slug', 
   ];
 
@@ -21,10 +18,4 @@ class Role extends Model {
   ];
 
   protected $dates = ['deleted_at'];
-
-  // public function users() {
-  //   return $this->hasMany('App\User', 'user_id');
-  // }
-
-  
 }

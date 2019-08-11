@@ -1,6 +1,6 @@
 <?php
-namespace App\Repositories\Role;
-interface RoleContract {
+namespace App\Repositories\Menu;
+interface MenuContract {
   public function create($request);
   public function findAll();
   public function findById($id);
