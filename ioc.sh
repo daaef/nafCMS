@@ -17,6 +17,9 @@ function createNewBranch {
     git add .
     git commit -m "checking into a new branch"
     git checkout -b ${repoName^}
+
+    git add .
+    git commit -m "new ${repoName^} branch created"
 }
 createNewBranch
 
