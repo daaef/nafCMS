@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\Setting\SettingContract;
+use Illuminate\Database\QueryException;
 class SettingController extends Controller
 {
     protected $repo;
@@ -11,7 +12,7 @@ class SettingController extends Controller
     
     public function index()
     {
-        $settings = $this->repo->getAll();
+        $settings = $this->repo->findAll();
         return view('setting.index')->with('settings', $settings);
     }
     
@@ -59,14 +60,14 @@ class SettingController extends Controller
     
     public function show($id)
     {
-        $setting = $this->repo->find($id);
+        $setting = $this->repo->findById($id);
         return $setting;
     }
     
     public function edit($id)
     {
         
-        $setting = $this->repo->edit($id);
+        $setting = $this->repo->findById($id);
         return view('setting.edit')->with('setting', $setting);
     }
     
@@ -114,7 +115,7 @@ class SettingController extends Controller
     
     public function delete($id)
     {
-        $setting = $this->repo->delete($id);
+        $setting = $this->repo->remove($id);
         $message = "settings deleted successfully";
         return redirect()->back()->with('message', $message);
     }

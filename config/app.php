@@ -174,6 +174,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+ 		App\Providers\GalleryServiceProvider::class,
  		App\Providers\SliderServiceProvider::class,
  		App\Providers\SettingServiceProvider::class,
  		App\Providers\SettingsServiceProvider::class,
@@ -187,6 +188,7 @@ return [
          App\Providers\RegisterServiceProvider::class,
          App\Providers\NewsCategoryServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*
@@ -240,6 +242,7 @@ return [
         'Activation' => Cartalyst\Sentinel\Laravel\Facades\Activation::class,
         'Reminder'   => Cartalyst\Sentinel\Laravel\Facades\Reminder::class,
         'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];

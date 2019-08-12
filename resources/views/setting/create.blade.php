@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layout.master')
 
 @section('content')
 
 <h1 class="text-center pt-5">Settings</h1>
 
-<form method="POST" action="{{ route('store.settings')}}" enctype="multipart/form-data">
+<form method="POST" action="{{ route('setting.store')}}" enctype="multipart/form-data">
     {{ csrf_field() }}                   
   <div class="form-row">
     <div class="col">
@@ -18,7 +18,7 @@
   </div>
   <div class="form-row mt-3">
     <div class="col">
-      <input type="text" class="form-control" placeholder="site description" name="site_description">
+      <textarea type="text" class="form-control" placeholder="site description" name="site_description"></textarea>
       <p>{{ $errors->first('site_description') }}</p>
     </div>
     <div class="col">

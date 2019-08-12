@@ -4,7 +4,7 @@ use App\Repositories\Setting\SettingContract;
 use App\Setting;
 class EloquentSettingRepository implements SettingContract {
     //
-    public function getAll(){
+    public function findAll(){
         $setting = Setting::all();
         return $setting;
     }
@@ -27,7 +27,7 @@ class EloquentSettingRepository implements SettingContract {
 
     }
 
-    public function find($id){
+    public function findById($id){
         $setting = Setting::whereId($id)->first();
         return $setting;
     }
@@ -49,7 +49,7 @@ class EloquentSettingRepository implements SettingContract {
         return $setting;
     }
 
-    public function delete($id){
+    public function remove($id){
 
         $setting  = Setting::findOrFail($id);
         return $setting->delete();  

@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\Slider\SliderContract;
+use Illuminate\Database\QueryException;
 class SliderController extends Controller
 {
     protected $repo;

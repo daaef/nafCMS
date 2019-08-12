@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layout.master')
 
 @section('content')
 <h1 class="text-center pt-5">Settings</h1>
 
-<form method="POST" action="{{ route('update.setting', $setting->id)}}" enctype="multipart/form-data">
+<form method="POST" action="{{ route('setting.update', $setting->id)}}" enctype="multipart/form-data">
     {{ method_field('PUT') }}   
     {{ csrf_field() }}                   
   <div class="form-row">
