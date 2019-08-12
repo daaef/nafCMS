@@ -1,56 +1,74 @@
 <?php
 namespace App\Repositories\News;
 use App\Repositories\News\NewsContract;
-use App\News;
+use App\MyNews;
 
 class EloquentNewsRepository implements NewsContract {
   //create a news category.
   
   public function create($request) {
-    $news = new News;
+    $news = new MyNews;
     $news->title = $request->title;  
     $news->body = $request->body;   
-    $news->news_image = $request->news_image;  
+    // $news->news_image = $request->news_image;  
+    if ($request->has('news_image')) {
+      $image = $request->file('news_image');
+      $filename = time().'.'.$image->getClientOriginalExtension();
+      $destinationPath = public_path('uploads/news/');
+      $image->move($destinationPath, $filename);  
+
+      $news->news_image = $filename;
+    }
     $news->news_category = $request->news_category;
-    $str = strtolower($request->name);
+    $str = strtolower($request->title);
     $news->slug = preg_replace('/\s+/', '-', $str);
     $news->tags = $request->tags;
-    $news->save()      ;
+    $news->save();
     return $news;
   }
 
   // return all news category
   public function findAll() {
-    return News::all();
+    return MyNews::all();
   }
 
   // return a news category by ID
-//   public function findById($id) {
-//     return NewsCategory::where('id', $id)->first();
-//   }
+  public function findById($id) {
+    return MyNews::where('id', $id)->first();
+  }
 
   // return a news category by slug
-//   public function findBySlug($slug){
-//     return NewsCategory::where('slug', $slug)->first();
-//   }
+  public function findBySlug($slug){
+    return MyNews::where('slug', $slug)->first();
+  }
 
-  // Update a news category
-//   public function update($request, $slug) {
-//     $newsCategory = $this->findBySlug($slug);
-//     $newsCategory->name = $request->name;  
-//     $newsCategory->description = $request->description;    
-//     $str = strtolower($request->name);
+  // Update a news
+  public function update($request, $slug) {
+    $news = $this->findBySlug($slug);
+    $news->title = $request->title;  
+    $news->body = $request->body;   
+    // $news->news_image = $request->news_image;  
+    if ($request->has('news_image')) {
+      $image = $request->file('news_image');
+      $filename = time().'.'.$image->getClientOriginalExtension();
+      $destinationPath = public_path('uploads/news/');
+      $image->move($destinationPath, $filename);  
 
-//     $newsCategory->slug = preg_replace('/\s+/', '-', $str);
-//     $newsCategory->save();
-//     return $newsCategory;
-//   }
+      $news->news_image = $filename;
+    }
+    $news->news_category = $request->news_category;
+    $str = strtolower($request->title);
+    $news->slug = preg_replace('/\s+/', '-', $str);
+    $news->tags = $request->tags;
+    $news->save();
+    return $news;
+  }
 
-  // Remove a Menu Item
-//   public function remove($slug) {
-//     $newsCategory = $this->findBySlug($slug);
-//     return $newsCategory->delete();
-//   }
+  // Remove news
+  public function remove($slug) {
+    $news = $this->findBySlug($slug);
+    return $news->delete();
+  }
 
 //   public function trash() {
 //     return Menu::onlyTrashed()->get();

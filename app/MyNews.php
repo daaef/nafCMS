@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class News extends Model
+class MyNews extends Model
 {
     protected $fillable = [
 		'title',
@@ -13,9 +13,5 @@ class News extends Model
         'news_image',
         'news_category',
         'tags' 
-	];
-
-	protected $casts = [
-		'permissions' => 'array',
 	];
 }
