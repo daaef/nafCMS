@@ -69,7 +69,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="" class="sidebar-link">
+              <a href="{{ route('news.index') }}" class="sidebar-link">
                 <i class="mdi mdi-view-parallel"></i>
                 <span class="hide-menu">Create News </span>
               </a>

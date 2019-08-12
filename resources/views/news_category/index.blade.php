@@ -185,7 +185,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon11"><i class="ti-comment-alt"></i></span>
                     </div>
-                    <textarea class="form-control" placeholder="Description" aria-label="Role Description" aria-describedby="basic-addon11" name="description">
+                    <textarea class="form-control" placeholder="Description" aria-label="Role Description" aria-describedby="basic-addon11" name="description" value="{{ $modal->description }}">
                       {{ $modal->description }}
                     </textarea>
                   </div>
@@ -217,7 +217,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form class="form p-t-20" method="post" action="">
+          <form class="form p-t-20" method="post" action="{{ route('newsCategory.delete', $modal->slug)}}">
             <div class="modal-body">
               {{ csrf_field() }}
               {{ method_field('GET') }}

@@ -189,6 +189,7 @@ return [
  		App\Providers\LoginServiceProvider::class,
         App\Providers\RegisterServiceProvider::class,
         App\Providers\NewsCategoryServiceProvider::class,
+        App\Providers\NewsServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Creativeorange\Gravatar\GravatarServiceProvider::class,
