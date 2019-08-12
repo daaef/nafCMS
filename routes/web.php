@@ -100,6 +100,13 @@ Route::group(['prefix' => 'admin'], function() {
     Route::put('/{slug}/edit', 'PageTypeController@update')->name('pageType.update');
   });
 
+  // Page Route Resources
+  Route::group(['prefix' => 'pages'], function() {
+    Route::get('/', 'PageController@index')->name('page.index');
+    Route::get('/create', 'PageController@create')->name('page.create');
+    Route::post('/create', 'PageController@store')->name('page.store');
+  });
+
   // News Category
   Route::group(['prefix' => 'news-category'], function () {
     Route::get('/', 'NewsCategoryController@index')->name('newsCategory.index');
