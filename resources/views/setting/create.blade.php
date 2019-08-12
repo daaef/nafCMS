@@ -18,7 +18,6 @@
             </div>
           @endif
 
-<<<<<<< HEAD
 <form method="POST" action="{{ route('setting.store')}}" enctype="multipart/form-data">
     {{ csrf_field() }}                   
   <div class="form-row">
@@ -55,7 +54,6 @@
     <div class="col">
       <input type="text" class="form-control" placeholder="footer instagram" name="footer_instagram">
       <p>{{ $errors->first('footer_instagram') }}</p>
-=======
           @if(session('success'))
             <div class="alert alert-success alert-dismissable"> 
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -146,7 +144,6 @@
           </div>
         
       </div>
->>>>>>> 995025017288a320d6e267ff3f5e6a6123b3c416
     </div>
   </div>
 

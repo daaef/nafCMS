@@ -45,27 +45,10 @@ Route::group(['prefix' => 'auth'], function() {
   
 });
 
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> 995025017288a320d6e267ff3f5e6a6123b3c416
 Route::group(['prefix' => 'admin'], function() {
-  Route::get('/dashboard', 'AdminController@index')->name('admin.index');
+Route::get('/dashboard', 'AdminController@index')->name('admin.index');
 
-  Route::group(['prefix' => 'settings'], function() {
-    Route::get('/', 'SettingController@index')->name('get_setting');
-    Route::post('/', 'SettingController@store')->name('store.settings');
-    Route::get('/create-settings', 'SettingController@create')->name('create.settings');
-    
 
-    Route::get('/find-setting/{id}', 'SettingController@show')->name('find.setting');
-    Route::get('/edit-setting/{id}', 'SettingController@edit')->name('edit.setting');
-    Route::put('/update-setting/{id}', 'SettingController@update')->name('update.setting');
-    Route::get('/delete-setting/{id}', 'SettingController@delete')->name('delete.setting');
-  });
 
   // Menu Roles Resources
   Route::group(['prefix' => 'roles'], function() {
@@ -119,7 +102,6 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/{slug}/delete', 'NewsCategoryController@delete')->name('newsCategory.delete');
   });
 
-<<<<<<< HEAD
 
 Route::group(['prefix' => 'sliders'], function(){
   Route::get('/{data}/edit', 'SliderController@edit')->name('slider.edit');
@@ -151,7 +133,6 @@ Route::group(['prefix' => 'settings'], function(){
 
 
   
-=======
   Route::group(['prefix' => 'sliders'], function() {
     Route::get('/', 'SliderController@index')->name('slider.index');
     Route::get('/create', 'SliderController@create')->name('slider.create');
@@ -161,19 +142,8 @@ Route::group(['prefix' => 'settings'], function(){
     Route::put('/{slug}/update', 'SliderController@update')->name('slider.update');
     Route::get('/{slug}/delete', 'SliderController@delete')->name('slider.delete');
   });
->>>>>>> 995025017288a320d6e267ff3f5e6a6123b3c416
+
 });
  
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> 995025017288a320d6e267ff3f5e6a6123b3c416
-  
-
 
 
