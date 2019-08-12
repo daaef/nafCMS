@@ -1,4 +1,4 @@
-@extends('layouts.app');
+@extends('layout.master')
 
 @section('content')
 <h1 class="text-center">All Sliders</h1>
@@ -18,7 +18,7 @@
         <td>{{ $slider->title }}</td>
         <td>{{ $slider->description }}</td>
         <td>
-          <a href="{{ route('slider.edit', $slider->slug) }}"> Edit </a>
+         <a href="{{ route('slider.edit', $slider->slug) }}"> Edit </a>
           <a href="{{ route('slider.delete', $slider->slug) }}"> Delete </a>
         </td>
       </tr>

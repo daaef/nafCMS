@@ -1,6 +1,6 @@
 <?php
-namespace App\Repositories\Setting;
-interface SettingContract {
+namespace App\Repositories\Gallery;
+interface GalleryContract {
   public function create($request);
   public function findAll();
   public function findById($id);

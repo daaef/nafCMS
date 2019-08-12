@@ -2,14 +2,14 @@
 
 @section('content')
 
-<h1 class="text-center pt-5">Sliders</h1>
+<h1 class="text-center pt-5">Gallery</h1>
 
-<form method="POST" action="{{ route('slider.store')}}" enctype="multipart/form-data">
+<form method="POST" action="{{ route('gallery.store')}}" enctype="multipart/form-data">
     {{ csrf_field() }}                   
   <div class="form-row">
     <div class="col">
-      <input type="file"  placeholder="slider Image" name="slider_image">
-      <p>{{ $errors->first('slider_image') }}</p>
+      <input type="file"  placeholder="gallery Image" name="image">
+      <p>{{ $errors->first('image') }}</p>
     </div>
     <div class="col">
       <input type="text" class="form-control" placeholder=" title" name="title">

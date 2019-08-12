@@ -15,7 +15,6 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-
 // Authentication Route Group
 Route::group(['prefix' => 'auth'], function() {
 
@@ -39,7 +38,6 @@ Route::group(['prefix' => 'auth'], function() {
 
   // Logout Route Resources
   Route::post('/logout', 'LoginController@logout')->name('logout');
-
   
 });
 
@@ -117,20 +115,31 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/{slug}/delete', 'NewsCategoryController@delete')->name('newsCategory.delete');
   });
 
-  Route::group(['prefix' => 'sliders'], function() {
-    Route::get('/', 'SliderController@index')->name('slider.index');
+  Route::group(['prefix' => 'sliders'], function(){
+    Route::get('/{data}/edit', 'SliderController@edit')->name('slider.edit');
     Route::get('/create', 'SliderController@create')->name('slider.create');
     Route::post('/create', 'SliderController@store')->name('slider.store');
-    
-    Route::get('/{slug}/edit', 'SliderController@edit')->name('slider.edit');
-    Route::put('/{slug}/update', 'SliderController@update')->name('slider.update');
-    Route::get('/{slug}/delete', 'SliderController@delete')->name('slider.delete');
+    Route::get('/', 'SliderController@index')->name('slider.index');
+    Route::put('/{data}/update', 'SliderController@update')->name('slider.update');
+    Route::get('/{data}/delete', 'SliderController@delete')->name('slider.delete');
   });
+
+  Route::group(['prefix' => 'gallery'], function(){
+    Route::get('/create', 'GalleryController@create')->name('gallery.create');
+    Route::post('/create', 'GalleryController@store')->name('gallery.store');
+    Route::get('/', 'GalleryController@index')->name('gallery.index');
+    Route::get('/{slug}/edit', 'GalleryController@edit')->name('gallery.edit');
+    Route::put('/{slug}/update', 'GalleryController@update')->name('gallery.update');
+    Route::get('/{slug}/delete', 'GalleryController@delete')->name('gallery.delete');
+  });
+
+  // Route::group(['prefix' => 'settings'], function(){
+  //   Route::get('/', 'SettingController@index')->name('setting.index');
+  //   Route::get('/create', 'SettingController@create')->name('setting.create');
+  //   Route::post('/create', 'SettingController@store')->name('setting.store');
+  //   Route::get('/edit/{id}', 'SettingController@show')->name('setting.show');
+  //   Route::get('/setting/{id}', 'SettingController@edit')->name('setting.edit');
+  //   Route::put('/update/{id}', 'SettingController@update')->name('setting.update');
+  //   Route::get('/delete/{id}', 'SettingController@delete')->name('setting.delete');
+  // });  
 });
- 
-
-
-  
-
-
-

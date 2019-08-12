@@ -1,4 +1,4 @@
-@extends('layouts.app');
+@extends('layout.master')
 
 @section('content')
 <h1 class="text-center">All Settings</h1>
@@ -25,8 +25,8 @@
         <td>{{ $setting->footer_twitter }}</td>
         <td>{{ $setting->footer_instagram }}</td>
         <td>
-          <a href="{{ route('edit.setting', $setting->id) }}"> Edit </a>
-          <a href="{{ route('delete.setting', $setting->id) }}"> Delete </a>
+          <a href="{{ route('setting.edit', $setting->id) }}"> Edit </a>
+          <a href="{{ route('setting.delete', $setting->id) }}"> Delete </a>
         </td>
       </tr>
     @endforeach
