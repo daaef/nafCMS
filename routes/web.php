@@ -45,7 +45,7 @@ Route::group(['prefix' => 'admin'], function() {
   Route::get('/dashboard', 'AdminController@index')->name('admin.index');
 
   Route::group(['prefix' => 'settings'], function() {
-    Route::get('/', 'SettingController@index')->name('get_setting');
+    Route::get('/', 'SettingController@create')->name('get_setting');
     Route::post('/', 'SettingController@store')->name('store.settings');
     Route::get('/create-settings', 'SettingController@create')->name('create.settings');
     
