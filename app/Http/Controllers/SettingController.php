@@ -3,34 +3,34 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use App\Repositories\Setting\SettingContract;
-use App\Setting;
-
-class SettingController extends Controller {
-	protected $repo;
-	public function __construct(SettingContract $settingContract) {
-		$this->repo = $settingContract;
-	}
-	
-	public function index() {
-		// $settings = $this->repo->getAll();
-		$settings = Setting::findOrFail(1);
-		return view('setting.create')->with('settings', $settings);
-	}
-	
-	public function create() {
-		return view('setting.create');
-	}
-	
-	public function store(Request $request) {
-		$this->validate($request, [
-			'site_logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-			'site_title' => 'required',
-			'footer_copywrite' => 'required',
-			'footer_facebook' => 'url',
-			'footer_twitter' => 'url',
-			'footer_instagram' => 'url',
-
-		]);
+class SettingController extends Controller
+{
+    protected $repo;
+    public function __construct(SettingContract $settingContract) {
+        $this->repo = $settingContract;
+    }
+    
+    public function index()
+    {
+        $settings = $this->repo->findAll();
+        return view('setting.index')->with('settings', $settings);
+    }
+    
+    public function create()
+    {
+        return view('setting.create');
+    }
+    
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'site_logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'site_title' => 'required',
+            'footer_copywrite' => 'required',
+            'footer_facebook' => 'url',
+            'footer_twitter' => 'url',
+            'footer_instagram' => 'url',
+	]);
 
 	   
 		if ($request->has('site_logo')) {
@@ -62,33 +62,36 @@ class SettingController extends Controller {
 				return back()->withInput()->with('error', 'There was an error');
 			}
 		}
-	   
-	}
-	
-	public function show($id)
-	{
-		$setting = $this->repo->find($id);
-		return $setting;
-	}
-	
-	public function edit($id)
-	{
-		
-		$setting = $this->repo->edit($id);
-		return view('setting.edit')->with('setting', $setting);
-	}
-	
-	public function update(Request $request, $id)
-	{
-		$this->validate($request, [
-			'site_logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-			'site_title' => 'required',
-			'footer_copywrite' => 'required',
-			'footer_facebook' => 'url',
-			'footer_twitter' => 'url',
-			'footer_instagram' => 'url',
 
+       
+    }
+    
+    public function show($id)
+    {
+        $setting = $this->repo->findById($id);
+        return $setting;
+    }
+    
+    public function edit($id)
+    {
+        
+        $setting = $this->repo->findById($id);
+        return view('setting.edit')->with('setting', $setting);
+    }
+    
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'site_logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'site_title' => 'required',
+            'footer_copywrite' => 'required',
+            'footer_facebook' => 'url',
+            'footer_twitter' => 'url',
+            'footer_instagram' => 'url',
+	   
 		]);
+	
+	
 
 		if($request->has('site_logo')) { 
 		  $file = $request->file('site_logo');
@@ -118,12 +121,16 @@ class SettingController extends Controller {
 				return back()->withInput()->with('error', 'There was an error');
 			}
 		}
-	}
+    }
+    
+    public function delete($id)
+    {
+        $setting = $this->repo->remove($id);
+        $message = "settings deleted successfully";
+        return redirect()->back()->with('message', $message);
+    }
+
 	
-	public function delete($id)
-	{
-		$setting = $this->repo->delete($id);
-		$message = "settings deleted successfully";
-		return redirect()->back()->with('message', $message);
-	}
+	
+
 }

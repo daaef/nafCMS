@@ -18,6 +18,44 @@
             </div>
           @endif
 
+<<<<<<< HEAD
+<form method="POST" action="{{ route('setting.store')}}" enctype="multipart/form-data">
+    {{ csrf_field() }}                   
+  <div class="form-row">
+    <div class="col">
+      <input type="file"  placeholder="site logo" name="site_logo">
+      <p>{{ $errors->first('site_logo') }}</p>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="site title" name="site_title">
+      <p>{{ $errors->first('site_title') }}</p>
+    </div>
+  </div>
+  <div class="form-row mt-3">
+    <div class="col">
+      <textarea type="text" class="form-control" placeholder="site description" name="site_description"></textarea>
+      <p>{{ $errors->first('site_description') }}</p>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="footer copywrite" name="footer_copywrite">
+      <p>{{ $errors->first('footer_copywrite') }}</p>
+    </div>
+  </div>
+  <div class="form-row mt-3">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="footer facebook" name="footer_facebook">
+      <p>{{ $errors->first('footer_facebook') }}</p>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="footer twitter" name="footer_twitter">
+      <p>{{ $errors->first('footer_twitter') }}</p>
+    </div>
+  </div>
+  <div class="form-row mt-3">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="footer instagram" name="footer_instagram">
+      <p>{{ $errors->first('footer_instagram') }}</p>
+=======
           @if(session('success'))
             <div class="alert alert-success alert-dismissable"> 
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -73,7 +111,7 @@
                         <label>Footer Facebook</label>
                         <div class="input-group mb-3">
                           <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon4"><i class="ti-lock"></i></span>
+                            <span class="input-group-text" id="basic-addon4"><i class="ti-facebook"></i></span>
                           </div>
                           <input type="text" class="form-control" placeholder="Footer Copyright" name="footer_facebook" value="{{ $settings->footer_facebook }}" aria-label="Footer Copyright" aria-describedby="basic-addon4">
                         </div>
@@ -83,7 +121,7 @@
                         <label>Footer Twitter</label>
                         <div class="input-group mb-3">
                           <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon4"><i class="ti-lock"></i></span>
+                            <span class="input-group-text" id="basic-addon4"><i class="ti-twitter"></i></span>
                           </div>
                           <input type="text" class="form-control" placeholder="Footer Copyright" name="footer_twitter" value="{{ $settings->footer_twitter }}" aria-label="Footer Copyright" aria-describedby="basic-addon4">
                         </div>
@@ -108,6 +146,7 @@
           </div>
         
       </div>
+>>>>>>> 995025017288a320d6e267ff3f5e6a6123b3c416
     </div>
   </div>
 

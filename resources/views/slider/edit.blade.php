@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('layout.master')
 @section('content')
 <h1 class="text-center pt-5">Sliders</h1>
 

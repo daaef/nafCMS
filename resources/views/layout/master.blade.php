@@ -2,6 +2,13 @@
 <html dir="ltr" lang="en">
 
 <head>
+<<<<<<< HEAD
+  <title></title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+  
+  
+=======
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Tell the browser to be responsive to screen width -->
@@ -26,6 +33,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+>>>>>>> 995025017288a320d6e267ff3f5e6a6123b3c416
 </head>
 
 <body>

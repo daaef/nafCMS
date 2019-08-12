@@ -1,9 +1,9 @@
 <?php
-namespace App\Repositories\Setting;
-interface SettingContract {
+namespace App\Repositories\Page;
+interface PageContract {
   public function create($request);
   public function findAll();
   public function findById($id);
   public function update($request, $id);
-  public function remove($slug);
+  public function remove($id);
 }
