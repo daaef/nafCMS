@@ -11,4 +11,14 @@
   <li><a href="{{ route('pageType.index') }}">Page Types</a></li>
   <li><a href="{{ route('pageType.create') }}">Create Page Type</a></li>
 
+  <li><a href="{{ route('setting.create') }}">create settings</a></li>
+  <li><a href="{{ route('setting.index') }}">view settings</a></li>
+
+  <li><a href="{{ route('slider.create') }}">create slider</a></li>
+  <li><a href="{{ route('slider.index') }}">view sliders</a></li>
+
+  <li><a href="{{ route('gallery.create') }}">create gallery</a></li>
+  <li><a href="{{ route('gallery.index') }}">view gallery images</a></li>
+
+
 </ul>
