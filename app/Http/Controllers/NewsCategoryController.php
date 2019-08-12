@@ -19,7 +19,7 @@ class NewsCategoryController extends Controller
     }
     
     public function create() {
-		return view('news_category.create');
+		  return view('news_category.create');
     }
     
     public function store(Request $request) {
