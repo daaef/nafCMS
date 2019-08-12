@@ -1,91 +1,110 @@
-<!DOCTYPE html>  
-<html lang="en">
+
+<!DOCTYPE html>
+<html dir="ltr">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
-<title>Terminus.ng > Reset Password</title>
-<!-- Bootstrap Core CSS -->
-<link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- animation CSS -->
-<link href="/css/animate.css" rel="stylesheet">
-<!-- Custom CSS -->
-<link href="/css/style.css" rel="stylesheet">
-<!-- color CSS -->
-<link href="/css/colors/default.css" id="theme"  rel="stylesheet">
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+  <title>Airforce Nigeria > Login</title>
+  <!-- Custom CSS -->
+  <link href="{{ URL::asset('/assets/dist/css/style.min.css') }}" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
 </head>
+
 <body>
-<!-- Preloader -->
-<div class="preloader">
-	<div class="cssload-speeding-wheel"></div>
-</div>
-<section id="wrapper" class="login-register">
-	<div class="login-box">
-		<div class="white-box">
-			<form class="form-horizontal form-material" method="post" action="">
-				{{ csrf_field() }}
-				<h3 class="box-title m-b-20">Reset My Password</h3>
-				@if(count($errors) > 0 )
-					<div class="alert alert-danger alert-dismissable"> 
-          				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-          				<ul>
-          					@foreach($errors->all() as $error)
-          						<li>{{ $error }}</li>
-          					@endforeach
-          				</ul>          				
-          			</div>
-          		@endif
+  <div class="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+      <div class="lds-ripple">
+        <div class="lds-pos"></div>
+        <div class="lds-pos"></div>
+      </div>
+    </div>
+    
+    <div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(../../assets/images/big/auth-bg.jpg) no-repeat center center;">
+      <div class="auth-box">
+        <div id="loginform">
+          <div class="logo">
+            <!-- <span class="db"><img src="../../assets/images/logo-icon.png" alt="logo" /></span> -->
+            <h5 class="font-medium m-b-20">Password Reset</h5>
+          </div>
+          <!-- Form -->
+          <div class="row">
+            <div class="col-12">
+              <form class="form-horizontal m-t-20" id="loginform" action="" method="post">
+                @if(session('error'))
+                  <div class="alert alert-danger alert-dismissable"> 
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    {{ session('error') }}
+                  </div>
+                @endif
 
-				@if(session('error'))
-          			<div class="alert alert-danger alert-dismissable"> 
-          				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-          				{{ session('error') }}
-          			</div>
-          		@endif
-
-				<div class="form-group ">
-					<div class="col-xs-12">
-						<input class="form-control" name="password" type="password" required="" placeholder="New Password">
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-xs-12">
-						<input class="form-control" name="password_confirmation" type="password" required="" placeholder="Confirm Password">
-					</div>
-				</div>
-				<div class="form-group text-center m-t-20">
-					<div class="col-xs-12">
-						<button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Reset My Password</button>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
-</section>
-<!-- jQuery -->
-<script src="/plugins/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Menu Plugin JavaScript -->
-<script src="/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
-
-<!--slimscroll JavaScript -->
-<script src="/js/jquery.slimscroll.js"></script>
-<!--Wave Effects -->
-<script src="/js/waves.js"></script>
-<!-- Custom Theme JavaScript -->
-<script src="/js/custom.min.js"></script>
-<!--Style Switcher -->
-<script src="/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+                @if(session('success'))
+                  <div class="alert alert-success alert-dismissable"> 
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    {{ session('success') }}
+                  </div>
+                @endif 
+                {{ csrf_field() }}
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="ti-lock"></i></span>
+                  </div>
+                  <input type="password" value="{{ old('password') }}" class="form-control form-control-lg" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon2"><i class="ti-lock"></i></span>
+                  </div>
+                  <input type="password" value="{{ old('password') }}" class="form-control form-control-lg" name="password_confirmation" placeholder="Confirm Password" aria-label="Password" aria-describedby="basic-addon1">
+                </div>
+                <div class="form-group text-center">
+                  <div class="col-xs-12 p-b-20">
+                    <button class="btn btn-block btn-lg btn-success" type="submit">Reset my Password</button>
+                  </div>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <!-- ============================================================== -->
+  <!-- All Required js -->
+  <!-- ============================================================== -->
+  <script src="{{ URL::asset('/assets/libs/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ URL::asset('/assets/libs/popper.js/dist/umd/popper.min.js') }}"></script>
+    <script src="{{ URL::asset('/assets/libs/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+  <!-- ============================================================== -->
+  <!-- This page plugin js -->
+  <!-- ============================================================== -->
+  <script>
+  $('[data-toggle="tooltip"]').tooltip();
+  $(".preloader").fadeOut();
+  // ============================================================== 
+  // Login and Recover Password 
+  // ============================================================== 
+  $('#to-recover').on("click", function() {
+    $("#loginform").slideUp();
+    $("#recoverform").fadeIn();
+  });
+  </script>
 </body>
+
 </html>

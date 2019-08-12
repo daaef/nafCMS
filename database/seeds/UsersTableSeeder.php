@@ -59,7 +59,7 @@ class UsersTableSeeder extends Seeder
       'first_name' => 'Nani',
       'last_name' => 'Moderator',
       'phone' => '1234567890',
-      'email' => 'partner@airforce.ng',
+      'email' => 'moderator@airforce.ng',
       'username' => 'moderator',
       'user_role' => 'moderator',
       'password' => 'secret',
