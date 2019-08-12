@@ -45,15 +45,13 @@ Route::group(['prefix' => 'admin'], function() {
   Route::get('/dashboard', 'AdminController@index')->name('admin.index');
 
   Route::group(['prefix' => 'settings'], function() {
-    Route::get('/', 'SettingController@create')->name('get_setting');
-    Route::post('/', 'SettingController@store')->name('store.settings');
-    Route::get('/create-settings', 'SettingController@create')->name('create.settings');
-    
-
-    Route::get('/find-setting/{id}', 'SettingController@show')->name('find.setting');
-    Route::get('/edit-setting/{id}', 'SettingController@edit')->name('edit.setting');
-    Route::put('/update-setting/{id}', 'SettingController@update')->name('update.setting');
-    Route::get('/delete-setting/{id}', 'SettingController@delete')->name('delete.setting');
+     Route::get('/', 'SettingController@index')->name('setting.index');
+    Route::get('/create', 'SettingController@create')->name('setting.create');
+    Route::post('/create', 'SettingController@store')->name('setting.store');
+    Route::get('/edit/{id}', 'SettingController@show')->name('setting.show');
+    Route::get('/setting/{id}', 'SettingController@edit')->name('setting.edit');
+    Route::put('/update/{id}', 'SettingController@update')->name('setting.update');
+    Route::get('/delete/{id}', 'SettingController@delete')->name('setting.delete');
   });
 
   // Menu Roles Resources
@@ -115,7 +113,8 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/{slug}/delete', 'NewsCategoryController@delete')->name('newsCategory.delete');
   });
 
-  Route::group(['prefix' => 'sliders'], function(){
+  Route::group(['prefix' => 'admin'], function() {
+    Route::group(['prefix' => 'sliders'], function(){
     Route::get('/{data}/edit', 'SliderController@edit')->name('slider.edit');
     Route::get('/create', 'SliderController@create')->name('slider.create');
     Route::post('/create', 'SliderController@store')->name('slider.store');
@@ -123,6 +122,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::put('/{data}/update', 'SliderController@update')->name('slider.update');
     Route::get('/{data}/delete', 'SliderController@delete')->name('slider.delete');
   });
+});
 
   Route::group(['prefix' => 'gallery'], function(){
     Route::get('/create', 'GalleryController@create')->name('gallery.create');
@@ -133,13 +133,4 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/{slug}/delete', 'GalleryController@delete')->name('gallery.delete');
   });
 
-  // Route::group(['prefix' => 'settings'], function(){
-  //   Route::get('/', 'SettingController@index')->name('setting.index');
-  //   Route::get('/create', 'SettingController@create')->name('setting.create');
-  //   Route::post('/create', 'SettingController@store')->name('setting.store');
-  //   Route::get('/edit/{id}', 'SettingController@show')->name('setting.show');
-  //   Route::get('/setting/{id}', 'SettingController@edit')->name('setting.edit');
-  //   Route::put('/update/{id}', 'SettingController@update')->name('setting.update');
-  //   Route::get('/delete/{id}', 'SettingController@delete')->name('setting.delete');
-  // });  
 });

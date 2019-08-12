@@ -91,7 +91,7 @@
         </li>
 
 				<li class="sidebar-item">
-					<a class="sidebar-link waves-effect waves-dark" href="{{ route('get_setting') }}" aria-expanded="false">
+					<a class="sidebar-link waves-effect waves-dark" href="{{ route('setting.index') }}" aria-expanded="false">
 						<i class="mdi mdi-av-timer"></i>
 						<span class="hide-menu">Settings</span>
 					</a>
