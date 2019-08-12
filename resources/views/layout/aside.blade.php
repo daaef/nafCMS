@@ -71,6 +71,13 @@
 				</li>
 
 				<li class="sidebar-item">
+					<a class="sidebar-link waves-effect waves-dark" href="{{ route('news.index') }}" aria-expanded="false">
+						<i class="mdi mdi-view-quilt"></i>
+						<span class="hide-menu">News </span>
+					</a>                    
+				</li>
+
+				<li class="sidebar-item">
 					<a class="sidebar-link waves-effect waves-dark" href="{{ route('get_setting') }}" aria-expanded="false">
 						<i class="mdi mdi-av-timer"></i>
 						<span class="hide-menu">Settings</span>

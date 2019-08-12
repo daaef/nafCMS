@@ -110,6 +110,16 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/{slug}/delete', 'NewsCategoryController@delete')->name('newsCategory.delete');
   });
 
+  // News
+  Route::group(['prefix' => 'news'], function () {
+    Route::get('/', 'NewsController@index')->name('news.index');
+    // Route::get('/create', 'NewsCategoryController@create')->name('newsCategory.create');
+    // Route::post('/create', 'NewsCategoryController@store')->name('newsCategory.store');
+    // Route::get('/{slug}/edit', 'NewsCategoryController@edit')->name('newsCategory.edit');
+    // Route::put('/{slug}/update', 'NewsCategoryController@update')->name('newsCategory.update');
+    // Route::get('/{slug}/delete', 'NewsCategoryController@delete')->name('newsCategory.delete');
+  });
+
   Route::group(['prefix' => 'sliders'], function() {
     Route::get('/', 'SliderController@index')->name('slider.index');
     Route::get('/create', 'SliderController@create')->name('slider.create');

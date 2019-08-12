@@ -20,12 +20,12 @@
         <div class="card-body">
           <div class="row" style="margin-bottom: 20px;">
             <div class="col-md-8">
-              <h4 class="card-title">List all News Category</h4>
+              <h4 class="card-title">List all News</h4>
             </div>
 
             <div class="col-md-4 ml-auto">
               <div class="form-group pull-right">
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Create News Category</button>  
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Create News</button>  
               </div>
             </div>
           </div>
@@ -47,27 +47,30 @@
           <table id="users" class="table table-striped table-bordered" style="width:100%">
             <thead>
               <tr>
-                <th>News Category Name</th>
-                <th>News Category Description</th>
-                <th>News Category Slug</th>
+                <th>News Title</th>
+                <th>News Body</th>
+                <th>News Slug</th>
+                <th>Image</th>
+                <th>Category</th>
+                <!-- <th>News Slug</th> -->
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
-              @if(count($news_categories) > 0)
-              @foreach($news_categories as $news_category)
+              @if(count($news) > 0)
+              @foreach($news as $new)
                   <tr>
-                    <td>{{ $news_category->name }}</td>  
-                    <td>{{ $news_category->description }}</td>              
-                    <td>{{ $news_category->slug }}</td>                    
+                    <td>{{ $new->name }}</td>  
+                    <td>{{ $new->description }}</td>              
+                    <td>{{ $new->slug }}</td>                    
                     <td>
-                      <button class="btn btn-primary btn-circle waves-effect waves-light" data-toggle="modal" data-target="#exampleModal{{ $news_category->id }}" data-whatever="@getbootstrap" data-toggle="tooltip" title="Edit Client" data-placement="top">
+                      <button class="btn btn-primary btn-circle waves-effect waves-light" data-toggle="modal" data-target="#exampleModal{{ $news->id }}" data-whatever="@getbootstrap" data-toggle="tooltip" title="Edit Client" data-placement="top">
                         <span class="btn-label">
                           <i class="far fa-edit"></i>
                         </span>
                       </button>
 
-                      <button class="btn btn-danger btn-circle waves-effect waves-light" data-toggle="modal" data-target="#deleteClientModal{{ $news_category->id }}" data-toggle="tooltip" title="Delete Client" data-placement="top"><span class="btn-label"><i class="fa fa-trash"></i></span></button>
+                      <button class="btn btn-danger btn-circle waves-effect waves-light" data-toggle="modal" data-target="#deleteClientModal{{ $news->id }}" data-toggle="tooltip" title="Delete Client" data-placement="top"><span class="btn-label"><i class="fa fa-trash"></i></span></button>
                     </td>
                   </tr>
                 @endforeach
@@ -75,7 +78,7 @@
               @else
                 <tr>
                   <td colspan="8" class="text-center">
-                    <h4 class="card-title">No News Category Created yet.</h4>
+                    <h4 class="card-title">No News Created yet.</h4>
                     <p>Please create</p>
                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Create News Category</button>
                   </td>
@@ -84,9 +87,12 @@
             </tbody>
             <tfoot>
               <tr>
-                <th>News Category Name</th>
-                <th>News Category Description</th>
-                <th>News Category Slug</th>
+                <th>News Title</th>
+                <th>News Body</th>
+                <th>News Slug</th>
+                <th>Image</th>
+                <th>Category</th>
+                <!-- <th>News Slug</th> -->
                 <th>Actions</th>
               </tr>
             </tfoot>
@@ -106,7 +112,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form class="form p-t-20" method="post" action="{{ route('newsCategory.store')}}">
+        <form class="form p-t-20" method="post" action="">
           <div class="modal-body">            
             {{ csrf_field() }}
             
@@ -118,7 +124,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon11"><i class="ti-user"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="News Category Name" aria-label="News Category Name" aria-describedby="basic-addon11" name="name">
+                    <input type="text" class="form-control" placeholder="News Name" aria-label="News Name" aria-describedby="basic-addon11" name="name">
                   </div>
                 </div>
               </div>
@@ -132,7 +138,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon11"><i class="ti-user"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="News Category Description" aria-label="News Category Description" aria-describedby="basic-addon11" name="description">
+                    <input type="text" class="form-control" placeholder="News Description" aria-label="News Description" aria-describedby="basic-addon11" name="description">
                   </div>
                 </div>
               </div>
@@ -149,7 +155,7 @@
   </div>
 
   <!-- Update User Modal -->
-  @foreach($news_categories as $modal)
+  @foreach($news as $modal)
     <div class="modal fade bs-example-modal-lg" id="exampleModal{{ $modal->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -159,7 +165,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form class="form p-t-20" method="post" action="{{ route('newsCategory.update', $modal->slug)}}">
+        <form class="form p-t-20" method="post" action="">
           <div class="modal-body">
             {{ method_field('PUT') }}
             {{ csrf_field() }}
@@ -202,7 +208,7 @@
   </div>
   @endforeach
 
-  @foreach($news_categories as $modal)
+  @foreach($news as $modal)
      
     <!-- ///////////////////////////////////////// -->
 
@@ -215,7 +221,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form class="form p-t-20" method="post" action="{{ route('newsCategory.delete', $modal->slug) }}">
+          <form class="form p-t-20" method="post" action="">
             <div class="modal-body">
               {{ csrf_field() }}
               {{ method_field('GET') }}
