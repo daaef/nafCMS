@@ -109,7 +109,7 @@
                         <label>Footer Facebook</label>
                         <div class="input-group mb-3">
                           <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon4"><i class="ti-lock"></i></span>
+                            <span class="input-group-text" id="basic-addon4"><i class="ti-facebook"></i></span>
                           </div>
                           <input type="text" class="form-control" placeholder="Footer Copyright" name="footer_facebook" value="{{ $settings->footer_facebook }}" aria-label="Footer Copyright" aria-describedby="basic-addon4">
                         </div>
@@ -119,7 +119,7 @@
                         <label>Footer Twitter</label>
                         <div class="input-group mb-3">
                           <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon4"><i class="ti-lock"></i></span>
+                            <span class="input-group-text" id="basic-addon4"><i class="ti-twitter"></i></span>
                           </div>
                           <input type="text" class="form-control" placeholder="Footer Copyright" name="footer_twitter" value="{{ $settings->footer_twitter }}" aria-label="Footer Copyright" aria-describedby="basic-addon4">
                         </div>

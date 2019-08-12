@@ -13,4 +13,8 @@ class PageType extends Model {
   ];
 
   protected $dates = ['deleted_at'];
+
+  public function pages() {
+    return $this->hasMany('App\Page');
+  }
 }
