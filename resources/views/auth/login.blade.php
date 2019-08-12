@@ -58,7 +58,7 @@
                                     </div>
                                     <input type="password" value="{{ old('password') }}" class="form-control form-control-lg" name="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
                                 </div>
-                                <div class="form-group row">
+                                <!-- <div class="form-group row">
                                     <div class="col-md-12">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -66,13 +66,13 @@
                                             <a href="javascript:void(0)" id="to-recover" class="text-dark float-right"><i class="fa fa-lock m-r-5"></i> Forgot password?</a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group text-center">
                                     <div class="col-xs-12 p-b-20">
                                         <button class="btn btn-block btn-lg btn-info" type="submit">Log In</button>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
                                         <div class="social">
                                             <a href="javascript:void(0)" class="btn  btn-facebook" data-toggle="tooltip" title="" data-original-title="Login with Facebook"> <i aria-hidden="true" class="fab  fa-facebook"></i> </a>
@@ -84,27 +84,27 @@
                                     <div class="col-sm-12 text-center">
                                         <a href="/" class="text-info m-l-5" data-toggle="tooltip" title="" data-original-title="Visit Airforce website"><b>visit site</b></a>
                                     </div>
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                     </div>
                 </div>
-                <div id="recoverform">
+                <!-- <div id="recoverform">
                     <div class="logo">
                         <span class="db"><img src="../../assets/images/logo-icon.png" alt="logo" /></span>
                         <h5 class="font-medium m-b-20">Recover Password</h5>
                         <span>Enter your Email and instructions will be sent to you!</span>
                     </div>
                     <div class="row m-t-20">
-                        <!-- Form -->
+                   
                         <form class="col-12" action="{{ route('password_recovery') }}">
-                            <!-- email -->
+                           
                             <div class="form-group row">
                                 <div class="col-12">
                                     <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="Enter Email">
                                 </div>
                             </div>
-                            <!-- pwd -->
+                           
                             <div class="row m-t-20">
                                 <div class="col-12">
                                     <button class="btn btn-block btn-lg btn-danger" type="submit" name="action">Reset</button>
@@ -112,7 +112,7 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         
