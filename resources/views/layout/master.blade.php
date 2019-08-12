@@ -42,8 +42,22 @@
   <div id="main-wrapper">
       
     @include('layout.header')
-      
-    @include('layout.aside')
+    
+    @if(Sentinel::getUser()->roles()->first()->slug === 'superadmin')
+      @include('layout.menus.superadmin')
+    @endif
+
+    @if(Sentinel::getUser()->roles()->first()->slug === 'admin')
+      @include('layout.aside')
+    @endif
+
+    @if(Sentinel::getUser()->roles()->first()->slug === 'moderator')
+      @include('layout.menus.moderator')
+    @endif
+
+    @if(Sentinel::getUser()->roles()->first()->slug === 'author')
+      @include('layout.menus.author')
+    @endif
           
     <div class="page-wrapper">
       <!-- ============================================================== -->
@@ -113,7 +127,7 @@
   <script src="{{ URL::asset('/assets/libs/chart.js/dist/chart.min.js') }}"></script>
   <script src="{{ URL::asset('/assets/libs/raphael/raphael.min.js') }}"></script>
   <script src="{{ URL::asset('/assets/libs/morris.js/morris.min.js') }}"></script>
-  <script src="{{ URL::asset('/assets/dist/js/pages/dashboards/dashboard2.js') }}"></script>
+  <script src="{{ URL::asset('/assets/dist/js/pages/dashboards/dashboard1.js') }}"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   <script>
     @if(Session::has('message'))

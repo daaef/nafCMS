@@ -37,17 +37,14 @@ class LoginController extends Controller {
 				// dd($authUser);
 				
 				try {
-				  if (Sentinel::getUser()->roles()->first()->slug === 'superadmin') {
-						
-						return "Super Admin dashboard";
+				  if (Sentinel::getUser()->roles()->first()->slug === 'superadmin') {						
+						return redirect()->route('admin.index');
 				  } elseif (Sentinel::getUser()->roles()->first()->slug === 'admin') {
 				  	return redirect()->route('admin.index');
-				  	return "admin dashboard";
 				  } elseif (Sentinel::getUser()->roles()->first()->slug === 'author') {
-						// return redirect()->route('dashboard.edit', $authUser->slug);
-						return "author dashboard";
+						return redirect()->route('admin.index');
 				  } elseif (Sentinel::getUser()->roles()->first()->slug === 'moderator') {			
-						return "Moderator dash";						
+						return redirect()->route('admin.index');
 				  }
 				} catch (\BadMethodCallException $e) {
 				  return redirect()->route('auth.login.get')->with('error', 'Your Session has expired. Please login again!');
