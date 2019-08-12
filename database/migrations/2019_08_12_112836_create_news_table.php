@@ -17,8 +17,10 @@ class CreateNewsTable extends Migration
             $table->bigIncrements('id');
             $table->string('slug')->unique();
             $table->string('title');
-            $table->string('description');
+            $table->string('body');
             $table->string('news_image');
+            $table->string('news_category');
+            $table->string('tags');
             $table->timestamps();
         });
     }
