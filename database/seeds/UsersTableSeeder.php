@@ -17,6 +17,7 @@ class UsersTableSeeder extends Seeder
       'email' => 'superadmin@airforce.ng',
       'username' => 'superadmin',
       'password' => 'secret',
+      'user_role' => 'superadmin',
       'slug' => 'super-admin',
     ];
     
@@ -31,6 +32,7 @@ class UsersTableSeeder extends Seeder
       'email' => 'admin@airforce.ng',
       'username' => 'admin',
       'password' => 'secret',
+      'user_role' => 'admin',
       'slug' => 'admin'      
     ];
   
@@ -44,6 +46,7 @@ class UsersTableSeeder extends Seeder
       'phone' => '1234567890',
       'email' => 'user@airforce.ng',
       'username' => 'author',
+      'user_role' => 'author',
       'password' => 'secret',
       'slug' => 'nani-user',
     ];
@@ -58,6 +61,7 @@ class UsersTableSeeder extends Seeder
       'phone' => '1234567890',
       'email' => 'partner@airforce.ng',
       'username' => 'moderator',
+      'user_role' => 'moderator',
       'password' => 'secret',
       'slug' => 'moderator',
     ];

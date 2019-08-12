@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Repositories\Setting\SettingContract;
 use Illuminate\Database\QueryException;
+use App\Repositories\Setting\SettingContract;
 class SettingController extends Controller
 {
     protected $repo;
@@ -30,31 +30,39 @@ class SettingController extends Controller
             'footer_facebook' => 'url',
             'footer_twitter' => 'url',
             'footer_instagram' => 'url',
+	]);
 
-        ]);
+	   
+		if ($request->has('site_logo')) {
+			$image = $request->file('site_logo');
+			$filename = time().'.'.$image->getClientOriginalExtension();
+			$destinationPath = public_path('uploads/logos/');
+			$image->move($destinationPath, $filename);		   
+		}		
 
-       
-          if ($request->has('site_logo')) {
-            $image = $request->file('site_logo');
-            $filename = time().'.'.$image->getClientOriginalExtension();
-            $destinationPath = public_path('uploads/logos/');
-            $image->move($destinationPath, $filename);
-           
-        }
-        
+		try{
+			$settings = $this->repo->create($request);
+			$settings['site_logo'] =  $filename;
+			$settings->save();
 
-        try{
-            $settings = $this->repo->create($request);
-            $settings['site_logo'] =  $filename;
-            $settings->save();
-            return $settings;
-        }
-        catch (QueryException $e) {
+			$notification = array(
+				'message' => "Menu $menu->name created successfully",
+				'alert-type' => 'success'
+			);
+
+			if($settings->id) {
+				return redirect()->back()->with($notification);
+			} else {
+				return back()->withInput()->with('error', 'Could not create store setting. Try again!');
+			}
+		}
+		catch (QueryException $e) {
 			$errorCode = $e->errorInfo[1];
 			if($errorCode == 1062){
 				return back()->withInput()->with('error', 'There was an error');
 			}
 		}
+
        
     }
     
@@ -80,35 +88,37 @@ class SettingController extends Controller
             'footer_facebook' => 'url',
             'footer_twitter' => 'url',
             'footer_instagram' => 'url',
+	   
+		]);
+	
+	
 
-        ]);
+		if($request->has('site_logo')) { 
+		  $file = $request->file('site_logo');
+		  $extension = $file->getClientOriginalExtension(); // getting image extension
+		  $filename =time().'.'.$extension;
+		  $file->move('uploads/logos/', $filename);
+		}
 
-        if($request->has('site_logo')) { 
-          $file = $request->file('site_logo');
-          $extension = $file->getClientOriginalExtension(); // getting image extension
-          $filename =time().'.'.$extension;
-          $file->move('uploads/logos/', $filename);
-        }
-
-        try{
-            $setting = $this->repo->update($id, $request);
-            $setting['site_logo'] =  $filename;
-            $setting->save();
-            return $setting;
-            $notification = array(
+		try{
+			$setting = $this->repo->update($id, $request);
+			$setting['site_logo'] =  $filename;
+			$setting->save();
+			return $setting;
+			$notification = array(
 				'message' => "Slider $setting->title created successfully",
 				'alert-type' => 'success'
 			);	
-            if($setting->id) {
+			if($setting->id) {
 				return redirect()->back()->with($notification);
 			} else {
 				return back()->withInput()->with('error', 'Could not create setting. Try again!');
 			}
-        }
-        catch (QueryException $e) {
+		}
+		catch (QueryException $e) {
 			$errorCode = $e->errorInfo[1];
 			if($errorCode == 1062){
-                return back()->withInput()->with('error', 'There was an error');
+				return back()->withInput()->with('error', 'There was an error');
 			}
 		}
     }
@@ -119,4 +129,8 @@ class SettingController extends Controller
         $message = "settings deleted successfully";
         return redirect()->back()->with('message', $message);
     }
+
+	
+	
+
 }

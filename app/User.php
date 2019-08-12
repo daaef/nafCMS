@@ -18,7 +18,14 @@ class User extends EloquentUser {
 	 * @var array
 	 */
 	protected $fillable = [
-		'name', 'email', 'phone', 'password',
+		'first_name', 
+		'last_name', 
+		'email', 
+		'phone', 
+		'password',
+		'username',
+		'user_role',
+		'slug',
 	];
 
 	protected $loginNames = ['email', 'username'];
@@ -48,6 +55,7 @@ class User extends EloquentUser {
 	}
 
 	// public function roles() {
-	// 	return $this->belongsToMany('App\Role', 'role_id');
-	// }
+ //    return $this->belongsToMany('App\Role', 'roles_users', 
+ //      'role_id', 'user_id');
+ //  }
 }
