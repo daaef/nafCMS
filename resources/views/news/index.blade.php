@@ -62,7 +62,7 @@
                   <tr>
                     <td>{{ $new->title }}</td>  
                     <td>{{ $new->body }}</td>  
-                    <td><img src="../uploads/news/{{$new->news_image}}" width="50px" heigth="50x" alt="heloo"></td>              
+                    <td><img src="../uploads/news/thumbnail/{{$new->news_image}}" width="50px" heigth="50x" alt="heloo"></td>              
                     <td>{{ $new->tags }}</td>             
                     <td>{{ $new->slug }}</td>                    
                     <td>
