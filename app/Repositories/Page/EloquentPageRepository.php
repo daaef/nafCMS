@@ -6,7 +6,7 @@ class EloquentPageRepository implements PageContract {
   //create a Page Item.  
   public function create($request) {
     $page = new Page;
-    $page->page_title = $request->page_title;
+    $page->name = $request->name;
     $page->description = $request->description;
     $page->page_content = $request->page_content;
     
@@ -18,18 +18,15 @@ class EloquentPageRepository implements PageContract {
 
     if ($request->has('feature_image')) {
       $image = $request->file('feature_image');
-      $filename = time().'.'.$image->getClientOriginalExtension();
+      $filename = time().'_feature_image.'.$image->getClientOriginalExtension();
       $destinationPath = public_path('uploads/pages/');
       $image->move($destinationPath, $filename);  
 
       $page->feature_image = $filename;
     }
 
-    // $page->feature_image = $request->feature_image;
-
-    $str = strtolower($request->page_title);
-    $page->slug = preg_replace('/\s+/', '-', $str);
-    $page->save();
+    $str = strtolower($request->name);
+    $page->slug = preg_replace('/\s+/', '-', $str);    
     return $page;
   }
 

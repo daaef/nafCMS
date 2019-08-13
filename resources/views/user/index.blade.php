@@ -65,13 +65,17 @@
                     <td>{{ $user->email }}</td>
                     <td><span class="label label-success label-rounded">{{ $user->user_role }}</span></td>
                     <td>
-                      <button class="btn btn-primary btn-circle waves-effect waves-light" data-toggle="modal" data-target="#exampleModal{{ $user->id }}" data-whatever="@getbootstrap" data-toggle="tooltip" title="Edit Client" data-placement="top">
-                        <span class="btn-label">
-                          <i class="far fa-edit"></i>
-                        </span>
-                      </button>
+                      @if(($user->id) == Sentinel::getUser()->id)
+                      <span class="label label-success label-rounded">You</span>
+                      @else
+                        <button class="btn btn-primary btn-circle waves-effect waves-light" data-toggle="modal" data-target="#exampleModal{{ $user->id }}" data-whatever="@getbootstrap" data-toggle="tooltip" title="Edit Client" data-placement="top">
+                          <span class="btn-label">
+                            <i class="far fa-edit"></i>
+                          </span>
+                        </button>
 
-                      <button class="btn btn-danger btn-circle waves-effect waves-light" data-toggle="modal" data-target="#deleteClientModal{{ $user->id }}" data-toggle="tooltip" title="Delete Client" data-placement="top"><span class="btn-label"><i class="fa fa-trash"></i></span></button>
+                        <button class="btn btn-danger btn-circle waves-effect waves-light" data-toggle="modal" data-target="#deleteClientModal{{ $user->id }}" data-toggle="tooltip" title="Delete Client" data-placement="top"><span class="btn-label"><i class="fa fa-trash"></i></span></button>
+                        @endif
                     </td>
                   </tr>
                 @endforeach

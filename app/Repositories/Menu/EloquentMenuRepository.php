@@ -11,6 +11,7 @@ class EloquentMenuRepository implements MenuContract {
     $menu->name = $request->name;    
     $str = strtolower($request->name);
     $menu->slug = preg_replace('/\s+/', '-', $str);
+    // dd($menu);
     $menu->save()      ;
     return $menu;
   }
