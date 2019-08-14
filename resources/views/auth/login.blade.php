@@ -46,18 +46,19 @@
 						<div class="col-12">
 							<form class="form-horizontal m-t-20" id="loginform" action="{{ route('auth.login.post') }}" method="post">
 								@if(session('error'))
-              <div class="alert alert-danger alert-dismissable"> 
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                {{ session('error') }}
-              </div>
-            @endif
+		              <div class="alert alert-danger alert-dismissable"> 
+		                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		                {{ session('error') }}
+		              </div>
+		            @endif
 
-            @if(session('success'))
-              <div class="alert alert-success alert-dismissable"> 
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                {{ session('success') }}
-              </div>
-            @endif 
+		            @if(session('success'))
+		              <div class="alert alert-success alert-dismissable"> 
+		                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		                {{ session('success') }}
+		              </div>
+		            @endif 
+						
 								{{ csrf_field() }}
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
@@ -134,8 +135,8 @@
 	<!-- All Required js -->
 	<!-- ============================================================== -->
 	<script src="{{ URL::asset('/assets/libs/jquery/dist/jquery.min.js') }}"></script>
-		<script src="{{ URL::asset('/assets/libs/popper.js/dist/umd/popper.min.js') }}"></script>
-		<script src="{{ URL::asset('/assets/libs/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+	<script src="{{ URL::asset('/assets/libs/popper.js/dist/umd/popper.min.js') }}"></script>
+	<script src="{{ URL::asset('/assets/libs/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 	<!-- ============================================================== -->
 	<!-- This page plugin js -->
 	<!-- ============================================================== -->
