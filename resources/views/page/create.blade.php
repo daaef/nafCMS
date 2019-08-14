@@ -21,7 +21,7 @@
                         <div class="input-group-prepend">
                           <span class="input-group-text" id="basic-addon22"><i class="ti-email"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Enter Page Title" name="page_title">
+                        <input type="text" class="form-control" placeholder="Enter Page Title" name="name">
                       </div>
                     </div>
                     <textarea class="summernote" name="page_content"></textarea>                      
@@ -50,17 +50,46 @@
                 {{ session('success') }}
               </div>
             @endif  
+            
 
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Status</label>
               </div>
-              <select class="custom-select" id="inputGroupSelect01">
+              <select class="custom-select" id="inputGroupSelect01" name="published">
                 <option value="No">No</option>
                 <option value="Yes">Yes</option>
                 <option value="Draft">Draft</option>
               </select>
             </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Parent Menu</label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect01" name="parent_menu">
+                @foreach($menus as $menu)
+                  <option value="{{ $menu->slug }}">{{ $menu->name }}</option>
+                @endforeach
+              </select>
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Before</label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect01" name="before">
+                @foreach($menus as $menu)
+                  <option value="{{ $menu->slug }}">{{ $menu->name }}</option>
+                @endforeach
+              </select>
+            </div>
+
+            <div class="custom-control custom-checkbox" style="margin-bottom: 20px;">
+              <input type="checkbox" name="child_menu" class="custom-control-input" id="customCheck2" checked="">
+              <label class="custom-control-label" for="customCheck2">Child Menu</label>
+            </div>
+            
             <button type="submit" class="btn btn-success m-r-10"><i class="fa fa-check"></i> Publish Page</button>
           </div>
         </div> 

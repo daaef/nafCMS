@@ -4,19 +4,18 @@ use App\Repositories\Slider\SliderContract;
 use App\Slider;
 class EloquentSliderRepository implements SliderContract {
     //
-    public function create($request){
+  public function create($request){
     $slider = new Slider;
     $slider->title= $request->title;  
     $slider->description = $request->description;   
     $str = strtolower($request->title);
     $slider->slug = preg_replace('/\s+/', '-', $str);
     return $slider;
-    }
+  }
 
   public function findAll() {
     $sliders = Slider::all();
     return $sliders;
-
   }
 
   public function findById($id) {

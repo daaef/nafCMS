@@ -10,7 +10,7 @@ class Page extends Model
   use SoftDeletes;
   // protected $dates = ['deleted_at'];
   protected $fillable = [
-    'page_title',
+    'name',
     'description',
     'page_content',
     'feature_image',
@@ -21,10 +21,16 @@ class Page extends Model
     'page_type_id',
     'user_id',
     'published',
-    'visibility',
+    // 'visibility',
+    'page_score',
+    'menu_id',
   ];
 
   public function pageType() {
     return $this->belongsToMany('App\PageType');
+  }
+
+  public function menu() {
+    return $this->belongsTo('App\Menu');
   }
 }

@@ -13,7 +13,7 @@ class CreatePagesTable extends Migration {
 	public function up() {
 		Schema::create('pages', function (Blueprint $table) {
 			$table->bigIncrements('id');
-			$table->string('page_title');
+			$table->string('name');
 			$table->text('description')->nullable();
 			$table->text('page_content')->nullable();
 			$table->text('feature_image')->nullable();
@@ -22,15 +22,18 @@ class CreatePagesTable extends Migration {
 			$table->text('banner_description')->nullable();
 			$table->string('slug')->unique();
 
-			$table->bigInteger('page_type_id')->unsigned();
+			$table->bigInteger('page_type_id')->nullable()->unsigned();
 			$table->foreign('page_type_id')->references('id')->on('page_types');
 			
 			$table->integer('user_id')->nullable()->unsigned();
 			$table->foreign('user_id')->references('id')->on('users');
 
 			$table->enum('published',['No', 'Yes', 'Draft'])->default('No');
-			$table->enum('visibility',['No', 'Yes'])->default('No');
-			
+			$table->integer('page_score')->default(0);
+
+			$table->bigInteger('menu_id')->unsigned()->nullable();
+      $table->foreign('menu_id')->references('id')->on('menus');       
+
 			$table->timestamps();
 			$table->softDeletes();
 		});

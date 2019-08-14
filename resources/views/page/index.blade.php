@@ -20,7 +20,7 @@
         <div class="card-body">
           <div class="row" style="margin-bottom: 20px;">
             <div class="col-md-8">
-              <h4 class="card-title">List all News Categories</h4>
+              <h4 class="card-title">List all Pages</h4>
             </div>
 
             <div class="col-md-4 ml-auto">
@@ -49,8 +49,8 @@
           <table id="users" class="table table-striped table-bordered" style="width:100%">
             <thead>
               <tr>
-                <th>Category Name</th>
-                <th>Category Description</th>
+                <th>Page Title</th>
+                <!-- <th>Category Description</th> -->
                 <th>Slug</th>
                 <th>Published</th>
                 <th>Actions</th>
@@ -60,9 +60,11 @@
               @if(count($pages) > 0)
                 @foreach($pages as $page)
                   <tr>
-                    <td>{{ $page->title }}</td>
-                    <td>{{ $page->description }}</td>
-                    <td>{{ $page->slug }}</td>                   
+                    <td>{{ $page->name }}</td>
+                    <!-- <td>{{ $page->description }}</td> -->
+                    
+                    <td>{{ $page->slug }}</td>
+                    <td>{{ $page->published }}</td>
                     <td>
                       <button class="btn btn-primary btn-circle waves-effect waves-light" data-toggle="modal" data-target="#exampleModal{{ $page->id }}" data-whatever="@getbootstrap" data-toggle="tooltip" title="Edit Client" data-placement="top">
                         <span class="btn-label">
@@ -74,7 +76,6 @@
                     </td>
                   </tr>
                 @endforeach
-
               @else
                 <tr>
                   <td colspan="8" class="text-center">
@@ -89,8 +90,8 @@
             </tbody>
             <tfoot>
               <tr>
-                <th>Category Name</th>
-                <th>Category Description</th>
+                <th>Page Title</th>
+                <!-- <th>Category Description</th> -->
                 <th>Slug</th>
                 <th>Published</th>
                 <th>Actions</th>

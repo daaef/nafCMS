@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\Admin\AdminContract;
+use Sentinel;
 class AdminController extends Controller
 {
     protected $repo;
@@ -11,7 +12,12 @@ class AdminController extends Controller
     
     public function index()
     {
-        return view('admin.index');
+        if(!Sentinel::check()){
+            return redirect()->route('auth.login.get');
+        }
+        else{
+            return view('admin.index');
+        }
     }
     
     public function create()

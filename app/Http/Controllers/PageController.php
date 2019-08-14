@@ -3,12 +3,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use App\Repositories\Page\PageContract;
+use App\Repositories\Menu\MenuContract;
 use Sentinel;
 
 class PageController extends Controller {
+	
 	protected $repo;
-	public function __construct(PageContract $pageContract) {
+	protected $menuRepo;
+
+	public function __construct(PageContract $pageContract, MenuContract $menuContract) {
 		$this->repo = $pageContract;
+		$this->menuRepo = $menuContract;
 	}
 	
 	public function index() {
@@ -26,13 +31,15 @@ class PageController extends Controller {
 			return redirect()->route('auth.login.get');
 		}
 		else{
-			return view('page.create');
+			$menus = $this->menuRepo->findAll();
+			// dd($menus);
+			return view('page.create')->with('menus', $menus);
 		}
 	}
 	
 	public function store(Request $request) {
 		$this->validate($request, [
-			'page_title' => 'required',
+			'name' => 'required',
 		]);
 
 		if(!Sentinel::check()) {
@@ -42,22 +49,30 @@ class PageController extends Controller {
 			// dd($request->all());
 			
 			try {
+
 				$page = $this->repo->create($request);
 
+				if ($request->child_menu === 'on') {		      
+		      $parent = $this->menuRepo->findBySlug($request->parent_menu);
+		      $page->menu_id = $parent->id;
+		    }
+
+				// dd($page);
+				$page->save();
+
 				$notification = array(
-					'message' => "Page $page->page_title created successfully",
+					'message' => "Page $page->name created successfully",
 					'alert-type' => 'success'
 				);		
 
 				if($page->id) {
-					return redirect()->back()->with($notification);
+					return redirect()->route('page.index')->with($notification);
 				} else {
 					return back()->withInput()->with('error', 'Could not create Page. Try again!');
 				}
-			} catch (QueryException $e) {
-				
+			} catch (QueryException $e) {				
 				$error = array(
-					'message' => "$request->page_title page already exists!",
+					'message' => "$request->name page already exists!",
 					'alert-type' => 'error'
 				);
 
@@ -66,13 +81,10 @@ class PageController extends Controller {
 					return redirect()->back()->withInput()->with($error);
 				}
 			}
-		}		
-
-
+		}
 	}
 	
-	public function show($id)
-	{
+	public function show($id) {
 		//
 	}
 	
@@ -85,13 +97,11 @@ class PageController extends Controller {
 		}
 	}
 	
-	public function update(Request $request, $id)
-	{
+	public function update(Request $request, $id) {
 		//
 	}
 	
-	public function delete($id)
-	{
+	public function delete($id) {
 		//
 	}
 }

@@ -15,7 +15,8 @@ class CreateMenusTable extends Migration {
 			$table->bigIncrements('id');
 			$table->string('slug')->unique();
 			$table->string('name');
-			// $table->unique('slug');            
+			$table->integer('page_score')->default(0);
+			
 			$table->timestamps();
 			$table->softDeletes();
 		});

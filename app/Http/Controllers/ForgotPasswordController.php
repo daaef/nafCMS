@@ -18,12 +18,8 @@ class ForgotPasswordController extends Controller {
 	}
 
 	public function postForgotPassword(Request $request){
-
-		// dd($request->email);
 		$user = User::whereEmail($request->email)->first();
-		// $sentinelUser = Sentinel::findById($user->id);
-		
-		if (count($user) == 0) {
+		if (!$user) {
 			return redirect()->back()->with(['success' => 'Password Reset Link has been sent to your email.']);
 		} else {
 			$reminder = Reminder::exists($user) ?: Reminder::create($user);
@@ -36,7 +32,7 @@ class ForgotPasswordController extends Controller {
 		
 		$user = User::byEmail($email);
 		
-		if(count($user) == 0)
+		if(!$user)
 			abort(404);
 		if($reminder = Reminder::exists($user)){
 			if($resetCode == $reminder->code){
@@ -58,14 +54,13 @@ class ForgotPasswordController extends Controller {
 		]);
 
 		$user = User::byEmail($email);
-		// $sentinelUser = Sentinel::findById($user->id);
 
-		if(count($user) == 0)
+		if(!$user)
 			abort(404);
 		if($reminder = Reminder::exists($user)){
 			if($resetCode == $reminder->code){
 				Reminder::complete($user, $resetCode, $request->password);
-				return redirect()->route('get_login')->with('success', 'Please Login with your New Password');
+				return redirect()->route('auth.login.get')->with('success', 'Please Login with your New Password');
 			} else {
 				abort(404);
 			}
