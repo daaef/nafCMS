@@ -241,27 +241,27 @@
         <div class="client-logos z-10">
             <div class="owl-carousel pt-15 pb-15 owl-theme client-logo-slide">
                 <div class="item">
-                    <a href="post.html" class="color-white">OPERATION GREEN SWEEP 3: NAF SCORES MAJOR SUCCESS AS JETS
+                    <a href="#" class="color-white">OPERATION GREEN SWEEP 3: NAF SCORES MAJOR SUCCESS AS JETS
                         DECIMATE TACTICAL BASE, NEUTRALIZE SCORES OF TERRORISTS AT IZZA IN BORNO STATE, </a>
                 </div>
                 <div class="item">
-                    <a href="post.html" class="color-white">OPERATION GREEN SWEEP 3: NAF SCORES MAJOR SUCCESS AS JETS
+                    <a href="#" class="color-white">OPERATION GREEN SWEEP 3: NAF SCORES MAJOR SUCCESS AS JETS
                         DECIMATE TACTICAL BASE, NEUTRALIZE SCORES OF TERRORISTS AT IZZA IN BORNO STATE, </a>
                 </div>
                 <div class="item">
-                    <a href="post.html" class="color-white">OPERATION GREEN SWEEP 3: NAF SCORES MAJOR SUCCESS AS JETS
+                    <a href="#" class="color-white">OPERATION GREEN SWEEP 3: NAF SCORES MAJOR SUCCESS AS JETS
                         DECIMATE TACTICAL BASE, NEUTRALIZE SCORES OF TERRORISTS AT IZZA IN BORNO STATE, </a>
                 </div>
                 <div class="item">
-                    <a href="post.html" class="color-white">OPERATION GREEN SWEEP 3: NAF SCORES MAJOR SUCCESS AS JETS
+                    <a href="#" class="color-white">OPERATION GREEN SWEEP 3: NAF SCORES MAJOR SUCCESS AS JETS
                         DECIMATE TACTICAL BASE, NEUTRALIZE SCORES OF TERRORISTS AT IZZA IN BORNO STATE, </a>
                 </div>
                 <div class="item">
-                    <a href="post.html" class="color-white">OPERATION GREEN SWEEP 3: NAF SCORES MAJOR SUCCESS AS JETS
+                    <a href="#" class="color-white">OPERATION GREEN SWEEP 3: NAF SCORES MAJOR SUCCESS AS JETS
                         DECIMATE TACTICAL BASE, NEUTRALIZE SCORES OF TERRORISTS AT IZZA IN BORNO STATE, </a>
                 </div>
                 <div class="item">
-                    <a href="post.html" class="color-white">OPERATION GREEN SWEEP 3: NAF SCORES MAJOR SUCCESS AS JETS
+                    <a href="#" class="color-white">OPERATION GREEN SWEEP 3: NAF SCORES MAJOR SUCCESS AS JETS
                         DECIMATE TACTICAL BASE, NEUTRALIZE SCORES OF TERRORISTS AT IZZA IN BORNO STATE, </a>
                 </div>
             </div>
