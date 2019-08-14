@@ -35,7 +35,6 @@ class CreatePagesTable extends Migration {
       $table->foreign('menu_id')->references('id')->on('menus');       
 
 			$table->timestamps();
-			$table->softDeletes();
 		});
 	}
 
