@@ -14,10 +14,9 @@ class MenuController extends Controller {
 		if(!Sentinel::check()){
 			return redirect()->route('auth.login.get');
 		}else{
-
-		}
-		$menus = $this->repo->findAll();
-		return view('menu.index')->with('menus', $menus);
+			$menus = $this->repo->findAll();
+			return view('menu.index')->with('menus', $menus);
+		}		
 	}
 	
 	public function create() {
@@ -30,12 +29,13 @@ class MenuController extends Controller {
 	}
 	
 	public function store(Request $request) {
+		$this->validate($request, [
+			'name' => 'required',
+		]);
+
 		if(!Sentinel::check()){
 			return redirect()->route('auth.login.get');
-		}else{
-			$this->validate($request, [
-				'name' => 'required',
-			]);
+		} else {			
 	
 			try {
 				$menu = $this->repo->create($request);
@@ -92,13 +92,13 @@ class MenuController extends Controller {
 		}else{
 			$menu = $this->repo->update($request, $slug);
 			$notification = array(
-			'message' => "Menu $menu->name updated successfully",
-			'alert-type' => 'success'
-		);
+				'message' => "Menu $menu->name updated successfully",
+				'alert-type' => 'success'
+			);
 
-		if($menu->id) {
-			return redirect()->route('menu.index')->with($notification);
-		}
+			if($menu->id) {
+				return redirect()->route('menu.index')->with($notification);
+			}
 		}
 		
 	}

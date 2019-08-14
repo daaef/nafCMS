@@ -18,16 +18,10 @@ class ForgotPasswordController extends Controller {
 	}
 
 	public function postForgotPassword(Request $request){
-
-		// dd($request->email);
 		$user = User::whereEmail($request->email)->first();
-		// $sentinelUser = Sentinel::findById($user->id);
-		// dd($user);
 		if (!$user) {
-			// dd('exits not');
 			return redirect()->back()->with(['success' => 'Password Reset Link has been sent to your email.']);
 		} else {
-			// dd('exits');
 			$reminder = Reminder::exists($user) ?: Reminder::create($user);
 			$this->sendEmail($user, $reminder->code);
 			return redirect()->back()->with(['success' => 'Password Reset Link has been sent to your email.']);
@@ -60,7 +54,6 @@ class ForgotPasswordController extends Controller {
 		]);
 
 		$user = User::byEmail($email);
-		// $sentinelUser = Sentinel::findById($user->id);
 
 		if(!$user)
 			abort(404);

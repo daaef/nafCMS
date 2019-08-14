@@ -1,18 +1,17 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Repositories\Slider\SliderContract;
 use Illuminate\Database\QueryException;
+use App\Repositories\Slider\SliderContract;
 use Sentinel;
-class SliderController extends Controller
-{
+
+class SliderController extends Controller{
     protected $repo;
     public function __construct(SliderContract $sliderContract) {
         $this->repo = $sliderContract;
     }
     
-    public function index()
-    {
+    public function index() {
         if(!Sentinel::check()){
             return redirect()->route('auth.login.get');
         }
@@ -23,15 +22,14 @@ class SliderController extends Controller
        
     }
     
-    public function create()
-    {
+    public function create() {
         if(!Sentinel::check()){
             return redirect()->route('auth.login.get');
         }
         else{
-            
+            return view('slider.create');
         }
-        return view('slider.create');
+        
     }
     
     public function store(Request $request)
@@ -98,8 +96,7 @@ class SliderController extends Controller
        
     }
     
-    public function edit($slug)
-    {
+    public function edit($slug) {
         if(!Sentinel::check()){
             return redirect()->route('auth.login.get');
         }
@@ -121,24 +118,24 @@ class SliderController extends Controller
                 $extension = $file->getClientOriginalExtension(); // getting image extension
                 $filename =time().'.'.$extension;
                 $file->move('uploads/sliders/', $filename);
-                }
-                $slider = $this->repo->update($request, $slug);
-                $slider['slider_image'] = $filename;
-                $slider->save();
-                $notification = array(
-                    'message' => "Slider $slider->title updated successfully",
-                    'alert-type' => 'success'
-                );
+            }
+            $slider = $this->repo->update($request, $slug);
+            $slider['slider_image'] = $filename;
+            $slider->save();
+            $notification = array(
+                'message' => "Slider $slider->title updated successfully",
+                'alert-type' => 'success'
+            );
         
-                if($slider->id) {
-                    return redirect()->route('slider.index')->with($notification);
-                }
+            if($slider->id) {
+                return redirect()->route('slider.index')->with($notification);
+            }
         }
     
     }
     
-    public function delete($slug)
-    {
+    public function delete($slug) {
+
         if(!Sentinel::check()){
             return redirect()->route('auth.login.get');
         }
@@ -148,15 +145,15 @@ class SliderController extends Controller
                     'message' => "slider deleted successfully",
                     'alert-type' => 'success'
                 );
-          return redirect()->back()->with($notification);
+                return redirect()->back()->with($notification);
            } else {
                 $error = array(
                     'message' => 'Error Deleting slider',
                     'alert-type' => 'error'
                 );
-          return back()->with($error);
-        }    
+                return back()->with($error);
+            }    
         }
-        }
+    }
         
 }

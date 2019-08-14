@@ -18,7 +18,7 @@ class ActivationController extends Controller {
 		$user = User::whereEmail($email)->first();
 
 		if (Activation::complete($user, $activationCode)) {
-			return redirect()->route('home')->with('success', 'Account activated successfully');
+			return redirect()->route('auth.login.get')->with('success', 'Account activated successfully');
 		} else {
 			return redirect()->back()->with(['error' => 'Wrong Credentials']);
 		}

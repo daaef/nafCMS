@@ -11,7 +11,12 @@ class Menu extends Model {
   protected $fillable = [
     'name',
     'slug', 
+    'page_score',
   ];
 
   protected $dates = ['deleted_at'];
+
+  public function pages() {
+    return $this->hasMany('App\Page');
+  }
 }

@@ -15,6 +15,14 @@ Route::get('/', function () {
   return view('welcome');
 });
 
+Route::get('/about-us', function() {
+  return view('about');
+})->name('about-us');
+
+Route::get('/history', function() {
+  return view('history');
+})->name('history');
+
 // Authentication Route Group
 Route::group(['prefix' => 'auth'], function() {
 
