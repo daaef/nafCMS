@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use App\Repositories\News\NewsContract;
 use App\Repositories\NewsCategory\NewsCategoryContract;
+use Sentinel;
 
 class NewsController extends Controller
 {
@@ -16,16 +17,22 @@ class NewsController extends Controller
     }
 
     public function index() {
+      if(!Sentinel::check()){
+        return redirect()->route('auth.login.get');
+      }
+      else{
         $news = $this->repo->findAll();
         $news_categories = $this->repos->findAll();
         return view('news.index')->with('news', $news)->with('news_categories', $news_categories);
+      }
+
     }
 
     public function store(Request $request) {
         $this->validate($request, [
           'title' => 'required',
           'body' => 'required',
-        //   'news_image' => 'required',
+          'news_image' => 'image|required|mimes:jpeg,png,jpg,gif,svg',
           'tags' => 'required',
         ]);
     

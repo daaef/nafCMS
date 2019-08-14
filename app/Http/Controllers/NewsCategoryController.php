@@ -19,10 +19,10 @@ class NewsCategoryController extends Controller
         return redirect()->route('auth.login.get');
       }
       else{
-
+        $news_categories = $this->repo->findAll();
+        return view('news_category.index')->with('news_categories', $news_categories);
       }
-      $news_categories = $this->repo->findAll();
-      return view('news_category.index')->with('news_categories', $news_categories);
+      
     }
     
     public function create() {

@@ -2,6 +2,7 @@
 namespace App\Repositories\News;
 use App\Repositories\News\NewsContract;
 use App\MyNews;
+use Image;
 
 class EloquentNewsRepository implements NewsContract {
   //create a news category.
@@ -11,11 +12,27 @@ class EloquentNewsRepository implements NewsContract {
     $news->title = $request->title;  
     $news->body = $request->body;   
     // $news->news_image = $request->news_image;  
+    // if ($request->has('news_image')) {
+    //   $image = $request->file('news_image');
+    //   $filename = time().'.'.$image->getClientOriginalExtension();
+    //   $destinationPath = public_path('uploads/news/');
+    //   $image->move($destinationPath, $filename);  
+
+    //   $news->news_image = $filename;
+    // }
     if ($request->has('news_image')) {
-      $image = $request->file('news_image');
-      $filename = time().'.'.$image->getClientOriginalExtension();
-      $destinationPath = public_path('uploads/news/');
-      $image->move($destinationPath, $filename);  
+      $originalImage= $request->file('news_image');
+      $thumbnailImage = Image::make($originalImage);
+      $thumbnailPath = public_path('uploads/news/thumbnail/');
+      $originalPath = public_path('uploads/news/images/');
+      // dd($originalPath);
+
+      $filename = time().$originalImage->getClientOriginalName();
+      $thumbnailImage->save($originalPath.$filename);
+      $thumbnailImage->resize(150,150);
+
+      // $thumbnail = time().$originalImage->getClientOriginalName();
+      $thumbnailImage->save($thumbnailPath.$filename); 
 
       $news->news_image = $filename;
     }
