@@ -125,8 +125,21 @@ button,
     color: #007bff;
 }
 
+.bg-0{
+    background: transparent!important;
+}
+
+.slider-about .owl-item img{
+    height: 519px;
+}
+
 .color-white{
     color: white!important;
+}
+
+
+.border-white .after{
+    background: white!important;
 }
 
 
@@ -271,6 +284,9 @@ button,
     background: #007bff;
 }
 
+.main-menu li .submenu li a{
+    color: #ffffff;
+}
 
 /*green bg opacity classes*/
 

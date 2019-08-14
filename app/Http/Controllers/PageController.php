@@ -66,7 +66,7 @@ class PageController extends Controller {
 				);		
 
 				if($page->id) {
-					return redirect()->back()->with($notification);
+					return redirect()->route('page.index')->with($notification);
 				} else {
 					return back()->withInput()->with('error', 'Could not create Page. Try again!');
 				}

@@ -22,14 +22,13 @@ class CreatePagesTable extends Migration {
 			$table->text('banner_description')->nullable();
 			$table->string('slug')->unique();
 
-			$table->bigInteger('page_type_id')->unsigned();
+			$table->bigInteger('page_type_id')->nullable()->unsigned();
 			$table->foreign('page_type_id')->references('id')->on('page_types');
 			
 			$table->integer('user_id')->nullable()->unsigned();
 			$table->foreign('user_id')->references('id')->on('users');
 
 			$table->enum('published',['No', 'Yes', 'Draft'])->default('No');
-			$table->enum('visibility',['No', 'Yes'])->default('No');
 			$table->integer('page_score')->default(0);
 
 			$table->bigInteger('menu_id')->unsigned()->nullable();

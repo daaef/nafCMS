@@ -96,6 +96,42 @@
             }
         });
 
+        $('.slider-about').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            smartSpeed: 450,
+            dotsContainer: '.dots-slider',
+            margin: 0,
+            nav: false,
+            navText: ["<i class='fas fa-angle-double-left'></i>", "<i class='fas fa-angle-double-right'></i>"],
+            dots: true,
+            touchDrag: false,
+            mouseDrag: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    dots: false
+                },
+                600: {
+                    items: 1,
+                    dots: false
+                },
+                991: {
+                    items: 1,
+                    nav: false,
+                    dots: false
+                },
+                993: {
+                    items: 1,
+                    nav: false,
+                    dots: true
+                }
+            }
+        });
+
 
         // Custom nav buttons
         $('.slides-left').on('click', function() {
@@ -279,14 +315,15 @@
         // Clients logos slider
         $('.client-logo-slide').owlCarousel({
             loop: true,
-            margin: 140,
+            margin: 100,
             autoplay: true,
             nav: false,
             dots: false,
             slideTransition: 'linear',
-            autoplayTimeout: 5000,
-            autoplaySpeed: 5000,
+            autoplayTimeout: 7000,
+            autoplaySpeed: 7000,
             autoplayHoverPause: true,
+            autoWidth:true,
             responsive: {
                 0: {
                     items: 2,

@@ -20,10 +20,10 @@ class Page extends Model
     'slug',
     'page_type_id',
     'user_id',
-    'menu_id',
-    'page_score',
     'published',
-    'visibility',
+    // 'visibility',
+    'page_score',
+    'menu_id',
   ];
 
   public function pageType() {

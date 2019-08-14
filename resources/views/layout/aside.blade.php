@@ -90,6 +90,13 @@
           </a>                    
         </li>
 
+        <!-- <li class="sidebar-item">
+          <a class="sidebar-link waves-effect waves-dark" href="{{ route('slider.index') }}" aria-expanded="false">
+            <i class="mdi mdi-account-multiple"></i>
+            <span class="hide-menu">Sliders</span>
+          </a>                    
+        </li> -->
+
 				<li class="sidebar-item">
 					<a class="sidebar-link waves-effect waves-dark" href="{{ route('setting.index') }}" aria-expanded="false">
 						<i class="mdi mdi-av-timer"></i>

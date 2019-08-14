@@ -308,7 +308,36 @@ label {
     margin: 0;
 }
 
+.contain{
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
 
+.blog-img{
+    height: 341px;
+}
+
+.img-cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog-img img{
+    height: 100%;
+}
+
+.bg-whitish{
+    background: #969696;
+}
+
+
+.client-logo-slide .owl-stage{
+    max-height: 20px;
+    overflow: hidden;
+}
 /*Buttons*/
 
 .btn,
@@ -586,7 +615,7 @@ label {
     padding: 17px 0px;
     opacity: 0;
     visibility: hidden;
-    background-color: #fff;
+    background-color: #07286b;
     z-index: 25;
 }
 
@@ -674,6 +703,10 @@ label {
     font-size: 17px;
     margin-right: 28px;
     color: #fff;
+}
+
+.h-100{
+    height: 100%;
 }
 
 .shop-icon {

@@ -13,7 +13,7 @@ class EloquentPageRepository implements PageContract {
     $page->banner_text = $request->banner_text;
     $page->banner_description = $request->banner_description;
     $page->published = $request->published;
-    $page->visibility = $request->visibility;
+    // $page->visibility = $request->visibility;
     $page->page_type_id = $request->page_type_id;
 
     if ($request->has('feature_image')) {
