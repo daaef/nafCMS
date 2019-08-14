@@ -111,6 +111,7 @@ class PageTypeController extends Controller {
 	}
 	
 	public function delete($slug) {
-		//
+		
+		
 	}
 }
