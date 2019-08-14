@@ -142,6 +142,11 @@ Route::group(['prefix' => 'admin'], function() {
   });
 });
 
+});
+ 
+
+
+
   Route::group(['prefix' => 'gallery'], function(){
     Route::get('/create', 'GalleryController@create')->name('gallery.create');
     Route::post('/create', 'GalleryController@store')->name('gallery.store');
@@ -151,4 +156,3 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/{slug}/delete', 'GalleryController@delete')->name('gallery.delete');
   });
 
-});

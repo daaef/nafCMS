@@ -12,6 +12,7 @@ class LoginController extends Controller {
 	
 	public function __construct(LoginContract $loginContract) {
 		$this->repo = $loginContract;
+		
 	}
 
 	public function getLogin() {
