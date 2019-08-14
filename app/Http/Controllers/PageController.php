@@ -45,7 +45,7 @@ class PageController extends Controller {
 				$page = $this->repo->create($request);
 
 				$notification = array(
-					'message' => "Page $menu->page_title created successfully",
+					'message' => "Page $page->page_title created successfully",
 					'alert-type' => 'success'
 				);		
 
