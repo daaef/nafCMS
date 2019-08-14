@@ -37,7 +37,7 @@ class EloquentSettingRepository implements SettingContract {
         return $setting;
     }
 
-    public function update($id, $request){
+    public function update($request, $id){
         $setting = Setting::findOrFail($id);
         $setting->site_logo = $request->site_logo;
         $setting->site_title = $request->site_title;
@@ -46,8 +46,8 @@ class EloquentSettingRepository implements SettingContract {
         $setting->footer_facebook = $request->footer_facebook;
         $setting->footer_twitter = $request->footer_twitter;
         $setting->footer_instagram = $request->footer_instagram;
-        $setting->save();
         return $setting;
+    
     }
 
     public function remove($id){

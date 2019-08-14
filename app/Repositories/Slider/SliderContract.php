@@ -1,9 +1,10 @@
 <?php
 namespace App\Repositories\Slider;
 interface SliderContract {
-  public function create($request);
   public function findAll();
+  public function create($request);
   public function findById($id);
-  public function update($request, $id);
-  public function remove($id);
+  public function findBySlug($slug);
+  public function update($request, $slug);
+  public function remove($slug);
 }
