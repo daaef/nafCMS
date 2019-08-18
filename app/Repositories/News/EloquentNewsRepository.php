@@ -25,9 +25,11 @@ class EloquentNewsRepository implements NewsContract {
       $thumbnailImage = Image::make($originalImage);
       $thumbnailPath = public_path('uploads/news/thumbnail/');
       $originalPath = public_path('uploads/news/images/');
+      $watermark = public_path('uploads/news/watermark/logo.png');
       // dd($originalPath);
 
       $filename = time().$originalImage->getClientOriginalName();
+      $thumbnailImage->insert($watermark, 'bottom-right', 1, 1);
       $thumbnailImage->save($originalPath.$filename);
       $thumbnailImage->resize(150,150);
 

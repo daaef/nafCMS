@@ -28,12 +28,6 @@
 <![endif]-->
 </head>
 <body>
-<<<<<<< HEAD
-  <h1>Welcome {{ Sentinel::getUser()->first_name }}</h1>
-  @yield('content')
-  @include('admin.menu')
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-=======
   <!-- ============================================================== -->
   <!-- Preloader - style you can find in spinners.css -->
   <!-- ============================================================== -->
@@ -133,7 +127,6 @@
   <script src="{{ URL::asset('/assets/libs/raphael/raphael.min.js') }}"></script>
   <script src="{{ URL::asset('/assets/libs/morris.js/morris.min.js') }}"></script>
   <script src="{{ URL::asset('/assets/dist/js/pages/dashboards/dashboard1.js') }}"></script>
->>>>>>> 085674490130ae2f78ab4a9d69d6be256bd55fe8
   <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   <script>
     @if(Session::has('message'))
