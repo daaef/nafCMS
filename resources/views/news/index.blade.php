@@ -49,10 +49,11 @@
               <tr>
                 <th>News Title</th>
                 <th>News Body</th>
-                <th>News Slug</th>
-                <th>Image</th>
-                <th>Category</th>
                 <!-- <th>News Slug</th> -->
+                <th>Image</th>
+                <!-- <th>News Slug</th> -->
+                <th>tags</th>
+                <th>News Slug</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -91,10 +92,11 @@
               <tr>
                 <th>News Title</th>
                 <th>News Body</th>
-                <th>News Slug</th>
+                
                 <th>Image</th>
-                <th>Category</th>
                 <!-- <th>News Slug</th> -->
+                <th>tags</th>
+                <th>News Slug</th>
                 <th>Actions</th>
               </tr>
             </tfoot>
