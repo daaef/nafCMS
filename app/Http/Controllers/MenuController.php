@@ -29,13 +29,12 @@ class MenuController extends Controller {
 	}
 	
 	public function store(Request $request) {
-		$this->validate($request, [
-			'name' => 'required',
-		]);
-
 		if(!Sentinel::check()){
 			return redirect()->route('auth.login.get');
-		} else {			
+		}else{
+			$this->validate($request, [
+				'name' => 'required',
+			]);
 	
 			try {
 				$menu = $this->repo->create($request);
@@ -92,13 +91,13 @@ class MenuController extends Controller {
 		}else{
 			$menu = $this->repo->update($request, $slug);
 			$notification = array(
-				'message' => "Menu $menu->name updated successfully",
-				'alert-type' => 'success'
-			);
+			'message' => "Menu $menu->name updated successfully",
+			'alert-type' => 'success'
+		);
 
-			if($menu->id) {
-				return redirect()->route('menu.index')->with($notification);
-			}
+		if($menu->id) {
+			return redirect()->route('menu.index')->with($notification);
+		}
 		}
 		
 	}
@@ -120,8 +119,7 @@ class MenuController extends Controller {
 				);
 				return back()->with($error);
 			}    
-		}
-		
+		}		
 		
 	}
 
@@ -131,8 +129,7 @@ class MenuController extends Controller {
 		}else{
 			$menus = $this->repo->trash();
 			return view('menu.trash')->with('menus', $menus);
-		}
-		
+		}		
 	}
 
 	public function parmanentDelete($slug) {
@@ -151,8 +148,7 @@ class MenuController extends Controller {
 				);
 				return back()->with($error);
 			}
-		}
-		
+		}	
 		
 	}
 }

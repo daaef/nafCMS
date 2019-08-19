@@ -138,12 +138,6 @@ Route::group(['prefix' => 'admin'], function() {
     Route::put('/{data}/update', 'SliderController@update')->name('slider.update');
     Route::get('/{data}/delete', 'SliderController@delete')->name('slider.delete');
   });
-});
-
-});
- 
-
-
 
   Route::group(['prefix' => 'gallery'], function(){
     Route::get('/create', 'GalleryController@create')->name('gallery.create');
@@ -153,4 +147,20 @@ Route::group(['prefix' => 'admin'], function() {
     Route::put('/{slug}/update', 'GalleryController@update')->name('gallery.update');
     Route::get('/{slug}/delete', 'GalleryController@delete')->name('gallery.delete');
   });
+});
+
+});
+
+Route::get('addwatermark', function(){
+    $img = Image::make(public_path('images/main.png'));
+   
+    /* insert watermark at bottom-right corner with 10px offset */
+    $img->insert(public_path('images/logo.png'), 'bottom-right', 10, 10);
+   
+    $img->save(public_path('images/main-new.png')); 
+   
+    dd('saved image successfully.');
+});
+ 
+
 

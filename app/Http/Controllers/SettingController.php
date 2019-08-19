@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use App\Repositories\Setting\SettingContract;
+use Intervention\Image\Facades\Image;
 use App\Setting;
 use Sentinel;
 
@@ -71,6 +72,7 @@ class SettingController extends Controller
 					);
 	
 					if($settings->id) {
+				
 						return redirect()->back()->with($notification);
 					} else {
 						return back()->withInput()->with('error', 'Could not create store setting. Try again!');
@@ -116,7 +118,9 @@ class SettingController extends Controller
 			if(!Sentinel::check()){
 				return redirect()->route('auth.login.get');
 			}
+		
 			else{
+				
 					$this->validate($request, [
 						'site_logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 						'site_title' => 'required',
@@ -125,24 +129,23 @@ class SettingController extends Controller
 						'footer_twitter' => 'url',
 						'footer_instagram' => 'url',
 		
-		]);
-
-
-
+			]);
+			
 		if($request->has('site_logo')) { 
 			$file = $request->file('site_logo');
 			$extension = $file->getClientOriginalExtension(); // getting image extension
 			$filename =time().'.'.$extension;
 			$file->move('uploads/logos/', $filename);
+			Image::make('uploads/logos/'. $filename)
+			->resize(100, 100)->save('uploads/logos/thumbnails/'. $filename, 50);
 		}
 
 		try{
-			$setting = $this->repo->update($id, $request);
+			$setting = $this->repo->update($request, $id);
 			$setting['site_logo'] =  $filename;
 			$setting->save();
-			return $setting;
 			$notification = array(
-				'message' => "Slider $setting->title created successfully",
+				'message' => "Settings $setting->title created successfully",
 				'alert-type' => 'success'
 			);	
 			if($setting->id) {

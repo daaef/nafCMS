@@ -28,15 +28,7 @@
 <![endif]-->
 </head>
 <body>
-<<<<<<< HEAD
-  <h1>Welcome {{ Sentinel::getUser()->first_name }}</h1>
-  @yield('content')
-  @include('admin.menu')
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-=======
-  <!-- ============================================================== -->
   <!-- Preloader - style you can find in spinners.css -->
-  <!-- ============================================================== -->
   <div class="preloader">
     <div class="lds-ripple">
       <div class="lds-pos"></div>
@@ -65,9 +57,7 @@
     @endif
           
     <div class="page-wrapper">
-      <!-- ============================================================== -->
-      <!-- Bread crumb and right sidebar toggle -->
-      <!-- ============================================================== -->
+     
       <div class="page-breadcrumb">
         <div class="row">
           <div class="col-5 align-self-center">
@@ -87,15 +77,13 @@
           </div>
         </div>
       </div>
-      <!-- ============================================================== -->
       
       <div class="container-fluid">
           @yield('content')
       </div>
       
-      <!-- ============================================================== -->
       @include('layout.footer')
-      <!-- ============================================================== -->
+     
     </div>
   </div>
     
@@ -133,7 +121,6 @@
   <script src="{{ URL::asset('/assets/libs/raphael/raphael.min.js') }}"></script>
   <script src="{{ URL::asset('/assets/libs/morris.js/morris.min.js') }}"></script>
   <script src="{{ URL::asset('/assets/dist/js/pages/dashboards/dashboard1.js') }}"></script>
->>>>>>> 085674490130ae2f78ab4a9d69d6be256bd55fe8
   <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   <script>
     @if(Session::has('message'))
@@ -150,7 +137,7 @@
             toastr.success("{{ Session::get('message') }}");
             break;
           case 'error':
-            toastr.error("{{ Session::get('message') }}");
+            toastr.error("{{ Session::get('message')}}");
             break;
         }
     @endif

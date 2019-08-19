@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
  		App\Providers\SubmenuServiceProvider::class,
  		App\Providers\HomeServiceProvider::class,
+ 		App\Providers\SliderServiceProvider::class,
  		App\Providers\PageServiceProvider::class,
  		App\Providers\GalleryServiceProvider::class,
  		App\Providers\UserServiceProvider::class,
