@@ -4,21 +4,22 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMenusTable extends Migration {
+class CreateSubmenusTable extends Migration {
 	/**
 	 * Run the migrations.
 	 *
 	 * @return void
 	 */
-	public function up(){
-		Schema::create('menus', function (Blueprint $table) {
+	public function up() {
+		Schema::create('submenus', function (Blueprint $table) {
 			$table->bigIncrements('id');
 			$table->string('slug')->unique();
 			$table->string('name');
 			$table->integer('page_score')->default(0);
-			
+
+			$table->bigInteger('menu_id')->unsigned();
+			$table->foreign('menu_id')->references('id')->on('menus');
 			$table->timestamps();
-			// $table->softDeletes();
 		});
 	}
 
@@ -28,9 +29,6 @@ class CreateMenusTable extends Migration {
 	 * @return void
 	 */
 	public function down() {
-		Schema::dropIfExists('menus');
-		Schema::table('menus', function (Blueprint $table) {
-			$table->dropSoftDeletes();
-		});
+		Schema::dropIfExists('submenus');
 	}
 }

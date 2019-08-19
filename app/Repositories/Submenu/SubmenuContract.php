@@ -1,6 +1,6 @@
 <?php
-namespace App\Repositories\Menu;
-interface MenuContract {
+namespace App\Repositories\Submenu;
+interface SubmenuContract {
   public function create($request);
   public function findAll();
   public function findById($id);

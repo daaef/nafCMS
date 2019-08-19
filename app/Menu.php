@@ -3,10 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+// use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Menu extends Model {
-  use SoftDeletes;
+  // use SoftDeletes;
 
   protected $fillable = [
     'name',
@@ -14,8 +14,12 @@ class Menu extends Model {
     'page_score',
   ];
 
-  protected $dates = ['deleted_at'];
+  // protected $dates = ['deleted_at'];
 
+  public function submenus() {
+    return $this->hasMany('App\Submenu');
+  }
+  
   public function pages() {
     return $this->hasMany('App\Page');
   }
