@@ -34,58 +34,55 @@ class GalleryController extends Controller
        
     }
     
-    public function store(Request $request)
-    {
-        if(!Sentinel::check()){
-            return redirect()->route('auth.get.get');
-        }
-        else{
-            $this->validate($request, [
-                'title' => 'required',
-                'description' => 'required',
-                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-            ]);
-            if($request->has('image')) { 
-                $file = $request->file('image');
-                $extension = $file->getClientOriginalExtension(); // getting image extension
-                $filename =time().'.'.$extension;
-                $file->move('uploads/gallery', $filename);
-                Image::make('uploads/gallery/'. $filename)
-                ->resize(240, 160)->save('uploads/gallery/thumbs/'. $filename, 50);
-              }
-      
-    
-            try {
-                $request;
-                $gallery = $this->repo->create($request);
-                $gallery['image'] = $filename;
-                $gallery->save();
-                return $gallery;
-    
-                $notification = array(
-                    'message' => "Gallery $gallery->title created successfully",
-                    'alert-type' => 'success'
-                );		
-    
-                if($gallery->id) {
-                    return redirect()->back()->with($notification);
-                } else {
-                    return back()->withInput()->with('error', 'Could not create image. Try again!');
-                }
-            } catch (QueryException $e) {
+        public function store(Request $request) {
+            if(!Sentinel::check()){
+                return redirect()->route('auth.get.get');
+            }
+            else{
                 
-                $error = array(
-                    'message' => "Role $request->title already exists!",
-                    'alert-type' => 'error'
-                );
-    
-                $errorCode = $e->errorInfo[1];
-                if($errorCode == 1062){
-                    return redirect()->back()->withInput()->with($error);
+                $this->validate($request, [
+                    'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+                    'title' => 'required',
+                    'description' => 'required',
+                   
+                ]);
+               
+                if($request->has('image')) { 
+                    $file = $request->file('image');
+                    $extension = $file->getClientOriginalExtension();
+                    $filename =time().'.'.$extension;
+                    $file->move('uploads/gallery/', $filename);
+                    Image::make('uploads/gallery/'. $filename)
+                    ->resize(150, 150)->save('uploads/gallery/thumbnails/'. $filename, 50);
+                }
+      
+                try {
+                    $gallery = $this->repo->create($request);
+                    $gallery['image'] = $filename;
+                    $gallery->save();
+                    $notification = array(
+                        'message' => "Image $gallery->title added successfully",
+                        'alert-type' => 'success'
+                    );		
+        
+                    if($gallery->id) {
+                        return redirect()->back()->with($notification);
+                    } else {
+                        return back()->withInput()->with('error', 'Could not create image. Try again!');
+                    }
+                } catch (QueryException $e) {
+                    
+                    $error = array(
+                        'message' => "Role $request->title already exists!",
+                        'alert-type' => 'error'
+                    );
+        
+                    $errorCode = $e->errorInfo[1];
+                    if($errorCode == 1062){
+                        return redirect()->back()->withInput()->with($error);
+                    }
                 }
             }
-        }
-        
     }
     
     public function show($slug)
@@ -112,9 +109,57 @@ class GalleryController extends Controller
         
     }
     
-    public function update(Request $request, $id)
+    public function update(Request $request, $slug)
     {
-        //
+        if(!Sentinel::check()){
+            return redirect()->route('auth.get.get');
+        }
+        else{
+            
+            $this->validate($request, [
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+                'title' => 'required',
+                'description' => 'required',
+               
+            ]);
+           
+
+            if($request->has('image')) { 
+                $file = $request->file('image');
+                $extension = $file->getClientOriginalExtension();
+                $filename =time().'.'.$extension;
+                $file->move('uploads/gallery/', $filename);
+                Image::make('uploads/gallery/'. $filename)
+                ->resize(150, 150)->save('uploads/gallery/thumbnails/'. $filename, 50);
+            }
+  
+            try {
+                $gallery = $this->repo->update($request, $slug);
+                $gallery['image'] = $filename;
+                $gallery->save();
+                $notification = array(
+                    'message' => "Image $gallery->title added successfully",
+                    'alert-type' => 'success'
+                );		
+    
+                if($gallery->id) {
+                    return redirect()->back()->with($notification);
+                } else {
+                    return back()->withInput()->with('error', 'Could not create image. Try again!');
+                }
+            } catch (QueryException $e) {
+                
+                $error = array(
+                    'message' => "Role $request->title already exists!",
+                    'alert-type' => 'error'
+                );
+    
+                $errorCode = $e->errorInfo[1];
+                if($errorCode == 1062){
+                    return redirect()->back()->withInput()->with($error);
+                }
+            }
+        }
     }
     
     public function delete($slug)
