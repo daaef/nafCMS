@@ -73,13 +73,12 @@
                     </td>
                   </tr>
                 @endforeach
-
               @else
                 <tr>
                   <td colspan="8" class="text-center">
-                    <h4 class="card-title">No News Created yet.</h4>
+                    <h4 class="card-title">No Image Created yet.</h4>
                     <p>Please create</p>
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Create News</button>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Add Image</button>
                   </td>
                 </tr>
               @endif
@@ -262,7 +261,7 @@
  
                <div class="row">
                  <div class="col-md-12">
-                   <p>Are you sure you want to delete this News?</p>
+                   <p>Are you sure you want to delete this image?</p>
                  </div>
                </div>                                 
              </div>

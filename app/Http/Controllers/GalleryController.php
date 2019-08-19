@@ -53,7 +53,7 @@ class GalleryController extends Controller
                     $filename =time().'.'.$extension;
                     $file->move('uploads/gallery/', $filename);
                     Image::make('uploads/gallery/'. $filename)
-                    ->resize(240, 150)->save('uploads/gallery/thumbnails/'. $filename, 50);
+                    ->resize(150, 150)->save('uploads/gallery/thumbnails/'. $filename, 50);
                 }
       
                 try {
@@ -130,7 +130,7 @@ class GalleryController extends Controller
                 $filename =time().'.'.$extension;
                 $file->move('uploads/gallery/', $filename);
                 Image::make('uploads/gallery/'. $filename)
-                ->resize(240, 150)->save('uploads/gallery/thumbnails/'. $filename, 50);
+                ->resize(150, 150)->save('uploads/gallery/thumbnails/'. $filename, 50);
             }
   
             try {
