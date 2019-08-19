@@ -6,12 +6,14 @@ class EloquentGalleryRepository implements GalleryContract {
     //
     public function create($request){
         $gallery = new Gallery;
+        $gallery->image = $request->image;
         $gallery->title= $request->title;  
         $gallery->description = $request->description;   
         $str = strtolower($request->title);
         $gallery->slug = preg_replace('/\s+/', '-', $str);
         return $gallery;
      }
+     
      public function findAll() {
         $gallery = Gallery::all();
         return $gallery;

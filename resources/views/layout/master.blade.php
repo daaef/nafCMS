@@ -28,9 +28,7 @@
 <![endif]-->
 </head>
 <body>
-  <!-- ============================================================== -->
   <!-- Preloader - style you can find in spinners.css -->
-  <!-- ============================================================== -->
   <div class="preloader">
     <div class="lds-ripple">
       <div class="lds-pos"></div>
@@ -59,9 +57,7 @@
     @endif
           
     <div class="page-wrapper">
-      <!-- ============================================================== -->
-      <!-- Bread crumb and right sidebar toggle -->
-      <!-- ============================================================== -->
+     
       <div class="page-breadcrumb">
         <div class="row">
           <div class="col-5 align-self-center">
@@ -81,15 +77,13 @@
           </div>
         </div>
       </div>
-      <!-- ============================================================== -->
       
       <div class="container-fluid">
           @yield('content')
       </div>
       
-      <!-- ============================================================== -->
       @include('layout.footer')
-      <!-- ============================================================== -->
+     
     </div>
   </div>
     
@@ -143,7 +137,7 @@
             toastr.success("{{ Session::get('message') }}");
             break;
           case 'error':
-            toastr.error("{{ Session::get('message') }}");
+            toastr.error("{{ Session::get('message')}}");
             break;
         }
     @endif

@@ -12,7 +12,7 @@ class SettingsTableSeeder extends Seeder
     public function run()
     {
         DB::table('settings')->insert([
-            'site_logo' => Str::random(2),
+            'site_logo' => '1565783289.jpeg',
             'site_title' => Str::random(10),
             'site_description' => Str::random(10),
             'footer_copywrite' => Str::random(10),
