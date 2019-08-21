@@ -152,9 +152,10 @@
 										<img src="../uploads/news/images/{{$post->news_image}}" alt="">
 									</div>
 									<div class="uk-card-body uk-padding-small">
-										<h5 class="text-bold">{{ strtoupper($post->title) }}</h5>
-										<p class="padding-bottom-xs">
-											
+										<h5 class="text-bold">
+											{!! strlen($post->title) > 100 ? strtoupper(substr($post->body,0,200)) : strtoupper($post->title !!}...
+										</h5>
+										<p class="padding-bottom-xs">											
 											{!! strlen($post->body) > 200 ? substr($post->body,0,200) : $post->body !!}...
 										</p>
 										<div class="uk-text-center">
