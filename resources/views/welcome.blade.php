@@ -158,7 +158,7 @@
 											{!! strlen($post->body) > 200 ? substr($post->body,0,200) : $post->body !!}...
 										</p>
 										<div class="uk-text-center">
-											<a href="#{{ route('news.show', $post->slug) }}" class="br25 uk-button uk-button-primary">Learn more</a>
+											<a href="" class="br25 uk-button uk-button-primary">Read more</a>
 										</div>
 									</div>
 								</div>
