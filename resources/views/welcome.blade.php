@@ -123,7 +123,7 @@
 						<div class="news-content width-100% uk-flex uk-flex-wrap">
 							<div class="uk-width-1-2@m uk-position-relative">
 								&nbsp;
-								<img src="./assets/pages/assets/img/news.png" alt="">
+								<img src="../uploads/news/images/{{$latest->news_image}}" alt="">
 							</div>
 							<div class="uk-width-1-2@m padding-bottom-sm">
 								<h5 class="text-bold">{{ strtoupper($latest->title) }}</h5>
