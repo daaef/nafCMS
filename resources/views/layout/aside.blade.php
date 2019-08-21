@@ -1,9 +1,9 @@
-<aside class="left-sidebar">
+<aside class="left-sidebar" style="background: #232845; !important">
 	<!-- Sidebar scroll-->
 	<div class="scroll-sidebar">
 		<!-- Sidebar navigation-->
 		<nav class="sidebar-nav">
-			<ul id="sidebarnav">
+			<ul id="sidebarnav" style="background: #232845; !important">
 				<li class="nav-small-cap">
 					<i class="mdi mdi-dots-horizontal"></i>
 					<span class="hide-menu">Personal</span>

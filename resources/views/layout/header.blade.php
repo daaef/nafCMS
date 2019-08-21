@@ -6,21 +6,7 @@
         <i class="ti-menu ti-close"></i>
       </a>
       
-      <div class="navbar-brand">
-        <a href="" class="logo">
-          <b class="logo-icon">
-            <img src="../../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
-            <img src="../../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
-          </b>
-          <span class="logo-text">
-            <img src="../../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-            <img src="../../assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
-          </span>
-        </a>
-        <a class="sidebartoggler d-none d-md-block" href="javascript:void(0)" data-sidebartype="mini-sidebar">
-          <i class="mdi mdi-toggle-switch mdi-toggle-switch-off font-20"></i>
-        </a>
-      </div>
+      
       
       <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
