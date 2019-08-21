@@ -11,6 +11,8 @@ use Sentinel;
 class NewsController extends Controller
 {
     protected $repo;
+    protected $repos;
+
     public function __construct(NewsContract $NewsContract, NewsCategoryContract $NewsCategoryContract) {
         $this->repo = $NewsContract;
         $this->repos = $NewsCategoryContract;
@@ -90,5 +92,10 @@ class NewsController extends Controller
           );
           return back()->with($error);
         }    
+    }
+
+    public function showNews($slug) {
+      $news = $this->repo->findBySlug($slug);
+      return view('news.show')->with('news', $news);
     }
 }

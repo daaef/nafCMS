@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home.page');
+Route::get('/{slug}', 'PageController@show')->name('page.show');
 
 Route::get('/about-us', function() {
   return view('about');
@@ -20,6 +21,11 @@ Route::get('/about-us', function() {
 Route::get('/history', function() {
   return view('history');
 })->name('history');
+
+// Protected News Route Resource
+Route::group(['prefix' => 'news'], function () {
+  Route::get('/{slug}', 'NewsController@showNews')->name('news.show');
+});
 
 // Authentication Route Group
 Route::group(['prefix' => 'auth'], function() {
@@ -51,7 +57,7 @@ Route::group(['prefix' => 'admin'], function() {
   Route::get('/dashboard', 'AdminController@index')->name('admin.index');
 
   Route::group(['prefix' => 'settings'], function() {
-     Route::get('/', 'SettingController@index')->name('setting.index');
+    Route::get('/', 'SettingController@index')->name('setting.index');
     Route::get('/create', 'SettingController@create')->name('setting.create');
     Route::post('/create', 'SettingController@store')->name('setting.store');
     Route::get('/edit/{id}', 'SettingController@show')->name('setting.show');
@@ -119,7 +125,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/{slug}/delete', 'NewsCategoryController@delete')->name('newsCategory.delete');
   });
 
-  // News
+  // Protected News Route Resource
   Route::group(['prefix' => 'news'], function () {
     Route::get('/', 'NewsController@index')->name('news.index');
     // Route::get('/create', 'NewsCategoryController@create')->name('newsCategory.create');
@@ -129,25 +135,25 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/{slug}/delete', 'NewsController@delete')->name('news.delete');
   });
 
-  Route::group(['prefix' => 'admin'], function() {
+  // Route::group(['prefix' => 'admin'], function() {
     Route::group(['prefix' => 'sliders'], function(){
-    Route::get('/{data}/edit', 'SliderController@edit')->name('slider.edit');
-    Route::get('/create', 'SliderController@create')->name('slider.create');
-    Route::post('/create', 'SliderController@store')->name('slider.store');
-    Route::get('/', 'SliderController@index')->name('slider.index');
-    Route::put('/{data}/update', 'SliderController@update')->name('slider.update');
-    Route::get('/{data}/delete', 'SliderController@delete')->name('slider.delete');
-  });
+      Route::get('/{data}/edit', 'SliderController@edit')->name('slider.edit');
+      Route::get('/create', 'SliderController@create')->name('slider.create');
+      Route::post('/create', 'SliderController@store')->name('slider.store');
+      Route::get('/', 'SliderController@index')->name('slider.index');
+      Route::put('/{data}/update', 'SliderController@update')->name('slider.update');
+      Route::get('/{data}/delete', 'SliderController@delete')->name('slider.delete');
+    });
 
-  Route::group(['prefix' => 'gallery'], function(){
-    Route::get('/create', 'GalleryController@create')->name('gallery.create');
-    Route::post('/create', 'GalleryController@store')->name('gallery.store');
-    Route::get('/', 'GalleryController@index')->name('gallery.index');
-    Route::get('/{slug}/edit', 'GalleryController@edit')->name('gallery.edit');
-    Route::put('/{slug}/update', 'GalleryController@update')->name('gallery.update');
-    Route::get('/{slug}/delete', 'GalleryController@delete')->name('gallery.delete');
-  });
-});
+    Route::group(['prefix' => 'gallery'], function(){
+      Route::get('/create', 'GalleryController@create')->name('gallery.create');
+      Route::post('/create', 'GalleryController@store')->name('gallery.store');
+      Route::get('/', 'GalleryController@index')->name('gallery.index');
+      Route::get('/{slug}/edit', 'GalleryController@edit')->name('gallery.edit');
+      Route::put('/{slug}/update', 'GalleryController@update')->name('gallery.update');
+      Route::get('/{slug}/delete', 'GalleryController@delete')->name('gallery.delete');
+    });
+  // });
 
 });
 

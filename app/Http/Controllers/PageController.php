@@ -22,6 +22,7 @@ class PageController extends Controller {
 		}
 		else{
 			$pages = $this->repo->findAll();
+			dd($pages);	
 			return view('page.index')->with('pages', $pages);
 		}
 	}
@@ -71,12 +72,14 @@ class PageController extends Controller {
 					return back()->withInput()->with('error', 'Could not create Page. Try again!');
 				}
 			} catch (QueryException $e) {				
+				
 				$error = array(
 					'message' => "$request->name page already exists!",
 					'alert-type' => 'error'
 				);
 
 				$errorCode = $e->errorInfo[1];
+
 				if($errorCode == 1062){
 					return redirect()->back()->withInput()->with($error);
 				}
@@ -84,8 +87,10 @@ class PageController extends Controller {
 		}
 	}
 	
-	public function show($id) {
-		//
+	public function show($slug) {
+		$page = $this->repo->findBySlug($slug);
+		dd($page);
+		return view('page.show')->with('page', $page);
 	}
 	
 	public function edit($id) {
