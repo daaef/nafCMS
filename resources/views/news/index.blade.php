@@ -6,11 +6,30 @@
 @section('scripts')
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../../assets/libs/tinymce/tinymce.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       $('#users').DataTable();
     });
-  </script>
+
+    $(document).ready(function() {
+
+      if ($("#mymce").length > 0) {
+        tinymce.init({
+          selector: "textarea#mymce",
+          theme: "modern",
+          height: 300,
+          plugins: [
+              "advlist autolink link image lists charmap hr anchor pagebreak spellchecker",
+              "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+              "save table contextmenu directionality emoticons template paste textcolor"
+          ],
+          toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | media fullpage | forecolor backcolor emoticons",
+        });
+      }
+    });
+  </script> 
+    
 @endsection
 
 @section('content')
@@ -59,7 +78,7 @@
             </thead>
             <tbody>
               @if(count($news) > 0)
-              @foreach($news as $new)
+                @foreach($news as $new)
                   <tr>
                     <td>{{ $new->title }}</td>  
                     <td>
@@ -139,14 +158,9 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <label>Body</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon11"><i class="ti-text"></i></span>
-                    </div>
-                    <textarea class="form-control" name="body" rows="5" aria-label="News Description" aria-describedby="basic-addon11"></textarea>
-                    <!-- <input type="text" class="form-control" placeholder="News Description" aria-label="News Description" aria-describedby="basic-addon11" name="description"> -->
-                  </div>
+                  <label>Post Content</label>
+                  <textarea id="mymce" name="body"></textarea>
+                  <small id="name13" class="badge badge-default badge-success form-text text-white float-right">Enter your post content above</small>
                 </div>
               </div>
             </div>

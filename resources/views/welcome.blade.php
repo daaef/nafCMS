@@ -153,11 +153,11 @@
 									</div>
 									<div class="uk-card-body uk-padding-small">
 										<h5 class="text-bold">
-											{!! strlen($post->title) > 50 ? strtoupper(substr($post->body,0,50)) : strtoupper($post->title) !!}...
+											{!! strlen($post->title) > 50 ? strtoupper(substr($post->title,0,50)) : strtoupper($post->title) !!}...
 										</h5>
-										<p class="padding-bottom-xs">											
-											{!! strlen($post->body) > 200 ? substr($post->body,0,200) : $post->body !!}...
-										</p>
+										<div class="padding-bottom-xs">											
+											{!! strlen($post->body) > 150 ? substr($post->body,0,150) : $post->body !!}...
+										</div>
 										<div class="uk-text-center">
 											<a href="" class="br25 uk-button uk-button-primary">Read more</a>
 										</div>
@@ -303,6 +303,7 @@
 								<li><a style="color: white !important" href="#">Site Map</a></li>
 								<li><a style="color: white !important" href="#">Terms of Use</a></li>
 								<li><a style="color: white !important" href="#">Privacy policy</a></li>
+								<li><a style="color: white !important" href="{{ route('auth.login.get') }}">Admin Login</a></li>
 	
 							</ul>
 						</div>

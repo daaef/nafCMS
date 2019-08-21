@@ -9,7 +9,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png"> -->
+  <link href="../../assets/pages/assets/favicon.png" rel="icon">
   <title>Airforce Nigeria - @yield('title')</title>
   <!-- Custom CSS -->
 
@@ -61,7 +62,7 @@
       <div class="page-breadcrumb">
         <div class="row">
           <div class="col-5 align-self-center">
-            <h4 class="page-title">Dashboard</h4>
+            <h4 class="page-title">Dashboard - {{ Sentinel::getUser()->first_name }} {{ Sentinel::getUser()->last_name }}</h4>
           </div>
           <div class="col-7 align-self-center">
             <div class="d-flex align-items-center justify-content-end">
@@ -108,19 +109,7 @@
   <script src="{{ URL::asset('/assets/dist/js/sidebarmenu.js') }}"></script>
   <!--Custom JavaScript -->
   <script src="{{ URL::asset('/assets/dist/js/custom.js') }}"></script>
-  <!--This page JavaScript -->
-  <!--chartis chart-->
-  <!-- <script src="{{ URL::asset('/assets/libs/chartist/dist/chartist.min.js') }}"></script> -->
-  <!-- <script src="{{ URL::asset('/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js') }}"></script> -->
-  <!--c3 charts -->
-  <!-- <script src="{{ URL::asset('/assets/extra-libs/c3/d3.min.js') }}"></script> -->
-  <!-- <script src="{{ URL::asset('/assets/extra-libs/c3/c3.min.js') }}"></script> -->
-  
-  <!-- chartjs -->
-  <!-- <script src="{{ URL::asset('/assets/libs/chart.js/dist/chart.min.js') }}"></script> -->
-  <!-- <script src="{{ URL::asset('/assets/libs/raphael/raphael.min.js') }}"></script> -->
-  <!-- <script src="{{ URL::asset('/assets/libs/morris.js/morris.min.js') }}"></script> -->
-  <!-- <script src="{{ URL::asset('/assets/dist/js/pages/dashboards/dashboard1.js') }}"></script> -->
+  @yield('scripts')
   <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   <script>
     @if(Session::has('message'))

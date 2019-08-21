@@ -34,12 +34,13 @@
 			</div>
 		</div>
 		
-		<div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(../../assets/images/big/auth-bg.jpg) no-repeat center center;">
+		<div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(../../assets/pages/assets/img/header-bg.png) no-repeat; background-size: cover;">
 			<div class="auth-box">
 				<div id="loginform">
 					<div class="logo">
-						<span class="db"><img src="../../assets/images/logo.png" alt="logo" /></span>
-						<h5 class="font-medium m-b-20">Sign In to portal</h5>
+						<span class="db">
+							<img src="../../assets/images/logo.png" alt="logo" height="100" />
+						</span>
 					</div>
 					<!-- Form -->
 					<div class="row">
@@ -86,14 +87,6 @@
 										<button class="btn btn-block btn-lg btn-info" type="submit">Log In</button>
 									</div>
 								</div>
-								<div class="row">
-									<!-- <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
-										<div class="social">
-											<a href="javascript:void(0)" class="btn  btn-facebook" data-toggle="tooltip" title="" data-original-title="Login with Facebook"> <i aria-hidden="true" class="fab  fa-facebook"></i> </a>
-											<a href="javascript:void(0)" class="btn btn-googleplus" data-toggle="tooltip" title="" data-original-title="Login with Google"> <i aria-hidden="true" class="fab  fa-google-plus"></i> </a>
-										</div>
-									</div> -->
-								</div>
 								<div class="form-group m-b-0 m-t-10">
 									<div class="col-sm-12 text-center">
 										<a href="/" class="text-info m-l-5" data-toggle="tooltip" title="" data-original-title="Visit Airforce website"><b>visit site</b></a>
@@ -105,7 +98,9 @@
 				</div>
 				<div id="recoverform">
 					<div class="logo">
-						<span class="db"><img src="../../assets/images/logo-icon.png" alt="logo" /></span>
+						<span class="db">
+							<img src="../../assets/images/logo.png" alt="logo" height="100"/>
+						</span>
 						<h5 class="font-medium m-b-20">Recover Password</h5>
 						<span>Enter your Email and instructions will be sent to you!</span>
 					</div>
@@ -121,7 +116,7 @@
 							<!-- pwd -->
 							<div class="row m-t-20">
 								<div class="col-12">
-									<button class="btn btn-block btn-lg btn-danger" type="submit" name="action">Reset</button>
+									<button class="btn btn-block btn-lg btn-danger" type="submit" name="action">Recover my password</button>
 								</div>
 							</div>
 						</form>
