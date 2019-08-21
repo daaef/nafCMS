@@ -119,21 +119,25 @@
 			<div class="latest-news">
 				<div class="container width-80%">
 					<h4>Latest News</h4>
-					<div class="news-content width-100% uk-flex uk-flex-wrap">
-						<div class="uk-width-1-2@m uk-position-relative">
-							&nbsp;
-							<img src="./assets/pages/assets/img/news.png" alt="">
+					@if($latest != null)
+						<div class="news-content width-100% uk-flex uk-flex-wrap">
+							<div class="uk-width-1-2@m uk-position-relative">
+								&nbsp;
+								<img src="./assets/pages/assets/img/news.png" alt="">
+							</div>
+							<div class="uk-width-1-2@m padding-bottom-sm">
+								<h5 class="text-bold">{{ strtoupper($latest->title) }}</h5>
+								<p class="color-accent margin-top-xs">
+									{{ date('d', strtotime($latest->created_at)) }} 
+									{{ date('F', strtotime($latest->created_at)) }},
+									{{ date('Y', strtotime($latest->created_at)) }}
+								</p>
+								<p class="margin-top-xs smallish">{!! $latest->body !!}</p>
+							</div>
 						</div>
-						<div class="uk-width-1-2@m padding-bottom-sm">
-							<h5 class="text-bold">{{ strtoupper($latest->title) }}</h5>
-							<p class="color-accent margin-top-xs">
-								{{ date('d', strtotime($latest->created_at)) }} 
-								{{ date('F', strtotime($latest->created_at)) }},
-								{{ date('Y', strtotime($latest->created_at)) }}
-							</p>
-							<p class="margin-top-xs smallish">{!! $latest->body !!}</p>
-						</div>
-					</div>
+					@else
+						<h4>No Latest News</h4>
+					@endif
 				</div>
 			</div>
 			<div class="news">
