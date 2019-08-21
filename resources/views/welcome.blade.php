@@ -132,7 +132,9 @@
 									{{ date('F', strtotime($latest->created_at)) }},
 									{{ date('Y', strtotime($latest->created_at)) }}
 								</p>
-								<p class="margin-top-xs smallish">{!! $latest->body !!}</p>
+								<p class="margin-top-xs smallish">
+									{!! strlen($latest->body) > 200 ? substr($latest->body,0,200) : $latest->body !!}...
+								</p>
 							</div>
 						</div>
 					@else
@@ -151,7 +153,10 @@
 									</div>
 									<div class="uk-card-body uk-padding-small">
 										<h5 class="text-bold">{{ strtoupper($post->title) }}</h5>
-										<p class="padding-bottom-xs">{!! $post->body !!}</p>
+										<p class="padding-bottom-xs">
+											
+											{!! strlen($post->body) > 200 ? substr($post->body,0,200) : $post->body !!}...
+										</p>
 										<div class="uk-text-center">
 											<a href="#{{ route('news.show', $post->slug) }}" class="br25 uk-button uk-button-primary">Learn more</a>
 										</div>
