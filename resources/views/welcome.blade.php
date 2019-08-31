@@ -327,7 +327,8 @@
 				</div>
 			</div>
 		</div>
-	</footer></section>
+	</footer>
+</section>
 
 <script src="assets/pages/assets/js/app.js"></script>
 </body>

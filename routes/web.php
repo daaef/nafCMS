@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home.page');
-Route::get('/{slug}', 'PageController@show')->name('page.show');
+// Route::get('/{slug}', 'PageController@show')->name('page.show');
 
 Route::get('/about-us', function() {
   return view('about');
@@ -154,6 +154,20 @@ Route::group(['prefix' => 'admin'], function() {
       Route::get('/{slug}/delete', 'GalleryController@delete')->name('gallery.delete');
     });
   // });
+
+  Route::group(['prefix' => 'cas'], function() {
+    Route::get('/', 'CasController@index')->name('cas.index');
+    Route::post('/', 'CasController@store')->name('cas.store');
+    Route::put('/{slug}/update', 'CasController@update')->name('cas.update');
+    Route::get('/{slug}/delete', 'CasController@delete')->name('cas.delete');
+  });
+
+  Route::group(['prefix' => 'leadership'], function() {
+    Route::get('/', 'LeadershipController@index')->name('leadership.index');
+    Route::post('/', 'LeadershipController@store')->name('leadership.store');
+    Route::put('/{slug}/update', 'LeadershipController@update')->name('leadership.update');
+    Route::get('/{slug}/delete', 'LeadershipController@delete')->name('leadership.delete');
+  });
 
 });
 

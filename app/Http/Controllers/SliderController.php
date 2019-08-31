@@ -36,7 +36,7 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         if(!Sentinel::check()){
-            return redirect()->route('auth.get.get');
+            return redirect()->route('auth.login.get');
         }
         else{
             

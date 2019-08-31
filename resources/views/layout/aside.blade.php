@@ -35,7 +35,7 @@
             </li>
           </ul>
         </li>
-
+{{-- 
         <li class="sidebar-item">
           <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
             <i class="mdi mdi-view-quilt"></i>
@@ -55,7 +55,7 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li> --}}
         <li class="sidebar-item">
           <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
             <i class="mdi mdi-view-quilt"></i>
@@ -76,26 +76,63 @@
             </li>
           </ul>
         </li>
-				<li class="sidebar-item">
+				{{-- <li class="sidebar-item">
 					<a class="sidebar-link waves-effect waves-dark" href="{{ route('pageType.index') }}" aria-expanded="false">
 						<i class="mdi mdi-account-multiple"></i>
 						<span class="hide-menu">Page Types </span>
 					</a>                    
-				</li>
+				</li> --}}
 
         <li class="sidebar-item">
-          <a class="sidebar-link waves-effect waves-dark" href="{{ route('page.index') }}" aria-expanded="false">
-            <i class="mdi mdi-account-multiple"></i>
+          <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+            <i class="mdi mdi-view-quilt"></i>
             <span class="hide-menu">Pages</span>
-          </a>                    
+          </a>
+          <ul aria-expanded="false" class="collapse  first-level">
+            <li class="sidebar-item">
+              <a href="{{ route('page.index') }}" class="sidebar-link">
+                <i class="mdi mdi-view-quilt"></i>
+                <span class="hide-menu">Media</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="{{ route('news.index') }}" class="sidebar-link">
+                <i class="mdi mdi-view-parallel"></i>
+                <span class="hide-menu">Mission &amp; Vision</span>
+              </a>
+            </li>
+
+          </ul>
         </li>
 
         <li class="sidebar-item">
+          <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+            <i class="mdi mdi-view-quilt"></i>
+            <span class="hide-menu">Leadership</span>
+          </a>
+          <ul aria-expanded="false" class="collapse  first-level">
+            <li class="sidebar-item">
+              <a href="{{ route('cas.index') }}" class="sidebar-link">
+                <i class="mdi mdi-view-quilt"></i>
+                <span class="hide-menu">CAS</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="{{ route('leadership.index') }}" class="sidebar-link">
+                <i class="mdi mdi-view-parallel"></i>
+                <span class="hide-menu">Leadership</span>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+        {{-- <li class="sidebar-item">
 					<a class="sidebar-link waves-effect waves-dark" href="{{ route('slider.index') }}" aria-expanded="false">
 						<i class="mdi mdi-view-quilt"></i>
 						<span class="hide-menu">Sliders</span>
 					</a>
-				</li>
+				</li> --}}
 
         <li class="sidebar-item">
 					<a class="sidebar-link waves-effect waves-dark" href="{{ route('gallery.index') }}" aria-expanded="false">
