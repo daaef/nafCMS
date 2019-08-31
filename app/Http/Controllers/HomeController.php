@@ -25,10 +25,21 @@ class HomeController extends Controller {
 	}
 	
 	public function index() {
-		$menus = Menu::with('submenus')->get();
-		$posts = $this->newsRepo->findAll();
-		// dd($posts);
-		$latest = MyNews::orderBy('created_at', 'desc')->first();
-		return view('welcome')->with('menus', $menus)->with('posts', $posts)->with('latest', $latest);
+		// $menus = Menu::with('submenus')->get();
+		// $posts = $this->newsRepo->findAll();
+		// // dd($posts);
+		// $latest = MyNews::orderBy('created_at', 'desc')->first();
+		// return view('welcome')->with('menus', $menus)->with('posts', $posts)->with('latest', $latest);
+		return view('welcome');
 	}
+
+	public function history(){
+		return view('history');
+	}
+
+	public function leadership(){
+		return view('leadership');
+	}
+
+
 }

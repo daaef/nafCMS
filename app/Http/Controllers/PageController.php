@@ -109,4 +109,6 @@ class PageController extends Controller {
 	public function delete($id) {
 		//
 	}
+
+	
 }
