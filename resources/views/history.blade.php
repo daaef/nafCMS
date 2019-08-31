@@ -81,16 +81,21 @@
         </h1>
 
         <ul class="main-top-nav">
-            <li class="apply-now-label"><a id="top-nav-connect" class="label-text">Join Now</a></li>
-            <li class="apply-now-label"><a class="label-text" href="#">Contact</a></li>
-            <li class="page-label"><span class="label-text is-filled">History
-                </span></li>
+            <li class="apply-now-label">
+                <a class="label-text" href="career.html">Mail</a></li>
+            <li class="apply-now-label">
+                <a class="label-text" href="{{route('pages.career')}}">Careers</a></li>
+            <li class="page-label">
+                <span class="label-text is-filled"><!--ko text:navPageName-->Gallery
+                    <!--/ko--></span>
+            </li>
             <li>
-                <a href="#" class="ir top-nav-button main-nav-toggle">
+                <a href="#" class="ir top-nav-button main-nav-toggle"
+                >
                     <span class="lines"></span>
                     <span class="cross">
                         <span class="cross-diagonal"></span>
-                        </span>
+                    </span>
                 </a>
             </li>
         </ul>
@@ -109,13 +114,13 @@
             </dt>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="{{route('pages.history')}}">
+                            href="{{route('pages.history')}}">
     <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                          clip-rule="evenodd" fill="#FFF"
                                                                          d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    History
-                </a></dd>
+                History
+            </a></dd>
             <dd style="">
                 <a class="main-navigation-link"
                    href="{{route('pages.leadership')}}">
@@ -128,23 +133,23 @@
             </dd>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="mission_vision.html">
+                            href="mission_vision.html">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
                                                                                      d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Mission & Vision
-                </a>
+                Mission & Vision
+            </a>
             </dd>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="#">
+                            href="#">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
                                                                                      d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Organization
-                </a>
+                Organization
+            </a>
             </dd>
 
         </dl>
@@ -160,13 +165,13 @@
             </dt>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="news.html">
+                            href="{{route('pages.news')}}">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
                                                                                      d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Events
-                </a>
+                Events
+            </a>
             </dd>
             <dd style="">
                 <a class="main-navigation-link"
@@ -184,8 +189,8 @@
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
                                                                                      d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Publications
-                </a>
+                Publications
+            </a>
             </dd>
 
         </dl>
@@ -211,13 +216,13 @@
             </dd>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="gallery.html">
+                            href="{{route('pages.gallery')}}">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
                                                                                      d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Gallery
-                </a>
+                Gallery
+            </a>
             </dd>
         </dl>
     </div>

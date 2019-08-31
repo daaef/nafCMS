@@ -41,5 +41,26 @@ class HomeController extends Controller {
 		return view('leadership');
 	}
 
+	public function career(){
+		return view('career');
+	}
+
+	public function news(){
+		return view('news');
+	}
+
+	public function newsDetails(){
+		return view('news-detail');
+	}
+
+	public function commanders(){
+		return view('commanders');
+	}
+
+	public function gallery(){
+		return view('gallery');
+	}
+
+
 
 }

@@ -5,13 +5,14 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="assets/pages/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/pages/assets/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/pages/assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/pages/assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="assets/pages/assets/css/style-v=1.0.1.css">
     <link rel="stylesheet" type="text/css" href="assets/pages/assets/css/fixes.css">
 
-    <link rel="icon" href="img/favicon.png">
+    <link rel="icon" href="assets/pages/assets/img/favicon.png">
     <title>Nigerian Air Force</title>
 
     <!-- This site is optimized with the Yoast SEO plugin v9.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
@@ -54,10 +55,9 @@
 <div class="site-header">
     <header class="site-header">
 
-        <a class="header-site-logo text-uppercase icon-logo-airforce"
-           href="index.html" style="background-image: none;">
+        <h1 class="header-site-logo icon-logo-airforce" href="#" style="background-image: none;">
             <span class="logo-title">Nigerian Air Force</span>
-        </a>
+        </h1>
 
         <ul class="main-top-nav">
             <li class="apply-now-label">
@@ -65,7 +65,7 @@
             <li class="apply-now-label">
                 <a class="label-text" href="{{route('pages.career')}}">Careers</a></li>
             <li class="page-label">
-                <span class="label-text is-filled"><!--ko text:navPageName-->Leadership
+                <span class="label-text is-filled"><!--ko text:navPageName-->News
                     <!--/ko--></span>
             </li>
             <li>
@@ -78,7 +78,6 @@
                 </a>
             </li>
         </ul>
-
     </header>
     <span class="site-header-small-view-bg" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
 </div>
@@ -92,7 +91,7 @@
             </dt>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="history.html">
+                   href="{{route('pages.history')}}">
     <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                          clip-rule="evenodd" fill="#FFF"
@@ -101,7 +100,7 @@
                 </a></dd>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="./leadership.html">
+                   href="{{route('pages.leadership')}}">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
@@ -143,7 +142,7 @@
             </dt>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="news.html">
+                   href="{{route('pages.news')}}">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
@@ -179,8 +178,8 @@
         <span class="coverer main-navigation-small-background"
               style="background-image: url('assets/pages/assets/img/shot7.png')"></span>
         <dl class="main-navigation-list">
-            <dt class="main-navigation-title"
-                href="#" style="">Media
+            <dt class="main-navigation-title">
+                <a href="#" style="">Media</a>
             </dt>
             <dd style="">
                 <a class="main-navigation-link"
@@ -194,12 +193,32 @@
             </dd>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="gallery.html">
+                   href="{{route('pages.gallery')}}">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
                                                                                      d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
                     Gallery
+                </a>
+            </dd>
+            <dd style="">
+                <a class="main-navigation-link"
+                   href="gallery.html">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                    Videos
+                </a>
+            </dd>
+            <dd style="">
+                <a class="main-navigation-link"
+                   href="gallery.html">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                    NAF Integrity Plan
                 </a>
             </dd>
         </dl>
@@ -252,301 +271,121 @@
     <div class="main-navigation-list-wrapper main-bg">
     </div>
 </nav>
-<section id="home" class="leadership">
-    <div class="view view-faq" style="visibility: visible;">
-        <header class="hero-image text-inverted is-small">
+<section id="home" class="news">
+    <div data-bind="template: { name: 'faq' }" class="view view-faq" style="visibility: visible;">
+        <!--ko block:{"optional":false,"definition":"hero-image","name":"hero-image","placeholder":"hero-small"} -->
+        <header class="hero-image text-inverted is-small"
+                data-bind="css: { 'is-small': isSmall, 'has-option-slider': hasOptionSlider }">
             <div class="hero-image-title">
                 <h6 class="heading-06 subtitle">Nigerian Air Force</h6>
-                <h1 class="heading-02 title">LEADERSHIP</h1>
+                <h1 class="heading-02 title">News</h1>
             </div>
         </header>
-        <div class="site-wrapper mt-70px">
-            <div class="heading-block text-center" data-transition="heading-block-02" data-bind="css: { 'small-margin-bottom': ko.unwrap($data.smallMarginBottom) }">
+        <article data-aos="fade"
+                 data-aos-duration="2500" data-aos-delay="300" class="content-wrapper content-small-head s-small-padding">
+            <div class="heading-block mt-70px">
                 <h6 class="heading-06 text-mask-background text-stroke-through">
-                    <!--ko text:$data.caption-->HOME > ABOUT > LEADERSHIP<!--/ko--></h6>
-                <h2 class="heading-02 title responsive-title">Chief of Air Staff (CAS)</h2>
-            </div>
-            <div class="row padding@mobile">
-                <div class="col-12 col-md-5 image bg-contain">
-                    <img src="assets/pages/assets/img/avm.png" class="img-fluid">
-                </div>
-                <div class="col-12 col-md-7 description grid-padding-around">
-                    <h4 class="feature-title">Air Marshal Sadique Baba Abubakar</h4>
-                    <h5 class="title">DFS GSS psc(+) fwc ndc(+) MSc</h5>
-                    <p>Air Marshal SB Abubakar was born on 8 April 1960 at Azare in Bauchi State. He had his primary education at St Paul’s Primary School Bauchi from 1967 to 1973 and his secondary education at GSS Bauchi. He joined the Nigerian Air Force as a member of Cadet Military Training Course (CMTC 5) in November 1979.</p>
-                    <div class="button-alignment">
-                        <a href="#"
-                           class="btn btn-outline-dark btn-lg btn-more" target="">Read More
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-        <article class="content-wrapper content-small-head section-specialty-careers">
-            <div class="heading-block" data-transition="">
-
-
-                <!-- ko if: $data.title -->
-                <h3 class="heading-03 has-small-margin text-mask-background text-stroke-through" data-bind="
-			css: {
-				'has-margin': $data.bodyCopy,
-				'has-small-margin': !$data.bodyCopy,
-				'text-mask-background text-stroke-through': !$data.noStrokeThrough
-			}" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                    <!--ko if:$data.html--><!--/ko-->
-                    <!--ko ifnot:$data.html-->
-                    <!--ko text:$data.title-->Senior Commanders<!--/ko-->
-                    <!--/ko-->
-                </h3>
-                <!-- /ko -->
-
-                <!-- ko if: $data.bodyCopy --><!-- /ko -->
+                    <!--ko text:$data.caption-->HOME > NEWS > EVENTS<!--/ko--></h6>
+                <h2 class="heading-02 title responsive-title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                    Latest News</h2>
             </div>
             <!--/ko-->
 
-            <ol class="reset-list grid-wrapper justify-content-center site-wrapper block-grid-animate">
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd1.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Air Vice Marshal EO Anebi</h5>
-                            <p class="card-text">Chief of Policy and Plans (COPP)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd2.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal IO Amao
-                            </h5>
-                            <p class="card-text">Chief of Training and Operations (CTOPS)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd3.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal M Muktar
-                            </h5>
-                            <p class="card-text">
-                                Chief of Aircraft Engineering (CAcE)
-                            </p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-<!--                            <img class="card-img-top" src="img/cmd1.jpg" alt="Card image cap">-->
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal MA Yakubu
-                            </h5>
-                            <p class="card-text">Chief of Logistics (CLOG)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd4.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal PN DIMFWINA
-                            </h5>
-                            <p class="card-text">
-                                Chief of Communication Information Systems (CCIS)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd5.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal KG Lar
-                            </h5>
-                            <p class="card-text">
-                                Chief of Administrations (COA)
-                            </p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd6.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal RN Ekeh</h5>
-                            <p class="card-text">Chief of Standard and Evaluation (COSE)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd8.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Cdre ME Shuaibu
-                            </h5>
-                            <p class="card-text">
-                                Chief of Medical Services
-                            </p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd9.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal CA Ogbeche</h5>
-                            <p class="card-text">Chief of Accounts and Budget (CAB)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-            </ol>
-            <hr class="is-horizontal-line">
-            <ol class="reset-list grid-wrapper justify-content-center site-wrapper block-grid-animate">
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd10.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal CA OHWO
-                            </h5>
-                            <p class="card-text">
-                                Air Officer Commanding Tactical Air Command</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd11.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal NB Bali
-                            </h5>
-                            <p class="card-text">
-                                Air Officer Commanding Special Operations Command
-                            </p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd12.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal UP Uzezi</h5>
-                            <p class="card-text">Air Officer Commanding Mobility Command</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd13.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal MZ Suleiman
-                            </h5>
-                            <p class="card-text">
-                                Air Officer Commanding Air Training Command</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd14.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal I Amin
-                            </h5>
-                            <p class="card-text">
-                                Air Officer Commanding Ground Training Command
-                            </p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd15.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal AA Olabisi
-                            </h5>
-                            <p class="card-text">
-                                Air Officer Commanding Logistics Command
-                            </p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/assets/img/cmd7.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal ME Ahmed
-                            </h5>
-                            <p class="card-text">
-                                Air Secretary (Air Sec)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-            </ol>
+            <div class="site-wrapper">
+                <div class="grid-wrapper home-grid-items text-inverted single-margin-bottom" data-transition="">
+                    <div class="grid-item grid-four-seventh">
+                        <a href="news-detail.html" class="button-block full-image-grid-item-small">
+                            <figure class="full-image-ratio ratio-1-1 is-active">
+                                <img src="assets/pages/assets/img/news1.jpg"
+                                     alt="" style="">
+                            </figure><!--/ko-->
 
+                            <div class="full-image-caption">
+                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <!--ko text:$data.careers()[0].caption-->26/Aug/2019<!--/ko--></h4>
+                                <h3 class="copy-intro-01 text-no-margin"
+                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    INTERNAL SECURITY OPERATIONS: NAF INDUCTS ANOTHER HELICOPTER REACTIVATED LOCALLY IN PORT HARCOURT
+                                    <!--/ko--></h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grid-item grid-three-seventh">
+
+                        <a href="news-detail.html"
+                           class="button-block full-image-grid-item-small">
+                            <!--ko block:{"optional":false,"definition":"full-image","name":"image-small"} -->
+                            <figure class="full-image-ratio ratio-3-2 is-active">
+                                <img src="assets/pages/assets/img/news-1.jpg"
+                                     alt="" style="">
+                            </figure><!--/ko-->
+                            <div class="full-image-caption">
+                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <!--ko text:$data.careers()[1].caption-->22/Aug/2019<!--/ko--></h4>
+                                <h3 class="copy-intro-01 text-no-margin"
+                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <!--ko text:$data.careers()[0].title-->JUST IN: NAF AIRLIFTS REFUGEES FROM CAMEROON TO
+                                    NIGERIA ...</h3>
+                            </div>
+                        </a>
+                        <a href="news-detail.html"
+                           class="button-block full-image-grid-item-small">
+                            <!--ko block:{"optional":false,"definition":"full-image","name":"image-small"} -->
+                            <figure class="full-image-ratio ratio-3-2 is-active">
+                                <img src="assets/pages/assets/img/news-2.jpg"
+                                     alt="" style="">
+                            </figure><!--/ko-->
+                            <div class="full-image-caption">
+                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <!--ko text:$data.careers()[1].caption-->20/Aug/2019<!--/ko--></h4>
+                                <h3 class="copy-intro-01 text-no-margin"
+                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    NAF COMMISSIONS RENOVATED ACCOMMODATION FOR SNCOS IN KADUNA...<!--/ko--></h3>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="grid-item grid-one-half">
+
+
+                        <a href="news-detail.html"
+                           class="button-block full-image-grid-item-small" style="">
+                            <figure class="full-image-ratio ratio-3-2 is-active">
+                                <img src="assets/pages/assets/img/news-3.jpg"
+                                     alt="" style="">
+                            </figure><!--/ko-->
+                            <div class="full-image-caption">
+                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    18/Aug/2019</h4>
+                                <h3 class="copy-intro-01 text-no-margin"
+                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    PRESIDENT MUHAMMADU BUHARI COMMISSIONS NAF REFERENCE HOSPITAL...</h3>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="grid-item grid-one-half">
+
+                        <a href="news-detail.html"
+                           class="button-block full-image-grid-item-small">
+                            <!--ko block:{"optional":false,"definition":"full-image","name":"image-small"} -->
+                            <figure class="full-image-ratio ratio-3-2 is-active">
+                                <img src="assets/pages/assets/img/news-2.jpg"
+                                     alt="" style="">
+                            </figure><!--/ko-->
+                            <div class="full-image-caption">
+                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <!--ko text:$data.careers()[1].caption-->20/Aug/2019<!--/ko--></h4>
+                                <h3 class="copy-intro-01 text-no-margin"
+                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    NAF COMMISSIONS RENOVATED ACCOMMODATION FOR SNCOS IN KADUNA...<!--/ko--></h3>
+                            </div>
+                        </a>
+
+                    </div>
+                </div><!--/ko-->
+                <!-- /ko -->
+            </div>
         </article>
     </div>
 </section>
@@ -716,6 +555,14 @@
     <a href="#" style="display : none;">Career index</a>
 
 </footer>
+
+<!--
+<div id="cookie-policy">
+<a href="index.html#" class="btn-close">X</a>
+<p>We use cookie to give you the best experience on our website.</p>
+<p>By continuing to use our website without changing your cookie settings, you agree to our use of cookies in accordance with our updated <a href="cookie-policy/index.html">Cookie Policy</a></p>
+</div>
+-->
 
 
 <script src="assets/pages/assets/js/jquery-3.2.1.min.js"></script>
