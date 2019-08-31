@@ -12,15 +12,15 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home.page');
-Route::get('/{slug}', 'PageController@show')->name('page.show');
+// Route::get('/{slug}', 'PageController@show')->name('page.show');
 
 Route::get('/about-us', function() {
   return view('about');
 })->name('about-us');
 
-Route::get('/history', function() {
-  return view('history');
-})->name('history');
+Route::get('/history', 'HomeController@history')->name('pages.history');
+
+Route::get('/leadership', 'HomeController@leadership')->name('pages.leadership');
 
 // Protected News Route Resource
 Route::group(['prefix' => 'news'], function () {
