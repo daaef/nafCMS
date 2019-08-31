@@ -22,6 +22,14 @@ Route::get('/history', 'HomeController@history')->name('pages.history');
 
 Route::get('/leadership', 'HomeController@leadership')->name('pages.leadership');
 
+Route::get('/career', 'HomeController@career')->name('pages.career');
+
+Route::get('/news', 'HomeController@news')->name('pages.news');
+
+Route::get('/commanders', 'HomeController@commanders')->name('pages.commanders');
+
+Route::get('/gallery', 'HomeController@gallery')->name('pages.gallery');
+
 // Protected News Route Resource
 Route::group(['prefix' => 'news'], function () {
   Route::get('/{slug}', 'NewsController@showNews')->name('news.show');
