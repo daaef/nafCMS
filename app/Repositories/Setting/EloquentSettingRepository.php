@@ -10,7 +10,6 @@ class EloquentSettingRepository implements SettingContract {
     }
 
     public function create($request){
-
       
         $data = [
             'site_logo' => $request->site_logo,
