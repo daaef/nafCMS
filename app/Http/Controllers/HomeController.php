@@ -59,6 +59,14 @@ class HomeController extends Controller {
 		return view('gallery');
 	}
 
+	public function missionVision(){
+		return view('mission_vision');
+	}
+
+	public function organization(){
+		return view('organization');
+	}
+
 
 
 }

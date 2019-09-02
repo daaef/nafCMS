@@ -104,11 +104,11 @@
               style="background-image: url('/assets/pages/img/shot5.png')"></span>
         <dl class="main-navigation-list">
             <dt class="main-navigation-title">
-                <a href="history.html" style="">About</a>
+                <a href="{{route('pages.history')}}" style="">About</a>
             </dt>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="history.html">
+                   href="{{route('pages.history')}}">
     <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                          clip-rule="evenodd" fill="#FFF"
@@ -117,7 +117,7 @@
                 </a></dd>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="./leadership.html">
+                   href="{{route('pages.leadership')}}">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
@@ -127,7 +127,7 @@
             </dd>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="mission_vision.html">
+                   href="{{route('pages.mission-vision')}}">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50">
                     <path fill-rule="evenodd"
@@ -138,7 +138,7 @@
             </dd>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="organization.html">
+                   href="{{route('pages.organization')}}">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
