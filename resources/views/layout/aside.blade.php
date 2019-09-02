@@ -76,12 +76,6 @@
             </li>
           </ul>
         </li>
-				{{-- <li class="sidebar-item">
-					<a class="sidebar-link waves-effect waves-dark" href="{{ route('pageType.index') }}" aria-expanded="false">
-						<i class="mdi mdi-account-multiple"></i>
-						<span class="hide-menu">Page Types </span>
-					</a>                    
-				</li> --}}
 
         <li class="sidebar-item">
           <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
@@ -95,12 +89,12 @@
                 <span class="hide-menu">Media</span>
               </a>
             </li>
-            <li class="sidebar-item">
+            {{-- <li class="sidebar-item">
               <a href="{{ route('news.index') }}" class="sidebar-link">
                 <i class="mdi mdi-view-parallel"></i>
                 <span class="hide-menu">Mission &amp; Vision</span>
               </a>
-            </li>
+            </li> --}}
 
           </ul>
         </li>
@@ -133,6 +127,12 @@
 						<span class="hide-menu">Sliders</span>
 					</a>
 				</li> --}}
+        <li class="sidebar-item">
+          <a class="sidebar-link waves-effect waves-dark" href="{{ route('vision.mission') }}" aria-expanded="false">
+            <i class="mdi mdi-view-quilt"></i>
+            <span class="hide-menu">Mission &amp; Vision</span>
+          </a>
+        </li>
 
         <li class="sidebar-item">
 					<a class="sidebar-link waves-effect waves-dark" href="{{ route('gallery.index') }}" aria-expanded="false">

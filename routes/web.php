@@ -135,25 +135,23 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/{slug}/delete', 'NewsController@delete')->name('news.delete');
   });
 
-  // Route::group(['prefix' => 'admin'], function() {
-    Route::group(['prefix' => 'sliders'], function(){
-      Route::get('/{data}/edit', 'SliderController@edit')->name('slider.edit');
-      Route::get('/create', 'SliderController@create')->name('slider.create');
-      Route::post('/create', 'SliderController@store')->name('slider.store');
-      Route::get('/', 'SliderController@index')->name('slider.index');
-      Route::put('/{data}/update', 'SliderController@update')->name('slider.update');
-      Route::get('/{data}/delete', 'SliderController@delete')->name('slider.delete');
-    });
+  Route::group(['prefix' => 'sliders'], function(){
+    Route::get('/{data}/edit', 'SliderController@edit')->name('slider.edit');
+    Route::get('/create', 'SliderController@create')->name('slider.create');
+    Route::post('/create', 'SliderController@store')->name('slider.store');
+    Route::get('/', 'SliderController@index')->name('slider.index');
+    Route::put('/{data}/update', 'SliderController@update')->name('slider.update');
+    Route::get('/{data}/delete', 'SliderController@delete')->name('slider.delete');
+  });
 
-    Route::group(['prefix' => 'gallery'], function(){
-      Route::get('/create', 'GalleryController@create')->name('gallery.create');
-      Route::post('/create', 'GalleryController@store')->name('gallery.store');
-      Route::get('/', 'GalleryController@index')->name('gallery.index');
-      Route::get('/{slug}/edit', 'GalleryController@edit')->name('gallery.edit');
-      Route::put('/{slug}/update', 'GalleryController@update')->name('gallery.update');
-      Route::get('/{slug}/delete', 'GalleryController@delete')->name('gallery.delete');
-    });
-  // });
+  Route::group(['prefix' => 'gallery'], function(){
+    Route::get('/create', 'GalleryController@create')->name('gallery.create');
+    Route::post('/create', 'GalleryController@store')->name('gallery.store');
+    Route::get('/', 'GalleryController@index')->name('gallery.index');
+    Route::get('/{slug}/edit', 'GalleryController@edit')->name('gallery.edit');
+    Route::put('/{slug}/update', 'GalleryController@update')->name('gallery.update');
+    Route::get('/{slug}/delete', 'GalleryController@delete')->name('gallery.delete');
+  });
 
   Route::group(['prefix' => 'cas'], function() {
     Route::get('/', 'CasController@index')->name('cas.index');
@@ -167,6 +165,12 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('/', 'LeadershipController@store')->name('leadership.store');
     Route::put('/{slug}/update', 'LeadershipController@update')->name('leadership.update');
     Route::get('/{slug}/delete', 'LeadershipController@delete')->name('leadership.delete');
+  });
+
+  Route::group(['prefix' => 'mission-vision'], function() {
+    Route::get('/', 'MissionController@index')->name('vision.mission');
+    Route::put('/{slug}/update-mission', 'MissionController@update')->name('mission.update');
+    Route::put('/{slug}/update-vision', 'VisionController@update')->name('vision.update');
   });
 
 });
