@@ -4,41 +4,40 @@ $(function() {
   $items.each(function(i,e) {
     $(e)
       .on("touchstart", function() {
-        $(e).parent().addClass("pressed")
+        $(e).parent().addClass("pressed");
         $(e).addClass("pressed")
       })
       .on("touchend", function() {
-        $(e).parent().removeClass("pressed")
+        $(e).parent().removeClass("pressed");
         $(e).removeClass("pressed")
       })
-  })
+  });
 
   $(document)
     .on("touchend", function() {
-      $items.removeClass("pressed")
+      $items.removeClass("pressed");
       $ul.removeClass("pressed");
-    })
+    });
 
   var sr = ScrollReveal({ reset: false });
 
   $(".numbers .item").each(function(i,e) {
     sr.reveal(e, { duration: 1000, distance: "50px", delay: i * 200 });
-  })
+  });
 
   sr.reveal('.feature .image', { duration: 1000, origin: "left", distance: "50px", delay: 500 });
   sr.reveal('.feature .description', { duration: 1000, origin: "right", distance: "50px", delay: 400 });
   sr.reveal('#footer .p-0', { duration: 1000, origin: "top", distance: "50px", delay: 200 });
   sr.reveal('#footer .container', { duration: 1000, origin: "top", distance: "50px", delay: 200 });
   sr.reveal('header h1', { duration: 1000, origin: "right", distance: "50px", delay: 200 });
-
-
+  if ($('#player').hasClass('video-foreground')){
   // play and show the video
   $("#player").show();
-  $("#player").addClass("active")
+  $("#player").addClass("active");
   var video = document.getElementById("player");
   video.play();
-
-})
+  }
+});
 
 var tag = document.createElement('script');
 
@@ -87,7 +86,7 @@ var done = false;
 function onPlayerStateChange(event) {
 
   if (event.data == YT.PlayerState.BUFFERING) {
-    console.log("quality set to hd720")
+    console.log("quality set to hd720");
     event.target.setPlaybackQuality('hd720');
   }
 

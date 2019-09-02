@@ -5,7 +5,7 @@
  * Inspired on https://stackoverflow.com/a/40658647/1413049
  * ==================================================== */
 !function ($) {
-  'use strict'
+  'use strict';
 
   var Class = function (el, cb) {
     this.$el = $(el);

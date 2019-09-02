@@ -12,24 +12,25 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home.page');
-// Route::get('/{slug}', 'PageController@show')->name('page.show');
 
 Route::get('/about-us', function() {
   return view('about');
 })->name('about-us');
 
 Route::get('/history', 'HomeController@history')->name('pages.history');
-
 Route::get('/leadership', 'HomeController@leadership')->name('pages.leadership');
+Route::get('/career', 'HomeController@career')->name('pages.career');
+Route::get('/commanders', 'HomeController@commanders')->name('pages.commanders');
+Route::get('/gallery', 'HomeController@gallery')->name('pages.gallery');
 
 // Protected News Route Resource
 Route::group(['prefix' => 'news'], function () {
-  Route::get('/{slug}', 'NewsController@showNews')->name('news.show');
+  Route::get('/', 'HomeController@news')->name('pages.news');
+  Route::get('/{slug}', 'NewsController@showSingleNews')->name('news.show.details');
 });
 
 // Authentication Route Group
 Route::group(['prefix' => 'auth'], function() {
-
   // Account Registration Route Resources
   Route::get('/register', 'RegisterController@register')->name('get_register');
   Route::post('/register', 'RegisterController@store')->name('post_register');
@@ -49,8 +50,7 @@ Route::group(['prefix' => 'auth'], function() {
   Route::post('/login', 'LoginController@post')->name('auth.login.post');
 
   // Logout Route Resources
-  Route::post('/logout', 'LoginController@logout')->name('logout');
-  
+  Route::post('/logout', 'LoginController@logout')->name('logout');  
 });
 
 Route::group(['prefix' => 'admin'], function() {

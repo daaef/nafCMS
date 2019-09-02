@@ -54,21 +54,27 @@
 <div class="site-header">
     <header class="site-header">
 
-        <h1 class="header-site-logo icon-logo-airforce" href="#" style="background-image: none;">
+        <a class="header-site-logo text-uppercase icon-logo-airforce"
+           href="index.html" style="background-image: none;">
             <span class="logo-title">Nigerian Air Force</span>
-        </h1>
+        </a>
 
         <ul class="main-top-nav">
-            <li class="apply-now-label"><a id="top-nav-connect" class="label-text">Join Now</a></li>
-            <li class="apply-now-label"><a class="label-text" href="#">Contact</a></li>
-            <li class="page-label"><span class="label-text is-filled"><!--ko text:navPageName-->Leadership
-                <!--/ko--></span></li>
+            <li class="apply-now-label">
+                <a class="label-text" href="career.html">Mail</a></li>
+            <li class="apply-now-label">
+                <a class="label-text" href="{{route('pages.career')}}">Careers</a></li>
+            <li class="page-label">
+                <span class="label-text is-filled"><!--ko text:navPageName-->Leadership
+                    <!--/ko--></span>
+            </li>
             <li>
-                <a href="#" class="ir top-nav-button main-nav-toggle">
+                <a href="#" class="ir top-nav-button main-nav-toggle"
+                >
                     <span class="lines"></span>
                     <span class="cross">
                         <span class="cross-diagonal"></span>
-                        </span>
+                    </span>
                 </a>
             </li>
         </ul>
@@ -86,7 +92,7 @@
             </dt>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="{{route('pages.history')}}">
+                   href="history.html">
     <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                          clip-rule="evenodd" fill="#FFF"
@@ -95,7 +101,7 @@
                 </a></dd>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="{{route('pages.leadership')}}">
+                   href="./leadership.html">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
@@ -127,7 +133,7 @@
         </dl>
     </div>
     <span class="coverer main-navigation-image span1"
-          style="background-image: url('assets/pages/assets/img/shot5.png');"></span>
+          style="background-image: url(&quot;assets/pages/assets/img/shot5.png&quot;);"></span>
     <div class="main-navigation-list-wrapper span2 newsBG">
         <span class="coverer main-navigation-small-background"
               style="background-image: url('assets/pages/assets/img/shot4.png')"></span>
@@ -168,7 +174,7 @@
         </dl>
     </div>
     <span class="coverer main-navigation-image span2"
-          style="background-image: url('assets/pages/assets/img/shot4.png');"></span>
+          style="background-image: url(&quot;assets/pages/assets/img/shot4.png&quot;);"></span>
     <div class="main-navigation-list-wrapper span3 mediaBG">
         <span class="coverer main-navigation-small-background"
               style="background-image: url('assets/pages/assets/img/shot7.png')"></span>
@@ -199,7 +205,7 @@
         </dl>
     </div>
     <span class="coverer main-navigation-image span3"
-          style="background-image: url('assets/pages/assets/img/shot7.png'); "></span>
+          style="background-image: url(&quot;assets/pages/assets/img/shot7.png&quot;); "></span>
     <div class="main-navigation-list-wrapper span4 howBG">
         <span class="coverer main-navigation-small-background"
               style="background-image: url('assets/pages/assets/img/shot3.png')"></span>
@@ -242,7 +248,7 @@
         </dl>
     </div>
     <span class="coverer main-navigation-image span4"
-          style="background-image: url('assets/pages/assets/img/shot3.png'); "></span>
+          style="background-image: url(&quot;assets/pages/assets/img/shot3.png&quot;); "></span>
     <div class="main-navigation-list-wrapper main-bg">
     </div>
 </nav>
@@ -260,9 +266,9 @@
                     <!--ko text:$data.caption-->HOME > ABOUT > LEADERSHIP<!--/ko--></h6>
                 <h2 class="heading-02 title responsive-title">Chief of Air Staff (CAS)</h2>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-5 image bg-contain" style="background-image: url('assets/pages/assets/img/avm.png');">
-                    <img src="./img/avm.png" class="d-lg-none img-fluid">
+            <div class="row padding@mobile">
+                <div class="col-12 col-md-5 image bg-contain">
+                    <img src="assets/pages/assets/img/avm.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-md-7 description grid-padding-around">
                     <h4 class="feature-title">Air Marshal Sadique Baba Abubakar</h4>
@@ -305,7 +311,7 @@
                     <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
                     <a href="commanders.html" class="card no-overflow">
                         <div class="media">
-                            <img class="card-img-top" src="img/cmd1.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="assets/pages/assets/img/cmd1.jpg" alt="Card image cap">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Air Vice Marshal EO Anebi</h5>
@@ -317,7 +323,7 @@
                     <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
                     <a href="commanders.html" class="card no-overflow">
                         <div class="media">
-                            <img class="card-img-top" src="img/cmd2.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="assets/pages/assets/img/cmd2.jpg" alt="Card image cap">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">
@@ -331,7 +337,7 @@
                     <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
                     <a href="commanders.html" class="card no-overflow">
                         <div class="media">
-                            <img class="card-img-top" src="img/cmd3.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="assets/pages/assets/img/cmd3.jpg" alt="Card image cap">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">

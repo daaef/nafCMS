@@ -25,12 +25,10 @@ class HomeController extends Controller {
 	}
 	
 	public function index() {
-		// $menus = Menu::with('submenus')->get();
-		// $posts = $this->newsRepo->findAll();
-		// // dd($posts);
-		// $latest = MyNews::orderBy('created_at', 'desc')->first();
-		// return view('welcome')->with('menus', $menus)->with('posts', $posts)->with('latest', $latest);
-		return view('welcome');
+		$posts = MyNews::orderBy('id', 'desc')->take(2)->get();
+		$latest = MyNews::orderBy('created_at', 'desc')->first();
+		return view('welcome')->with('posts', $posts)->with('latest', $latest);
+		// return view('welcome');
 	}
 
 	public function history(){
@@ -40,6 +38,27 @@ class HomeController extends Controller {
 	public function leadership(){
 		return view('leadership');
 	}
+
+	public function career(){
+		return view('career');
+	}
+
+	public function news(){
+		return view('news');
+	}
+
+	public function newsDetails(){
+		return view('news-detail');
+	}
+
+	public function commanders(){
+		return view('commanders');
+	}
+
+	public function gallery(){
+		return view('gallery');
+	}
+
 
 
 }

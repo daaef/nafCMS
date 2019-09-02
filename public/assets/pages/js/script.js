@@ -119,7 +119,7 @@ $( function(){
 		);
 		enquiryCarousel.on('changed.owl.carousel', function(e) {
 		    $('.enquiry .wpcf7 .progress-bar').css('width', (e.item.index/(e.item.count-1)*100)+'%');
-		})
+		});
 		enquiryCarousel.find('.btn-next').on('click', function(e){
 			e.preventDefault();
 
@@ -226,7 +226,7 @@ $( function(){
 		var modal = $(this);
 		modal.find('.modal-title').text(member.find('.name').text());
 		modal.find('.modal-body').html(member.find('.bio').html());
-	})
+	});
 
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 	    if ( '12' == event.detail.contactFormId ) {
