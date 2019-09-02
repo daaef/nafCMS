@@ -94,4 +94,9 @@ class NewsController extends Controller{
     $news = $this->repo->findBySlug($slug);
     return view('news.show')->with('news', $news);
   }
+
+  public function showSingleNews($slug) {
+    $news = $this->repo->findBySlug($slug);
+    return view('news.show')->with('news', $news);
+  }
 }

@@ -22,7 +22,7 @@ class PageController extends Controller {
 		}
 		else{
 			$pages = $this->repo->findAll();
-			dd($pages);	
+			// dd($pages);	
 			return view('page.index')->with('pages', $pages);
 		}
 	}
@@ -89,7 +89,7 @@ class PageController extends Controller {
 	
 	public function show($slug) {
 		$page = $this->repo->findBySlug($slug);
-		dd($page);
+		// dd($page);
 		return view('page.show')->with('page', $page);
 	}
 	
