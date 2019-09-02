@@ -5,14 +5,17 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="assets/pages/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/pages/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/pages/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/pages/css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="assets/pages/css/style-v=1.0.1.css">
     <link rel="stylesheet" type="text/css" href="assets/pages/css/fixes.css">
 
     <link rel="icon" href="img/favicon.png">
-    <title>Nigerian Air Force | Leadership</title>
+    <title>Nigerian Air Force</title>
+
+    <!-- This site is optimized with the Yoast SEO plugin v9.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
     <link rel="canonical" href="index.html"/>
     <meta property="og:locale" content="en_GB"/>
     <meta property="og:type" content="website"/>
@@ -72,7 +75,7 @@
                     <li class="apply-now-label">
                         <a class="label-text" href="{{route('pages.career')}}">Careers</a></li>
                     <li class="page-label">
-                <span class="label-text is-filled"><!--ko text:navPageName-->LEADERSHIP
+                <span class="label-text is-filled"><!--ko text:navPageName-->ORGANIZATION
                     <!--/ko--></span>
                     </li>
                     <li>
@@ -269,302 +272,24 @@
             <div class="main-navigation-list-wrapper main-bg">
             </div>
         </nav>
-<section id="home" class="leadership">
+<section id="home" class="organization">
     <div class="view view-faq" style="visibility: visible;">
+        <!--ko block:{"optional":false,"definition":"hero-image","name":"hero-image","placeholder":"hero-small"} -->
         <header class="hero-image text-inverted is-small">
             <div class="hero-image-title">
                 <h6 class="heading-06 subtitle">Nigerian Air Force</h6>
-                <h1 class="heading-02 title">LEADERSHIP</h1>
+                <h1 class="heading-02 title">ORGANIZATION</h1>
             </div>
         </header>
-        <div class="site-wrapper mt-70px">
-            <div class="heading-block text-center" data-transition="heading-block-02" data-bind="css: { 'small-margin-bottom': ko.unwrap($data.smallMarginBottom) }">
-                <h6 class="heading-06 text-mask-background text-stroke-through">
-                    <!--ko text:$data.caption-->HOME > ABOUT > LEADERSHIP<!--/ko--></h6>
-                <h2 class="heading-02 title responsive-title">Chief of The Air Staff (CAS)</h2>
-            </div>
-            <div class="row padding@mobile">
-                <div class="col-12 col-md-5 image bg-contain">
-                    <img src="assets/pages/img/avm.png" class="img-fluid">
-                </div>
-                <div class="col-12 col-md-7 description grid-padding-around">
-                    <h4 class="feature-title">Air Marshal Sadique Baba Abubakar</h4>
-                    <h5 class="title">DFS GSS psc(+) fwc ndc(+) MSc</h5>
-                    <p>Air Marshal SB Abubakar was born on 8 April 1960 at Azare in Bauchi State. He had his primary education at St Paul’s Primary School Bauchi from 1967 to 1973 and his secondary education at GSS Bauchi. He joined the Nigerian Air Force as a member of Cadet Military Training Course (CMTC 5) in November 1979.</p>
-                    <div class="button-alignment">
-                        <a href="#"
-                           class="btn btn-outline-dark btn-lg btn-more" target="">Read More
-                        </a>
+        <section>
+            <div data-bind="css : 'block-container ' + (controller.options.extraClassName || '')"
+                 class="block-container">
+                <div class="site-wrapper xl content-wrapper content-xsmall-head">
+                    <div class="story-intro-image-content organogram site-wrapper l grid-wrapper text-left">
+                        <img src="assets/pages/img/organogram.png" alt="">
                     </div>
-                </div>
-            </div>
-
-
-        </div>
-        <article class="content-wrapper content-small-head section-specialty-careers">
-            <div class="heading-block" data-transition="">
-
-
-                <!-- ko if: $data.title -->
-                <h3 class="heading-03 has-small-margin text-mask-background text-stroke-through" data-bind="
-			css: {
-				'has-margin': $data.bodyCopy,
-				'has-small-margin': !$data.bodyCopy,
-				'text-mask-background text-stroke-through': !$data.noStrokeThrough
-			}" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                    <!--ko if:$data.html--><!--/ko-->
-                    <!--ko ifnot:$data.html-->
-                    <!--ko text:$data.title-->Senior Commanders<!--/ko-->
-                    <!--/ko-->
-                </h3>
-                <!-- /ko -->
-
-                <!-- ko if: $data.bodyCopy --><!-- /ko -->
-            </div>
-            <!--/ko-->
-
-            <ol class="reset-list grid-wrapper justify-content-center site-wrapper block-grid-animate">
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                           <!-- <img class="card-img-top" src="assets/pages/img/cmd1.jpg" alt="Card image cap"> -->
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Air Vice Marshal EO Anebi</h5>
-                            <p class="card-text">Chief of Policy and Plans (COPP)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd2.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal IO Amao
-                            </h5>
-                            <p class="card-text">Chief of Training and Operations (CTOPS)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd3.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal M Muktar
-                            </h5>
-                            <p class="card-text">
-                                Chief of Aircraft Engineering (CAcE)
-                            </p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-<!--                            <img class="card-img-top" src="img/cmd1.jpg" alt="Card image cap">-->
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal MA Yakubu
-                            </h5>
-                            <p class="card-text">Chief of Logistics (CLOG)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd4.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal PN DIMFWINA
-                            </h5>
-                            <p class="card-text">
-                                Chief of Communication Information Systems (CCIS)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd5.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal KG Lar
-                            </h5>
-                            <p class="card-text">
-                                Chief of Administrations (COA)
-                            </p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd6.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal RN Ekeh</h5>
-                            <p class="card-text">Chief of Standard and Evaluation (COSE)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-<!--                            <img class="card-img-top" src="img/cmd8.jpg" alt="Card image cap">-->
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Cdre ME Shuaibu
-                            </h5>
-                            <p class="card-text">
-                                Chief of Medical Services
-                            </p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd9.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal CA Ogbeche</h5>
-                            <p class="card-text">Chief of Accounts and Budget (CAB)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-            </ol>
-            <hr class="is-horizontal-line">
-            <ol class="reset-list grid-wrapper justify-content-center site-wrapper block-grid-animate">
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd10.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal CA OHWO
-                            </h5>
-                            <p class="card-text">
-                                Air Officer Commanding Tactical Air Command</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd11.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal NB Bali
-                            </h5>
-                            <p class="card-text">
-                                Air Officer Commanding Special Operations Command
-                            </p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd12.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal UP Uzezi</h5>
-                            <p class="card-text">Air Officer Commanding Mobility Command</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd13.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal MZ Suleiman
-                            </h5>
-                            <p class="card-text">
-                                Air Officer Commanding Air Training Command</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd14.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal I Amin
-                            </h5>
-                            <p class="card-text">
-                                Air Officer Commanding Ground Training Command
-                            </p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd15.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal AA Olabisi
-                            </h5>
-                            <p class="card-text">
-                                Air Officer Commanding Logistics Command
-                            </p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-                <li class="grid-item mt-1 mb-1 grid-one-quarter">
-                    <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-                    <a href="commanders.html" class="card no-overflow">
-                        <div class="media">
-                            <img class="card-img-top" src="assets/pages/img/cmd7.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Air Vice Marshal ME Ahmed
-                            </h5>
-                            <p class="card-text">
-                                Air Secretary (Air Sec)</p>
-                        </div>
-                    </a><!--/ko-->
-                </li>
-            </ol>
-
-        </article>
+                </div><!--/ko-->
+        </section>
     </div>
 </section>
         <footer class="site-footer">
@@ -625,6 +350,14 @@
 
         </footer>
 
+<!--
+<div id="cookie-policy">
+<a href="index.html#" class="btn-close">X</a>
+<p>We use cookie to give you the best experience on our website.</p>
+<p>By continuing to use our website without changing your cookie settings, you agree to our use of cookies in accordance with our updated <a href="cookie-policy/index.html">Cookie Policy</a></p>
+</div>
+-->
+
 
 <script src="assets/pages/js/jquery-3.2.1.min.js"></script>
 <script src="assets/pages/js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -634,13 +367,11 @@
 <script src="assets/pages/js/scrollreveal.js"></script>
 <script src="assets/pages/js/owl.carousel.min.js"></script>
 <script type='text/javascript' src='assets/pages/js/wp-embed.min-ver=4.9.10.js'></script>
-<script src="assets/pages/js/isInViewport.jquery.js"></script>
+<script src="jassets/pages/s/isInViewport.jquery.js"></script>
 <script src="assets/pages/js/anime.min.js"></script>
 <script src="assets/pages/js/script.js"></script>
 <script type='text/javascript' src='assets/pages/js/scripts-ver=5.0.5.js'></script>
 <script src="assets/pages/js/fixes.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl7qvcP18DbNkAoeGscVNA1VPE8Ni4bYI&callback=initMap" async
-        defer></script>
 <script src="assets/pages/js/aos.js"></script>
 <script src="assets/pages/js/jquery.matchHeight.js"></script>
 <script>
@@ -648,13 +379,77 @@
         easing: 'ease-out-back',
         duration: 1000
     });
-    $(function() {
+    $(function () {
         $('.card.no-overflow').matchHeight({
             byRow: true,
             property: 'height',
             target: null,
             remove: false
         });
+    });
+
+    console.log($(".section img"))
+    $(".section img").click(function () {
+        $(".lightbox").fadeIn(300);
+        $(".lightbox").append("<img src='" + $(this).attr("src") + "' alt='" + $(this).attr("alt") + "' />");
+        $(".filter").css("background-image", "url(" + $(this).attr("src") + ")");
+        /*$(".title").append("<h1>" + $(this).attr("alt") + "</h1>");*/
+        $("html").css("overflow", "hidden");
+        if ($(this).is(":last-child")) {
+            $(".arrowr").css("display", "none");
+            $(".arrowl").css("display", "block");
+        } else if ($(this).is(":first-child")) {
+            $(".arrowr").css("display", "block");
+            $(".arrowl").css("display", "none");
+        } else {
+            $(".arrowr").css("display", "block");
+            $(".arrowl").css("display", "block");
+        }
+    });
+
+    $(".close").click(function () {
+        $(".lightbox").fadeOut(300);
+        $("h1").remove();
+        $(".lightbox img").remove();
+        $("html").css("overflow", "auto");
+    });
+
+    $(document).keyup(function (e) {
+        if (e.keyCode == 27) {
+            $(".lightbox").fadeOut(300);
+            $(".lightbox img").remove();
+            $("html").css("overflow", "auto");
+        }
+    });
+
+    $(".arrowr").click(function () {
+        var imgSrc = $(".lightbox img").attr("src");
+        var search = $("section").find("img[src$='" + imgSrc + "']");
+        var newImage = search.next().attr("src");
+        /*$(".lightbox img").attr("src", search.next());*/
+        $(".lightbox img").attr("src", newImage);
+        $(".filter").css("background-image", "url(" + newImage + ")");
+
+        if (!search.next().is(":last-child")) {
+            $(".arrowl").css("display", "block");
+        } else {
+            $(".arrowr").css("display", "none");
+        }
+    });
+
+    $(".arrowl").click(function () {
+        var imgSrc = $(".lightbox img").attr("src");
+        var search = $("section").find("img[src$='" + imgSrc + "']");
+        var newImage = search.prev().attr("src");
+        /*$(".lightbox img").attr("src", search.next());*/
+        $('.lightbox img').attr("src", newImage);
+        $(".filter").css("background-image", "url(" + newImage + ")");
+
+        if (!search.prev().is(":first-child")) {
+            $(".arrowr").css("display", "block");
+        } else {
+            $(".arrowl").css("display", "none");
+        }
     });
 </script>
 </body>
