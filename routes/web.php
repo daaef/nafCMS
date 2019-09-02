@@ -54,7 +54,7 @@ Route::group(['prefix' => 'auth'], function() {
 });
 
 Route::group(['prefix' => 'admin'], function() {
-  Route::get('/dashboard', 'AdminController@index')->name('admin.index');
+  Route::get('/dashboard', 'DashboardController@index')->name('admin.index');
 
   Route::group(['prefix' => 'settings'], function() {
     Route::get('/', 'SettingController@index')->name('setting.index');
@@ -90,7 +90,6 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/create', 'MenuController@create')->name('menu.create');
     Route::post('/create', 'MenuController@store')->name('menu.store');
 
-    // Route::get('/{slug}', 'MenuController@show')->name('menu.show');
     Route::get('/{slug}/edit', 'MenuController@edit')->name('menu.edit');
     Route::put('/{slug}/edit', 'MenuController@update')->name('menu.update');
     Route::get('/{slug}/delete', 'MenuController@delete')->name('menu.delete');
@@ -176,14 +175,14 @@ Route::group(['prefix' => 'admin'], function() {
 });
 
 Route::get('addwatermark', function(){
-    $img = Image::make(public_path('images/main.png'));
-   
-    /* insert watermark at bottom-right corner with 10px offset */
-    $img->insert(public_path('images/logo.png'), 'bottom-right', 10, 10);
-   
-    $img->save(public_path('images/main-new.png')); 
-   
-    dd('saved image successfully.');
+  $img = Image::make(public_path('images/main.png'));
+ 
+  /* insert watermark at bottom-right corner with 10px offset */
+  $img->insert(public_path('images/logo.png'), 'bottom-right', 10, 10);
+ 
+  $img->save(public_path('images/main-new.png')); 
+ 
+  dd('saved image successfully.');
 });
  
 

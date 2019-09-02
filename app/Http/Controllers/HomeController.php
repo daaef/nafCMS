@@ -26,7 +26,7 @@ class HomeController extends Controller {
 	
 	public function index() {
 		$posts = MyNews::orderBy('id', 'desc')->take(2)->get();
-		$latest = MyNews::orderBy('created_at', 'desc')->first();
+		$latest = MyNews::orderBy('id', 'desc')->first();
 		return view('welcome')->with('posts', $posts)->with('latest', $latest);
 		// return view('welcome');
 	}

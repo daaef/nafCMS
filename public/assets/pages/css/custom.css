@@ -16785,7 +16785,7 @@ html.is-mobile .full-image-hotspot-wrapper.active .full-image-hotspot-content, h
 }
 
 .story-intro-image img {
-    top: 50%;
+    top: 82%;
     left: 50%;
     position: absolute;
     width: 100%;
@@ -21617,22 +21617,22 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
     .main-navigation-list-wrapper.main-bg {
         flex-basis: 35%;
     }
-
     .aboutBG {
-        background: #000;
+        background: #172039;
     }
 
     .newsBG {
-        background: #323232;
+        background: #1a2440;
     }
 
     .mediaBG {
-        background: #181818;
+        background: #1e2a4d;
     }
 
     .howBG {
-        background: #494949;
+        background: #202d55;
     }
+
 
     .main-navigation-image {
         left: 65%;
@@ -21737,6 +21737,105 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
     margin-bottom: 1rem;
 }
 
+.animate-right{
+    right: 36% !important;
+    left: -30% !important;
+}
+#sob-mask{
+    right: 50%;
+    left: 50%;
+    transition: all 0.2s ease-in;
+} 
+
+.option-01{
+    /* z-index: 99999999; */
+}
+
+.option-01:hover ~ #sob-mask{
+    right: 36%;
+    left: 50%;
+} 
+.option-02:hover ~ #sob-mask{
+    right: 50% !important;
+    left: 36% !important;
+} 
+
+#sob-mask::before{
+    left: 0;
+}
+
+
+.option-01:hover ~ #sob-mask::before{
+    left: auto;
+    right: -1px;
+}
+.option-02:hover ~ #sob-mask::before{
+    left: 0px
+}
+
+.option-01:hover > div#title01{
+   opacity: 1 !important;
+}
+.option-02:hover > div#title02{
+   opacity: 1 !important;
+}
+.option-01:hover > div.option-hover-content{
+   opacity: 1 !important;
+   margin-top: 3.75rem;
+   text-align: left;
+}
+.option-02:hover > div.option-hover-content{
+   opacity: 1 !important;
+   margin-top: 3.75rem;
+   text-align: right;
+}
+.option-01:hover ~ #sob-mask > .vs-icon{
+    left: auto;
+    right: 0px;
+    margin-right: -22px;
+    margin-left: 0;
+}
+
+@media (max-width: 767px) {
+    .option-01{
+        pointer-events:none;
+    }
+    .option-02{
+        pointer-events:none;
+    }
+
+     #sob-mask{
+        display: none
+    } 
+    .option-01 > div.option-hover-content{
+        opacity: 1 !important;
+        margin-top: 3.75rem;
+        margin-left: -11rem !important;
+
+    }
+    .option-02 > div.option-hover-content{
+        opacity: 1 !important;
+        margin-top: 3.75rem;
+        margin-left: 11rem !important;
+        /* text-align: center; */
+    }
+}
+.enlist-list{
+    padding-left: 0px;
+    margin-top: 30px;
+}
+
+.enlist-list > li{
+    margin-bottom: 20px;
+    
+}
+.sublist > li{
+    margin-bottom: 15px;
+    font-size:20px
+}
+.sublist > li >p{
+    font-size:20px !important;
+}
 .videos-header{
     height: 75vh;
     background: linear-gradient(rgb(29, 34, 54), rgba(29, 34, 54, .03));
@@ -21834,4 +21933,214 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
 
 .organogram img{
     width: 100%;
+}
+
+.main-navigation-image {
+    left: 65%;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+}
+
+.aboutBG + .main-navigation-image {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform .4s!important;
+    transition-delay: .4s!important;
+}
+
+.is-hidden .aboutBG + .main-navigation-image {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.main-navigation-list-wrapper:hover + .main-navigation-image {
+    opacity: 1;
+}
+
+.main-navigation-list-wrapper + span {
+    transition-delay: 0s !important;
+}
+
+.main-navigation-list-wrapper{
+    transform: scaleX(1)!important;
+    transform-origin: left;
+    transition: transform .4s!important;
+}
+
+.is-hidden .main-navigation-list-wrapper {
+    transform: scaleX(0)!important;
+}
+
+.p-top-none{
+padding-top: 20px!important;
+}
+.news-detail .story-intro-image-caption{
+margin-top: -9rem;
+margin-bottom: 1rem;
+}
+
+.news .full-image-caption{
+padding: 2rem;
+left: 0;
+right: 0;
+bottom: 0;
+}
+
+.news .full-image-caption:before{
+content: '';
+background: rgba(0, 0, 0, 0.71);
+filter: blur(25px);
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+}
+
+.fixed-side-share{
+position: fixed;
+float: none;
+z-index: 200;
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
+}
+
+.fixed-side-share li{
+display: block;
+margin-bottom: 15px;
+}
+.text-uppercase{
+text-transform: uppercase;
+}
+.bg-contain img{
+width: 100%;
+height: 100%;
+object-fit: contain;
+margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+.padding\@mobile{
+    padding: 0 30px;
+}
+.bg-contain img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+}
+
+.mission .heading-03{
+margin-bottom: 1rem;
+}
+
+.animate-right{
+right: 36% !important;
+left: -30% !important;
+}
+#sob-mask{
+right: 50%;
+left: 50%;
+transition: all 0.2s ease-in;
+} 
+
+.option-01{
+/* z-index: 99999999; */
+}
+
+.option-01:hover ~ #sob-mask{
+right: 36%;
+left: 50%;
+} 
+.option-02:hover ~ #sob-mask{
+right: 50% !important;
+left: 36% !important;
+} 
+
+#sob-mask::before{
+left: 0;
+}
+
+
+.option-01:hover ~ #sob-mask::before{
+left: auto;
+right: -1px;
+}
+.option-02:hover ~ #sob-mask::before{
+left: 0px
+}
+
+.option-01:hover > div#title01{
+opacity: 1 !important;
+}
+.option-02:hover > div#title02{
+opacity: 1 !important;
+}
+.option-01:hover > div.option-hover-content{
+opacity: 1 !important;
+margin-top: 3.75rem;
+text-align: left;
+}
+.option-02:hover > div.option-hover-content{
+opacity: 1 !important;
+margin-top: 3.75rem;
+text-align: right;
+}
+.option-01:hover ~ #sob-mask > .vs-icon{
+left: auto;
+right: 0px;
+margin-right: -22px;
+margin-left: 0;
+}
+
+@media (max-width: 767px) {
+.option-01{
+    pointer-events:none;
+}
+.option-02{
+    pointer-events:none;
+}
+
+ #sob-mask{
+    display: none
+} 
+.option-01 > div.option-hover-content{
+    opacity: 1 !important;
+    margin-top: 3.75rem;
+    margin-left: -11rem !important;
+
+}
+.option-02 > div.option-hover-content{
+    opacity: 1 !important;
+    margin-top: 3.75rem;
+    margin-left: 11rem !important;
+    /* text-align: center; */
+}
+}
+
+.historyPage{
+    text-align: justify-all;
+}
+
+@media (max-width: 992px){
+    .historyPage .copy-body-01{
+        font-size: 13px!important;
+    }
+}
+
+.footer-2-column.two a{
+    color: #5f80a2
+}
+
+p{
+    text-align: justify;
+}
+
+section header {
+    display: block;
+    width: 100%;
+    height: 80vh;
 }

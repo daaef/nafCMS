@@ -11,15 +11,7 @@ class EloquentNewsRepository implements NewsContract {
     $news = new MyNews;
     $news->title = $request->title;  
     $news->body = $request->body;   
-    // $news->news_image = $request->news_image;  
-    // if ($request->has('news_image')) {
-    //   $image = $request->file('news_image');
-    //   $filename = time().'.'.$image->getClientOriginalExtension();
-    //   $destinationPath = public_path('uploads/news/');
-    //   $image->move($destinationPath, $filename);  
-
-    //   $news->news_image = $filename;
-    // }
+    
     if ($request->has('news_image')) {
       $originalImage= $request->file('news_image');
       $thumbnailImage = Image::make($originalImage);
@@ -38,6 +30,7 @@ class EloquentNewsRepository implements NewsContract {
 
       $news->news_image = $filename;
     }
+    
     $news->news_category = $request->news_category;
     $str = strtolower($request->title);
     $news->slug = preg_replace('/\s+/', '-', $str);
