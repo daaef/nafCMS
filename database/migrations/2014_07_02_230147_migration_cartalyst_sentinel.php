@@ -107,6 +107,7 @@ class MigrationCartalystSentinel extends Migration
             $table->string('phone')->nullable();
             $table->string('username')->nullable();
             $table->string('user_role')->nullable();
+            $table->integer('update_password')->default(0);
             $table->timestamps();
 
             $table->engine = 'InnoDB';
