@@ -11553,7 +11553,7 @@ html.is-mobile .tag-selector.result-filter-tags li.active, html:not(.is-mobile) 
 }
 
 .hero-image.is-small {
-    max-height: 72vh;
+    max-height: 40vh;
     height: auto
 }
 
@@ -21421,12 +21421,6 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
     position: relative;
 }
 
-.news-detail .hero-image:before {
-    background: url(../img/news-1.jpg) center no-repeat;
-    background-size: cover;
-    filter: brightness(65%);
-    z-index: 0
-}
 
 .story-intro-image-caption {
     border-left-color: white;
@@ -21609,7 +21603,7 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
 @media (min-width: 992px) {
     .main-navigation-list-wrapper {
         height: 100%;
-        width: calc((65%) / 4);
+        width: calc((66%) / 4);
         position: relative;
         z-index: 2;
     }
@@ -21964,7 +21958,7 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
 }
 
 .main-navigation-list-wrapper{
-    transform: scaleX(1)!important;
+    transform: scaleX(1.05)!important;
     transform-origin: left;
     transition: transform .4s!important;
 }
@@ -22129,6 +22123,14 @@ margin-left: 0;
     .historyPage .copy-body-01{
         font-size: 13px!important;
     }
+
+
+    section header {
+        display: block;
+        width: 100%;
+        height: 80vh;
+    }
+
 }
 
 .footer-2-column.two a{
@@ -22138,9 +22140,37 @@ margin-left: 0;
 p{
     text-align: justify;
 }
+.button-icon path{
+    fill: #5f80a2!important;
+}
+.button-icon circle{
+    stroke: #5f80a2!important;
+}
 
-section header {
-    display: block;
-    width: 100%;
-    height: 80vh;
+@media (min-width: 993px) {
+    .footer-nav  iframe{
+        height: 260px!important;
+    }
+    .footer-nav{
+        overflow: hidden;
+        height: 260px!important;
+    }
+}
+
+input.form-control{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none!important;
+    width: 100%!important;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input.form-control + button{
+    padding: 10px 15px;
+    color: #1e2236;
+    font-weight: 600;
+    transition: all .4s ease-in-out;
 }

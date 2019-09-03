@@ -5,8 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="assets/pages/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/pages/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/pages/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/pages/css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="assets/pages/css/style-v=1.0.1.css">
@@ -65,7 +64,7 @@
             <header class="site-header">
 
                 <a class="header-site-logo text-uppercase icon-logo-airforce"
-                   href="index.html" style="background-image: none;">
+                   href="/" style="background-image: none;">
                     <span class="logo-title">Nigerian Air Force</span>
                 </a>
 
@@ -75,16 +74,15 @@
                     <li class="apply-now-label">
                         <a class="label-text" href="career.html">Careers</a></li>
                     <li class="page-label">
-                <span class="label-text is-filled"><!--ko text:navPageName-->EVENTS
+                <span class="label-text is-filled">EVENTS
                     <!--/ko--></span>
                     </li>
                     <li>
-                        <a href="#" class="ir top-nav-button main-nav-toggle"
-                        >
+                        <a href="#" class="ir top-nav-button main-nav-toggle">
                             <span class="lines"></span>
                             <span class="cross">
-                        <span class="cross-diagonal"></span>
-                    </span>
+                                <span class="cross-diagonal"></span>
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -93,184 +91,7 @@
             <span class="site-header-small-view-bg" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
         </div>
         <nav class="main-navigation is-hidden text-inverted">
-            <div class="main-navigation-list-wrapper span1 aboutBG">
-        <span class="coverer main-navigation-small-background"
-              style="background-image: url('assets/pages/img/shot5.png')"></span>
-                <dl class="main-navigation-list">
-                    <dt class="main-navigation-title">
-                        <a href="history.html" style="">About</a>
-                    </dt>
-                    <dd style="">
-                        <a class="main-navigation-link"
-                           href="history.html">
-    <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                         clip-rule="evenodd" fill="#FFF"
-                                                                         d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                            History
-                        </a></dd>
-                    <dd style="">
-                        <a class="main-navigation-link"
-                           href="./leadership.html">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                            Leadership
-                        </a>
-                    </dd>
-                    <dd style="">
-                        <a class="main-navigation-link"
-                           href="mission_vision.html">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50">
-                    <path fill-rule="evenodd"
-                          clip-rule="evenodd" fill="#FFF"
-                          d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                            Mission & Vision
-                        </a>
-                    </dd>
-                    <dd style="">
-                        <a class="main-navigation-link"
-                           href="organization.html">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                            Organization
-                        </a>
-                    </dd>
-
-                </dl>
-            </div>
-            <span class="coverer main-navigation-image span1"
-                  style="background-image: url(&quot;assets/pages/img/shot5.png&quot;);"></span>
-            <div class="main-navigation-list-wrapper span2 newsBG">
-        <span class="coverer main-navigation-small-background"
-              style="background-image: url('assets/pages/img/shot4.png')"></span>
-                <dl class="main-navigation-list">
-                    <dt class="main-navigation-title">
-                        <a href="news.html" style="">News</a>
-                    </dt>
-                    <dd style="">
-                        <a class="main-navigation-link"
-                           href="news.html">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                            Events
-                        </a>
-                    </dd>
-                    <!--<dd style="">
-                        <a class="main-navigation-link"
-                           href="#">
-                        <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                             clip-rule="evenodd" fill="#FFF"
-                                                                                             d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                            Lifestyle
-                        </a>
-                    </dd>-->
-                    <dd style="">
-                        <a class="main-navigation-link" href="news.html" target="_blank">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                            Publications
-                        </a>
-                    </dd>
-                </dl>
-            </div>
-            <span class="coverer main-navigation-image span2"
-                  style="background-image: url(&quot;assets/pages/img/shot4.png&quot;);"></span>
-            <div class="main-navigation-list-wrapper span3 mediaBG">
-        <span class="coverer main-navigation-small-background"
-              style="background-image: url('assets/pages/img/shot7.png')"></span>
-                <dl class="main-navigation-list">
-                    <dt class="main-navigation-title">
-                        <a href="downloads.html" style="">Media</a>
-                    </dt>
-                    <dd style="">
-                        <a class="main-navigation-link"
-                           href="downloads.html">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                            Downloads
-                        </a>
-                    </dd>
-                    <dd style="">
-                        <a class="main-navigation-link"
-                           href="gallery.html">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                            Gallery
-                        </a>
-                    </dd>
-                    <dd style="">
-                        <a class="main-navigation-link"
-                           href="videos.html">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                            Videos
-                        </a>
-                    </dd>
-                </dl>
-            </div>
-            <span class="coverer main-navigation-image span3"
-                  style="background-image: url(&quot;assets/pages/img/shot7.png&quot;); "></span>
-            <div class="main-navigation-list-wrapper span4 howBG">
-        <span class="coverer main-navigation-small-background"
-              style="background-image: url('assets/pages/img/shot3.png')"></span>
-                <dl class="main-navigation-list">
-                    <dt class="main-navigation-title">
-                        <a href="#" style="">How to Join</a>
-                    </dt>
-                    <dd style=""><a href="applynow.html" class="main-navigation-link"
-                    >
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                        <span>Apply now</span>
-                    </a></dd>
-                    <dd style=""><a class="main-navigation-link"
-                                    href="#">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                        Connect
-                    </a></dd>
-                    <dd style=""><a class="main-navigation-link"
-                                    data-close="" href="#">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                        Prepare for success
-                    </a></dd>
-                    <dd style=""><a class="main-navigation-link"
-                                    href="#">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                        Process
-                    </a></dd>
-                </dl>
-            </div>
-            <span class="coverer main-navigation-image span4"
-                  style="background-image: url(&quot;assets/pages/img/shot3.png&quot;); "></span>
-            <div class="main-navigation-list-wrapper main-bg">
-            </div>
+            @include('layout.frontend.navbar')
         </nav>
 <section id="home" class="news">
     <div data-bind="template: { name: 'faq' }" class="view view-faq" style="visibility: visible;">
@@ -294,167 +115,40 @@
 
             <div class="site-wrapper">
                 <div class="grid-wrapper home-grid-items text-inverted single-margin-bottom" data-transition="">
-                    <div class="grid-item grid-four-seventh">
-                        <a href="news-detail.html" class="button-block full-image-grid-item-small">
-                            <figure class="full-image-ratio ratio-1-1 is-active">
-                                <img src="assets/pages/img/news1.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
+                    @foreach($news as $ne)
+                        <div class="grid-item grid-one-half">
+                            <a href="{{ route('news.show.details', $ne->slug) }}"
+                               class="button-block full-image-grid-item-small" style="">
+                                <figure class="full-image-ratio ratio-3-2 is-active">
+                                    <img src="/uploads/news/images/{{ $ne->news_image }}"
+                                         alt="" style="">
+                                </figure>
+                                <div class="full-image-caption">
+                                    <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                        {{ date('d', strtotime($ne->created_at)) }}/
+                                        {{ date('m', strtotime($ne->created_at)) }}/
+                                        {{ date('Y', strtotime($ne->created_at)) }}
+                                    </h4>
+                                    <h3 class="copy-intro-01 text-no-margin"
+                                        style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                        {!!strlen($ne->title) > 150 ? substr($ne->title,0,150) : $ne->title!!}...    
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
 
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[0].caption-->26/Aug/2019<!--/ko--></h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    INTERNAL SECURITY OPERATIONS: NAF INDUCTS ANOTHER HELICOPTER REACTIVATED LOCALLY IN PORT HARCOURT
-                                    <!--/ko--></h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="grid-item grid-three-seventh">
-
-                        <a href="news-detail.html"
-                           class="button-block full-image-grid-item-small">
-                            <!--ko block:{"optional":false,"definition":"full-image","name":"image-small"} -->
-                            <figure class="full-image-ratio ratio-3-2 is-active">
-                                <img src="assets/pages/img/news-1.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[1].caption-->22/Aug/2019<!--/ko--></h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[0].title-->JUST IN: NAF AIRLIFTS REFUGEES FROM CAMEROON TO
-                                    NIGERIA ...</h3>
-                            </div>
-                        </a>
-                        <a href="news-detail.html"
-                           class="button-block full-image-grid-item-small">
-                            <!--ko block:{"optional":false,"definition":"full-image","name":"image-small"} -->
-                            <figure class="full-image-ratio ratio-3-2 is-active">
-                                <img src="assets/pages/img/news-2.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[1].caption-->20/Aug/2019<!--/ko--></h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    NAF COMMISSIONS RENOVATED ACCOMMODATION FOR SNCOS IN KADUNA...<!--/ko--></h3>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="grid-item grid-one-half">
-
-
-                        <a href="news-detail.html"
-                           class="button-block full-image-grid-item-small" style="">
-                            <figure class="full-image-ratio ratio-3-2 is-active">
-                                <img src="assets/pages/img/news-3.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    18/Aug/2019</h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    PRESIDENT MUHAMMADU BUHARI COMMISSIONS NAF REFERENCE HOSPITAL...</h3>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="grid-item grid-one-half">
-
-                        <a href="news-detail.html"
-                           class="button-block full-image-grid-item-small">
-                            <!--ko block:{"optional":false,"definition":"full-image","name":"image-small"} -->
-                            <figure class="full-image-ratio ratio-3-2 is-active">
-                                <img src="assets/pages/img/news-2.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[1].caption-->20/Aug/2019<!--/ko--></h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    NAF COMMISSIONS RENOVATED ACCOMMODATION FOR SNCOS IN KADUNA...<!--/ko--></h3>
-                            </div>
-                        </a>
-
-                    </div>
-                </div><!--/ko-->
-                <!-- /ko -->
+                </div>
+                
             </div>
         </article>
     </div>
 </section>
         <footer class="site-footer">
 
-            <ul class="reset-list footer-nav footer-main-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Media</a></li>
-                <li><a href="#">How to join</a>
-                </li>
-            </ul>
-
-            <div class="footer-2-column">
-                <ul class="reset-list footer-nav footer-sub-nav">
-                    <li><a href="#">Event Updates</a></li>
-                    <li><a href="#"
-                    >NAF Publications</a></li>
-                    <li><a href="#" target="_blank">Photo Gallery</a></li>
-                    <li><a href="#">NAF Spotlights</a></li>
-                    <li><a href="#">Downloads</a></li>
-                    <li><a href="#">Videos</a></li>
-                </ul>
-            </div>
-            <div class="reset-list marginx footer-nav footer-main-nav">
-                <a class="twitter-timeline" data-height="500" data-theme="dark" href="https://twitter.com/NigAirForce">Tweets by Nigerian Airforce</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div class="reset-list footer-nav marginx footer-main-nav">
-                <div class="fb-page"
-                     data-href="https://web.facebook.com/hqnigerianairforce/"
-                     data-tabs="timeline"
-                     data-small-header="false"
-                     data-adapt-container-width="true"
-                     data-hide-cover="false"
-                     data-show-facepile="true">
-                    <blockquote cite="https://web.facebook.com/hqnigerianairforce//" class="fb-xfbml-parse-ignore">
-                        <a href="https://web.facebook.com/hqnigerianairforce/">HQNIGERIANAIRFORCE</a>
-                    </blockquote>
-                </div>
-            </div>
-
-            <ul class="reset-list footer-nav footer-sub-nav">
-                <li><a href="h#">NAF Structure</a>
-                </li>
-                <li><a href="#">Direct Reporting</a>
-                </li>
-                <li><a href="#">Privacy Policy</a>
-                </li>
-                <li><a href="#">Terms of Use</a></li>
-            </ul>
-            <!--ko block:{"optional":false,"definition":"share"} -->
-
-            <h6 class="footer-site-logo icon-logo-airforce" href="https://www.airforce.mil.ng/"></h6>
-
-            <a href="#" style="display : none;">Career index</a>
+            @include('layout.frontend.footer')
 
         </footer>
-
-<!--
-<div id="cookie-policy">
-<a href="index.html#" class="btn-close">X</a>
-<p>We use cookie to give you the best experience on our website.</p>
-<p>By continuing to use our website without changing your cookie settings, you agree to our use of cookies in accordance with our updated <a href="cookie-policy/index.html">Cookie Policy</a></p>
-</div>
--->
 
 
 <script src="assets/pages/js/jquery-3.2.1.min.js"></script>

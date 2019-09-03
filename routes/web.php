@@ -22,10 +22,12 @@ Route::get('/leadership', 'HomeController@leadership')->name('pages.leadership')
 Route::get('/career', 'HomeController@career')->name('pages.career');
 Route::get('/commanders', 'HomeController@commanders')->name('pages.commanders');
 Route::get('/gallery', 'HomeController@gallery')->name('pages.gallery');
-Route::get('/mission&vision', 'HomeController@missionVision')->name('pages.mission-vision');
+Route::get('/mission-vision', 'HomeController@missionVision')->name('pages.mission-vision');
 Route::get('/organization', 'HomeController@organization')->name('pages.organization');
 Route::get('/downloads', 'HomeController@downloads')->name('pages.downloads');
 Route::get('/videos', 'HomeController@videos')->name('pages.videos');
+Route::get('/apply-now', 'HomeController@apply')->name('pages.apply');
+Route::get('/apply-now/dssc', 'HomeController@dssc')->name('pages.dssc');
 
 // Protected News Route Resource
 Route::group(['prefix' => 'news'], function () {
