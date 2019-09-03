@@ -65,7 +65,7 @@
 
 
         <a class="header-site-logo text-uppercase icon-logo-airforce"
-           href="index.html" style="background-image: none;">
+           href="/" style="background-image: none;">
             <span class="logo-title">Nigerian Air Force</span>
         </a>
 
@@ -88,174 +88,7 @@
     <span class="site-header-small-view-bg" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
 </div>
 <nav class="main-navigation is-hidden text-inverted">
-    <div class="main-navigation-list-wrapper span1 aboutBG">
-        <span class="coverer main-navigation-small-background"
-              style="background-image: url('assets/pages/img/shot5.png')"></span>
-        <dl class="main-navigation-list">
-            <dt class="main-navigation-title"
-                href="" style="">About
-            </dt>
-            <dd style="">
-                <a class="main-navigation-link"
-                   href="history.html">
-    <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                         clip-rule="evenodd" fill="#FFF"
-                                                                         d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    History
-                </a></dd>
-            <dd style="">
-                <a class="main-navigation-link"
-                   href="./leadership.html">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Leadership
-                </a>
-            </dd>
-            <dd style="">
-                <a class="main-navigation-link"
-                   href="mission_vision.html">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Mission & Vision
-                </a>
-            </dd>
-            <dd style="">
-                <a class="main-navigation-link"
-                   href="#">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Organization
-                </a>
-            </dd>
-
-        </dl>
-    </div>
-    <span class="coverer main-navigation-image span1"
-          style="background-image: url(&quot;assets/pages/img/shot5.png&quot;);"></span>
-    <div class="main-navigation-list-wrapper span2 newsBG">
-        <span class="coverer main-navigation-small-background"
-              style="background-image: url('assets/pages/img/shot4.png')"></span>
-        <dl class="main-navigation-list">
-            <dt class="main-navigation-title"
-                href="#" style="">News
-            </dt>
-            <dd style="">
-                <a class="main-navigation-link"
-                   href="news.html">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Events
-                </a>
-            </dd>
-            <dd style="">
-                <a class="main-navigation-link"
-                   href="#">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Lifestyle
-                </a>
-            </dd>
-            <dd style="">
-                <a class="main-navigation-link" href="/airmanchallenge" target="_blank">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Publications
-                </a>
-            </dd>
-
-        </dl>
-    </div>
-    <span class="coverer main-navigation-image span2"
-          style="background-image: url(&quot;assets/pages/img/shot4.png&quot;);"></span>
-    <div class="main-navigation-list-wrapper span3 mediaBG">
-        <span class="coverer main-navigation-small-background"
-              style="background-image: url('assets/pages/img/shot7.png')"></span>
-        <dl class="main-navigation-list">
-            <dt class="main-navigation-title"
-                href="#" style="">Media
-            </dt>
-            <dd style="">
-                <a class="main-navigation-link"
-                   href="#">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Downloads
-                </a>
-            </dd>
-            <dd style="">
-                <a class="main-navigation-link"
-                   href="gallery.html">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                    Gallery
-                </a>
-            </dd>
-        </dl>
-    </div>
-    <span class="coverer main-navigation-image span3"
-          style="background-image: url(&quot;assets/pages/img/shot7.png&quot;); "></span>
-    <div class="main-navigation-list-wrapper span4 howBG">
-        <span class="coverer main-navigation-small-background"
-              style="background-image: url('assets/pages/img/shot3.png')"></span>
-        <dl class="main-navigation-list">
-            <dt class="main-navigation-title"
-                href="#" style="">How to Join
-            </dt>
-                    <dd style=""><a href="applynow.html" class="main-navigation-link"
-                    >
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                        <span>Apply now</span>
-                    </a></dd>
-            <dd style=""><a class="main-navigation-link"
-                            href="#">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                Connect
-            </a></dd>
-            <dd style=""><a class="main-navigation-link"
-                            data-close="" href="#">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                Prepare for success
-            </a></dd>
-            <dd style=""><a class="main-navigation-link"
-                            href="#">
-                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
-                                                                                     clip-rule="evenodd" fill="#FFF"
-                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
-                Process
-            </a></dd>
-        </dl>
-    </div>
-    <span class="coverer main-navigation-image span4"
-          style="background-image: url(&quot;assets/pages/img/shot3.png&quot;); "></span>
-    <div class="main-navigation-list-wrapper main-bg">
-    </div>
+    @include('layout.frontend.navbar')
 </nav>
 <section id="home" class="videos">
     <div data-bind="template: { name: 'faq' }" class="view view-faq" style="visibility: visible;">
@@ -264,7 +97,7 @@
                      style="top: -15.625px; left: 0px; width: 100%; height: 75vh; opacity: 1;">
                 <button class="btn btn-lg frameBTN btn-dark bg-danger">close</button>
                 <iframe src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <img srcset="img/shot3.png" alt="Phase 04: Transition">
+                <img srcset="assets/pages/img/shot3.png" alt="Phase 04: Transition">
                 <!-- /ko -->
 
                 <!-- ko ifnot : $data.variants && $data.variants().length --><!-- /ko -->
@@ -294,7 +127,7 @@
                         <li class="grid-item grid-one-third grid-s-one-whole">
                             <a href="#" data-url="https://www.youtube.com/embed/RZ4R2h0Rxmk?autoplay=1" class="button-block frameToggle" >
                                 <figure class="full-image-ratio ratio-3-2">
-                                <img src="img/vid1.webp">
+                                <img src="assets/pages/img/vid1.webp">
                             </figure><!--/ko-->
                                 <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title-->OPERATION GREEN SWEEP 3<!--/ko--></h3>
                                 <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NAF DESTROYS TERRORISTS’ LOGISTICS BASE/ASSEMBLY AREA AT BULA BELLO IN BORN<!--/ko--></h4>
@@ -304,7 +137,7 @@
                         <li class="grid-item grid-one-third grid-s-one-whole">
                             <a href="#" data-url="https://www.youtube.com/embed/1djSubMxHdI?autoplay=1" class="button-block frameToggle">
                                 <!--ko block:{"optional":false,"definition":"full-image","name":"satellites-image"} --><figure data-bind="attr.class:($data.ratio ? 'full-image-ratio ratio-' + $data.ratio() : 'full-image')" class="full-image-ratio ratio-3-2">
-                                <img src="img/vid2.webp">
+                                <img src="assets/pages/img/vid2.webp">
                             </figure><!--/ko-->
                                 <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
                                 <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NAF SCORES SUCCESS AS JETS DECIMATE TACTICAL BASE OF TERRORISTS AT IZZA IN BORNO STATE
@@ -315,7 +148,7 @@
                         <li class="grid-item grid-one-third grid-s-one-whole">
                             <a href="#" data-url="https://www.youtube.com/embed/Yy8IpID2F-E?autoplay=1" class="button-block frameToggle">
                                 <figure class="full-image-ratio ratio-3-2">
-                                <img src="img/vid3.webp">
+                                <img src="assets/pages/img/vid3.webp">
                             </figure><!--/ko-->
                                 <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
                                 <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NAF FIGHTER JETS DESTROY HIDEOUTS, NEUTRALIZE TERRORISTS AT ALAFA IN BORNO STATE
@@ -327,7 +160,7 @@
                         <li class="grid-item grid-one-third grid-s-one-whole">
                             <a href="#" data-url="https://www.youtube.com/embed/pF6CHbDgdLA?autoplay=1" class="button-block frameToggle" data-bind="click: $root.targetBranchHandler.bind($root, targetBranch, $data)">
                                 <figure class="full-image-ratio ratio-3-2">
-                                <img src="img/vid4.webp">
+                                <img src="assets/pages/img/vid4.webp">
                             </figure><!--/ko-->
                                 <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
                                 <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->I'M CORPORAL BASHIR UMAR AND THIS IS MY STORY<!--/ko--></h4>
@@ -337,7 +170,7 @@
                         <li class="grid-item grid-one-third grid-s-one-whole">
                             <a href="#" data-url="https://www.youtube.com/embed/soSbbGV5lQQ?autoplay=1" class="button-block frameToggle" data-bind="click: $root.targetBranchHandler.bind($root, targetBranch, $data)">
                                 <!--ko block:{"optional":false,"definition":"full-image","name":"satellites-image"} --><figure data-bind="attr.class:($data.ratio ? 'full-image-ratio ratio-' + $data.ratio() : 'full-image')" class="full-image-ratio ratio-3-2">
-                                <img src="img/vid5.webp">
+                                <img src="assets/pages/img/vid5.webp">
                             </figure><!--/ko-->
                                 <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
                                 <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->HIGHLIGHTS OF NAF K-9 UNIT SPECIAL OPERATIONS TRAINING
@@ -348,7 +181,7 @@
                         <li class="grid-item grid-one-third grid-s-one-whole">
                             <a href="#" data-url="https://www.youtube.com/embed/zLRnL8ydliM?autoplay=1" class="button-block frameToggle">
                                 <figure class="full-image-ratio ratio-3-2">
-                                <img src="img/vid6.webp">
+                                <img src="assets/pages/img/vid6.webp">
                             </figure><!--/ko-->
                                 <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
                                 <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NAF SUSTAINS AIR STRIKES AGAINST TERRORISTS TARGETS, DEGRADES ANOTHER HIDEOUT IN SAMBISA FOREST<!--/ko--></h4>
@@ -412,7 +245,7 @@
                                 <figure class="full-image-ratio ratio-3-2">
                                 <img src="assets/pages/img/vid12.webp">
                             </figure><!--/ko-->
-                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title-->AIRING OF DOCUMENTARY<!--/ko--></h3>
+                                <h3 class="full-image-caption top heading-03 text-no-margin">AIRING OF DOCUMENTARY</h3>
                                 <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NIGERIAN AIR FORCE: ATTAINING NEW HEIGHTS AT 55<!--/ko--></h4>
                             </a>
                         </li>
@@ -423,71 +256,8 @@
     </div>
 </section>
         <footer class="site-footer">
-
-            <ul class="reset-list footer-nav footer-main-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Media</a></li>
-                <li><a href="#">How to join</a>
-                </li>
-            </ul>
-
-            <div class="footer-2-column">
-                <ul class="reset-list footer-nav footer-sub-nav">
-                    <li><a href="#">Event Updates</a></li>
-                    <li><a href="#"
-                    >NAF Publications</a></li>
-                    <li><a href="#" target="_blank">Photo Gallery</a></li>
-                    <li><a href="#">NAF Spotlights</a></li>
-                    <li><a href="#">Downloads</a></li>
-                    <li><a href="#">Videos</a></li>
-                </ul>
-            </div>
-            <div class="reset-list marginx footer-nav footer-main-nav">
-                <a class="twitter-timeline" data-height="500" data-theme="dark" href="https://twitter.com/NigAirForce">Tweets by Nigerian Airforce</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div class="reset-list footer-nav marginx footer-main-nav">
-                <div class="fb-page"
-                     data-href="https://web.facebook.com/hqnigerianairforce/"
-                     data-tabs="timeline"
-                     data-small-header="false"
-                     data-adapt-container-width="true"
-                     data-hide-cover="false"
-                     data-show-facepile="true">
-                    <blockquote cite="https://web.facebook.com/hqnigerianairforce//" class="fb-xfbml-parse-ignore">
-                        <a href="https://web.facebook.com/hqnigerianairforce/">HQNIGERIANAIRFORCE</a>
-                    </blockquote>
-                </div>
-            </div>
-
-            <ul class="reset-list footer-nav footer-sub-nav">
-                <li><a href="h#">NAF Structure</a>
-                </li>
-                <li><a href="#">Direct Reporting</a>
-                </li>
-                <li><a href="#">Privacy Policy</a>
-                </li>
-                <li><a href="#">Terms of Use</a></li>
-            </ul>
-            <!--ko block:{"optional":false,"definition":"share"} -->
-
-            <h6 class="footer-site-logo icon-logo-airforce" href="https://www.airforce.mil.ng/"></h6>
-
-            <a href="#" style="display : none;">Career index</a>
-
+            @include('layout.frontend.footer')
         </footer>
-
-<!--
-<div id="cookie-policy">
-<a href="index.html#" class="btn-close">X</a>
-<p>We use cookie to give you the best experience on our website.</p>
-<p>By continuing to use our website without changing your cookie settings, you agree to our use of cookies in accordance with our updated <a href="cookie-policy/index.html">Cookie Policy</a></p>
-</div>
--->
-
 
 <script src="assets/pages/js/jquery-3.2.1.min.js"></script>
 <script src="assets/pages/js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
