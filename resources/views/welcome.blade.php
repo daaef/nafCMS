@@ -160,7 +160,7 @@
             </dt>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="news.html">
+                   href="{{route('pages.news')}}">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
@@ -200,7 +200,7 @@
             </dt>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="downloads.html">
+                   href="{{route('pages.downloads')}}">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
@@ -210,7 +210,7 @@
             </dd>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="gallery.html">
+                   href="{{route('pages.gallery')}}">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
@@ -220,7 +220,7 @@
             </dd>
             <dd style="">
                 <a class="main-navigation-link"
-                   href="videos.html">
+                   href="{{route('pages.videos')}}">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"

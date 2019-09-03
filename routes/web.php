@@ -24,6 +24,8 @@ Route::get('/commanders', 'HomeController@commanders')->name('pages.commanders')
 Route::get('/gallery', 'HomeController@gallery')->name('pages.gallery');
 Route::get('/mission&vision', 'HomeController@missionVision')->name('pages.mission-vision');
 Route::get('/organization', 'HomeController@organization')->name('pages.organization');
+Route::get('/downloads', 'HomeController@downloads')->name('pages.downloads');
+Route::get('/videos', 'HomeController@videos')->name('pages.videos');
 
 // Protected News Route Resource
 Route::group(['prefix' => 'news'], function () {

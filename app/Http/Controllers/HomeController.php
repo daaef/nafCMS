@@ -67,6 +67,14 @@ class HomeController extends Controller {
 		return view('organization');
 	}
 
+	public function downloads(){
+		return view('downloads');
+	}
+
+	public function videos(){
+		return view('videos');
+	}
+
 
 
 }
